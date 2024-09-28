@@ -1,0 +1,225 @@
+.footer {
+    // border: 2px solid red;
+    background-color: #000000;
+    position: relative;
+    height: 400px;
+    width: 100%;
+    left: 0;
+    color: white;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        // border: 2px solid red;
+        width: 100%;
+        height: 100%;
+
+        .part1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 85%;
+
+            .left {
+                // border: 2px solid red;
+
+                .title {
+                    margin-bottom: 10px;
+                    font-size: 2.5rem;
+
+                    .p1 {
+                        color: #FF6D02;
+                    }
+                }
+
+                .desc {
+                    margin-bottom: 25px;
+                }
+
+                .social-media {
+                    display: flex;
+                    // border: 2px solid red;
+                    width: 45%;
+                    height: 52px;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .icons {
+                        border: 2px solid rgb(161, 177, 191);
+                        color: rgb(161, 177, 191);
+                        height: 100%;
+                        width: 33%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        border-radius: 10px;
+                        transition: transform 0.3s ease, color 0.3s ease;
+                        cursor: pointer;
+
+                        &.instagram {
+                            color: #d11cd1;
+                        }
+
+                        &.facebook {
+                            color: rgb(26, 72, 158);
+                        }
+
+                        &.linkedin {
+                            color: rgb(19, 82, 170);
+                        }
+                    }
+
+                    .icons:hover {
+                        transform: scale(1.25);
+                        filter: brightness(0.85);
+                    }
+                }
+            }
+
+            .right {
+                // border: 2px solid white;
+                height: 170px;
+                width: 499px;
+
+                .address {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    color: rgb(161, 177, 191);
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        margin-right: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        // border: 2px solid red;
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+
+        .part2 {
+            // border: 2px solid white;
+            border-top: 2px solid white;
+            opacity: 0.3;
+
+            .bottom {
+                display: flex;
+                // flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: 180px;
+                font-size: 20px;
+                margin-right: 150px;
+                padding: 12px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .footer {
+
+        // border: 2px solid red;
+        // width: 100%;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .part1 {
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                // border: 2px solid rgb(0, 255, 170);
+                width: 100%;
+
+                .left {
+                    // border: 2px solid red;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding-left: 15px;
+                    height: 100%;
+                    font-size: 18px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .title {
+                        font-size: 24px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding-top: 20px;
+                        padding-left: 15px;
+                    }
+
+                    .desc {
+                        position: absolute;
+                        font-size: 20px;
+                        top: 45px;
+                        width: 80%;
+                        // border: 2px solid white;
+                    }
+
+                    .social-media {
+                        display: flex;
+                        // border: 2px solid red;
+                        width: 45%;
+                        height: 52px;
+                        justify-content: space-around;
+                        align-items: center;
+                        position: absolute;
+                        top: 100px;
+
+                        .icons {
+                            border: 2px solid rgb(161, 177, 191);
+                            color: rgb(161, 177, 191);
+                            height: 100%;
+                            width: 33%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 10px;
+                            border-radius: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .right {
+                    margin-top: 10px;
+                    position: absolute;
+                    padding-left: 15px;
+                    top: 40%;
+                    width: 100%;
+                    left: 0;
+                    padding-bottom: 12px;
+                    // border: 2px solid white;
+                }
+            }
+
+            .part2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .bottom {
+                    margin-left: 0px;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

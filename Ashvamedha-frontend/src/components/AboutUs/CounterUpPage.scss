@@ -1,0 +1,67 @@
+.counterUpRow {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.counterUp {
+  flex: 1;
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin: 10px;
+}
+
+.counterUp:hover {
+  background: #555;
+  transform: scale(1.05);
+}
+
+.counterUp h1 {
+  font-size: 40px;
+  margin: 0;
+  padding: 10px;
+  color: aquamarine;
+}
+
+.counterUp p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.counterUp {
+  width: 100%;
+  background: #151515;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Smooth transition */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.counterUp:hover {
+  background: #151515;
+  transform: scale(1.05);
+}
+
+.counterUp h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 10px;
+}
+
+.counterUp+.counterUp {
+  border-top: 1px solid #444;
+}

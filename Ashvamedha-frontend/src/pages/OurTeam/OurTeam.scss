@@ -1,0 +1,386 @@
+  .OurTeam {
+    height: 100%;
+
+    background-color: #151515;
+
+    .heading {
+      color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      font-size: 56px;
+      // border: 2px solid red;
+      margin-top: 60px;
+
+      .h1 {
+        color: #FF6F0F;
+        margin-right: 10px;
+      }
+
+      .h2 {
+        color: #fff;
+      }
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+      margin-bottom: 100px;
+
+      .cards {
+        display: flex;
+        flex-direction: column;
+        // border: 2px solid red;
+        color: white;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+
+        .chief-coordinator {
+          .card {
+            // border: 2px solid blue;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .image {
+              // border: 2px solid red;
+              border: 2px solid white;
+              border-radius: 100%;
+              width: 190px;
+              height: 190px;
+
+              img {
+                object-fit: fill;
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+              }
+
+            }
+
+            .description {
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+
+              // border: 2px solid red;
+              p {
+                font-size: 30px;
+                color: #FF6F0F;
+                text-transform: uppercase;
+                margin-top: 10px;
+                font-weight: 700;
+              }
+
+              h3 {
+                font-size: 24px;
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        .coreheads,
+        .coordinator {
+          display: grid;
+          width: 80%;
+          grid-template-columns: repeat(4, 1fr);
+          margin-top: 50px;
+          gap: 30px;
+
+          .card {
+            // border: 2px solid blue;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .image {
+              border: 2px solid white;
+              border-radius: 100%;
+              width: 190px;
+              height: 190px;
+
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                object-fit: cover;
+              }
+
+            }
+
+            .description {
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+
+              p {
+                font-size: 24px;
+                color: #FF6F0F;
+                margin-top: 10px;
+                text-transform: uppercase;
+                // font-weight: 700;
+                // border: 2px solid red;
+              }
+
+              h3 {
+                font-size: 24px;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+
+      /* Responsive adjustments */
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .OurTeam {
+
+      .heading {
+        margin-top: 20px;
+        font-size: 36px;
+
+        .h1 {}
+      }
+
+      .team-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 100px;
+
+        .cards {
+          .chief-coordinator {
+            .card {
+              // border: 2px solid blue;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+
+              .image {
+                // border: 2px solid red;
+                border: 2px solid white;
+                border-radius: 100%;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 100%;
+                }
+
+              }
+
+              .description {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                // border: 2px solid red;
+                p {
+                  font-size: 24px;
+                  color: #FF6F0F;
+                  text-transform: uppercase;
+                  margin-top: 10px;
+                  font-weight: 700;
+                }
+
+                h3 {
+                  font-size: 24px;
+                  color: white;
+                }
+              }
+            }
+          }
+
+          .coreheads,
+          .coordinator {
+            display: grid;
+            width: 80%;
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: 50px;
+            gap: 30px;
+
+            .card {
+              // border: 2px solid blue;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+
+              .image {
+                // border: 2px solid red;
+                border: 2px solid white;
+                border-radius: 100%;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 100%;
+                }
+
+              }
+
+              .description {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                  font-size: 16px;
+                  color: #FF6F0F;
+                  margin-top: 10px;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  // border: 2px solid red;
+                  text-align: center;
+                }
+
+                h3 {
+                  font-size: 16px;
+                  color: white;
+                  text-align: center;
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:350px) {
+    .OurTeam {
+
+      .heading {
+        margin-top: 20px;
+        font-size: 36px;
+
+        .h1 {}
+      }
+
+      .team-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 100px;
+
+        .cards {
+          .chief-coordinator {
+            .card {
+              // border: 2px solid blue;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+
+              .image {
+                // border: 2px solid red;
+                border: 2px solid white;
+                border-radius: 100%;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 100%;
+                }
+
+              }
+
+              .description {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                // border: 2px solid red;
+                p {
+                  font-size: 24px;
+                  color: #FF6F0F;
+                  text-transform: uppercase;
+                  margin-top: 10px;
+                  font-weight: 700;
+                }
+
+                h3 {
+                  font-size: 24px;
+                  color: white;
+                }
+              }
+            }
+          }
+
+          .coreheads,
+          .coordinator {
+            display: grid;
+            width: 80%;
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: 50px;
+            gap: 30px;
+
+            .card {
+              // border: 2px solid blue;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+
+              .image {
+                // border: 2px solid red;
+                border: 2px solid white;
+                border-radius: 100%;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 100%;
+                }
+
+              }
+
+              .description {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                  font-size: 16px;
+                  color: #FF6F0F;
+                  margin-top: 10px;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  // border: 2px solid red;
+                  text-align: center;
+                }
+
+                h3 {
+                  font-size: 16px;
+                  color: white;
+                  text-align: center;
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+  }

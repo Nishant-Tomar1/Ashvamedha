@@ -1,0 +1,80 @@
+.collegewrapper {
+    border-bottom: 2px solid white;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    color: white;
+
+    .serial-no {
+        width: 20%;
+    }
+
+    .collegename {
+        text-transform: uppercase;
+        width: 50%;
+
+    }
+
+    .score {
+        width: 10%;
+
+    }
+
+    .next {
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+
+    .serial-no,
+    .collegename,
+    .score {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .collegewrapper {
+        // border: 2px solid red;
+
+        .serial-no {
+            width: 20%;
+            // flex: 1;
+        }
+
+        .collegename {
+            text-transform: uppercase;
+            width: 50%;
+
+        }
+
+        .score {
+            width: 10%;
+
+        }
+
+        .next {
+            width: 10%;
+            display: flex;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+
+        .serial-no,
+        .collegename,
+        .score {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+    }
+}

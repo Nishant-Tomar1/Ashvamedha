@@ -1,0 +1,22 @@
+.gallery {
+    background-color: #151515;
+
+    h1 {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        font-size: 46px;
+
+        .h1 {
+            color: #FF6D02;
+
+        }
+
+        .h2 {
+            color: white;
+
+        }
+    }
+}

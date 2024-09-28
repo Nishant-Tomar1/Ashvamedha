@@ -1,0 +1,91 @@
+.leaderboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // background-image: url("../../assests/demoPhotos/bg.jpg");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    // border: 2px solid red;
+    background-color: #151515;
+
+    .heading {
+        font-size: 46px;
+        // border: 2px solid red;
+        margin-top: 60px;
+        margin-bottom: 40px;
+
+        .text {
+            .h1 {
+                color: #FF6F0F;
+                margin-right: 20px;
+            }
+
+            .h2 {
+                color: white;
+            }
+
+        }
+
+    }
+
+    .content {
+        width: 60%;
+        display: flex;
+        // height: 100%;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-bottom: 40px;
+        padding: 20px;
+        border-radius: 10px;
+        background: black;
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 2px solid white;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .leaderboard {
+
+        .heading {
+            font-size: 24px;
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .content {
+            width: 90%;
+            margin-top: 0px;
+
+        }
+    }
+}
+
+@media screen and (max-width:350px) {
+    .leaderboard {
+
+        .heading {
+            font-size: 24px;
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .content {
+            width: 90%;
+            margin-top: 0px;
+
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.ui-card {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    background: radial-gradient(#111 50%, #000 100%);
+    cursor: pointer;
+    border-radius: 20px;
+    border: 3px solid #030027;
+    box-shadow: 0px 3px 16px #2a2846;
+
+    img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease-out;
+    }
+
+    .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        color: #FF6F0F;
+        font-size: 16px;
+
+        h3 {
+            font-weight: 700;
+            font-size: 32px;
+            margin: 0 0 20px;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.3s ease-out;
+
+        }
+    }
+}
+
+.ui-card:hover img {
+    transform: scale(1.1) translateY(-20px);
+    opacity: 0.3
+}
+
+.ui-card:hover .description h3 {
+    opacity: 1;
+    transform: translateY(-100px);
+}

@@ -1,0 +1,170 @@
+.pointinfo {
+    border: 2px solid white;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    align-items: center;
+    margin: 10px;
+    width: 50%;
+    text-transform: uppercase;
+    margin-top: 20px;
+
+    .serial-no {
+        width: 10%;
+        margin-left: 20px;
+        // border: 2px solid wheat;
+    }
+
+    .category {
+
+        width: 30%;
+    }
+
+    .opponent {
+
+        // border: 2px solid wheat;
+        width: 20%;
+
+        .name {
+            margin-left: 5px;
+        }
+    }
+
+    .point {
+        width: 20%;
+        // border: 2px solid wheat;
+
+    }
+
+    .sportname {
+        width: 30%;
+    }
+
+    .serial-no,
+    .category,
+    .opponent,
+    .point,
+    .sportname {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+
+    }
+
+}
+
+@media screen and (max-width:750px) {
+    .pointinfo {
+        width: 95%;
+        height: 100px;
+        margin: 10px 10px;
+        text-transform: lowercase;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .serial-no {
+            width: 10%;
+            margin-left: 10px;
+            // border: 2px solid wheat;
+        }
+
+        .category {
+
+            width: 20%;
+        }
+
+        .opponent {
+
+            // border: 2px solid wheat;
+            width: 20%;
+
+            .name {
+                margin-left: 5px;
+            }
+        }
+
+        .point {
+            width: 20%;
+            // border: 2px solid wheat;
+
+        }
+
+        .sportname {
+            width: 30%;
+        }
+
+        .serial-no,
+        .category,
+        .opponent,
+        .point,
+        .sportname {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+        }
+
+    }
+}
+
+@media screen and (max-width:350px) {
+    .pointinfo {
+        // margin: 10px;
+        height: 100px;
+        text-transform: lowercase;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 95%;
+        margin: 10px 10px;
+
+        .serial-no {
+            width: 10%;
+            margin-left: 10px;
+            // border: 2px solid wheat;
+        }
+
+        .category {
+
+            width: 20%;
+        }
+
+        .opponent {
+
+            // border: 2px solid wheat;
+            width: 30%;
+
+            .name {
+                margin-left: 5px;
+            }
+        }
+
+        .point {
+            width: 20%;
+            // border: 2px solid wheat;
+
+        }
+
+        .sportname {
+            width: 20%;
+        }
+
+        .serial-no,
+        .category,
+        .opponent,
+        .point,
+        .sportname {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+        }
+
+    }
+}

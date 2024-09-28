@@ -1,0 +1,265 @@
+.hero {
+    .container {
+        position: relative;
+        margin-top: -70px;
+
+        .content-hero {
+            height: 100vh;
+            background-image: url("../../assests/banner.jpg");
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .hero-info {
+                width: 60%;
+                // border: 2px solid red;
+                text-align: center;
+                height: 180px;
+                color: white;
+
+                .ashvamedha {
+                    color: white;
+                    font-size: 70px;
+
+                    .ashva {
+                        color: #FF6D02;
+                    }
+                }
+
+                .theme,
+                .date {
+                    font-size: 24px;
+                }
+
+            }
+
+            .buttons {
+                display: flex;
+                align-items: center;
+                // border: 2px solid red;
+                position: relative;
+                top: 20px;
+                width: 60%;
+                justify-content: space-evenly;
+
+                .btn1 {
+                    .btn-primary {
+                        color: white;
+                        background-color: transparent;
+                        padding: 12px 24px;
+                        font-size: 16px;
+                        height: 50px;
+                        font-weight: 500;
+                        width: 180px;
+                        border-radius: 10px;
+                        transition: all ease-in 0.3s;
+                        cursor: pointer;
+                        // margin-right: 200px;
+
+                        &:hover {
+                            // background-color: #FF6D02;
+                            color: #FF6D02;
+                            border: 1px solid #FF6D02;
+
+                        }
+                    }
+
+                }
+
+                .btn2 {
+                    .btn-secondary {
+                        color: white;
+                        background-color: transparent;
+                        padding: 12px 24px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        height: 50px;
+                        width: 180px;
+                        border-radius: 10px;
+                        transition: all ease-in 0.3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #FF6D02;
+                            border: 1px solid #FF6D02;
+                        }
+                    }
+                }
+
+            }
+
+
+
+
+        }
+
+        .carousel-bullet {
+            position: absolute;
+            bottom: 3%;
+            left: 45%;
+            // border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                width: 12px;
+                height: 12px;
+                background-color: rgb(160, 159, 159);
+                margin-left: 10px;
+                border-radius: 50%;
+                cursor: pointer;
+                box-shadow: 3px 2px 2px rgba(73, 72, 72, 0.338);
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .hero {
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .content-hero {
+                width: 100%;
+
+                .hero-info {
+                    width: 100%;
+                    // border: 2px solid red;
+                    text-align: center;
+                    height: 180px;
+                    color: white;
+
+                    .ashvamedha {
+                        color: white;
+                        font-size: 48px;
+                    }
+
+                    .theme,
+                    .date {
+                        font-size: 24px;
+                    }
+
+                }
+
+                .buttons {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    top: 49px;
+                    left: 0px;
+                    align-items: center;
+                    height: 5%;
+                    justify-content: flex-end;
+                    font-size: 18px;
+
+                    .btn1 {
+                        // border: 2px solid red;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .btn-primary {
+                            margin-bottom: 20px;
+                            margin-right: 10px;
+
+                        }
+
+                    }
+                }
+            }
+
+            .carousel-bullet {
+                position: absolute;
+                bottom: 3%;
+                left: 30%;
+                // border: 2px solid red;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .hero {
+        .container {
+            display: flex;
+            justify-content: center;
+            // flex-direction: column;
+            align-items: center;
+            // border: 2px solid yellow;
+            width: 100%;
+
+            .content-hero {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+
+                .hero-info {
+                    width: 100%;
+                    // border: 2px solid red;
+                    text-align: center;
+                    height: 180px;
+                    color: white;
+
+                    .ashvamedha {
+                        color: white;
+                        font-size: 36px;
+                    }
+
+                    .theme,
+                    .date {
+                        font-size: 20px;
+                    }
+
+                }
+
+                .buttons {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    justify-content: flex-end;
+                    align-items: center;
+                    top: 49px;
+                    left: 0px;
+                    // border: 2px solid red;
+                    align-items: center;
+                    font-size: 18px;
+                    height: 1%;
+
+                    .btn1 {
+                        // border: 2px solid red;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .btn-primary {
+                            margin-bottom: 20px;
+                            margin-right: 10px;
+
+                        }
+
+                    }
+                }
+            }
+
+            .carousel-bullet {
+                position: absolute;
+                bottom: 3%;
+                left: 30%;
+                // border: 2px solid red;
+            }
+        }
+    }
+}
