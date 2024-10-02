@@ -79,12 +79,7 @@ function AboutUs() {
   return (
     !isLoading && (
       <div className="AboutUs">
-        <Parallax
-          bgImage={bg}
-          bgImageStyle={imgStyle}
-          strength={500}
-          blur={100}
-        >
+        
           <div className="content">
             <div className="title">
               <h1>
@@ -124,7 +119,7 @@ function AboutUs() {
                   celebration. Let's come together to make Ashvamedha 2023 an
                   unforgettable experience.
                 </p>
-                <div className="social-media">
+                {/* <div className="social-media">
                   <div
                     className="icons facebook"
                     onClick={() => handleRedirect(2)}
@@ -143,7 +138,7 @@ function AboutUs() {
                   >
                     <FaLinkedinIn className="icon" />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -163,7 +158,6 @@ function AboutUs() {
           <div className="ath">
             <img src={logos[4]?.image?.url} alt="tshirt" />
           </div>
-        </Parallax>
       </div>
     )
   );

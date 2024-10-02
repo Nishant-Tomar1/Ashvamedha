@@ -19,7 +19,7 @@ function Events() {
       id: 1,
       sportName: "Chess",
       imgUrl:
-        "https://res.cloudinary.com/dzjzrubld/image/upload/v1719870722/eventImgSmall/iinflximk5k8kx3snms9.jpg",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/khcpaoug4b1uegv1q22f.jpg",
       desc: "Chess is the art of thinking ahead, of making complex decisions under pressure",
       date: "28th-29th October",
     },
@@ -27,7 +27,7 @@ function Events() {
       id: 2,
       sportName: "Badminton",
       imgUrl:
-        "https://res.cloudinary.com/dzjzrubld/image/upload/v1719870746/eventImgSmall/g1di2rrur5cwmv2fowhm.jpg",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/aynkimvzlkdwmbexfymg.jpg",
       desc: "Badminton is not only about winning. It's about playing beautiful, memorable games.",
       date: "28th-29th October",
     },
@@ -35,7 +35,7 @@ function Events() {
       id: 3,
       sportName: "Volleyball",
       imgUrl:
-        "https://res.cloudinary.com/dzjzrubld/image/upload/v1719871170/eventImgSmall/b0h7bbleyjlngxwm54ob.jpg",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729823/ashvamedha/events/bwneqkxvz129rbzbmr00.jpg",
       desc: "Success in volleyball comes not from individual glory but from seamless teamwork",
       date: "28th-29th October",
     },
@@ -43,7 +43,7 @@ function Events() {
       id: 4,
       sportName: "Football",
       imgUrl:
-        "https://res.cloudinary.com/dzjzrubld/image/upload/v1719870796/eventImgSmall/mdow5qp169qbbtjizx7t.jpg",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729823/ashvamedha/events/kypkiyi1i6bk9ciqwyym.jpg",
       desc: "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all, love of what you are doing or learning to do.",
       date: "28th-29th October",
     },
@@ -51,7 +51,7 @@ function Events() {
       id: 5,
       sportName: "Basketball",
       imgUrl:
-        "https://res.cloudinary.com/dzjzrubld/image/upload/v1719870814/eventImgSmall/ia3xqnti93j65e3mmxmg.jpg",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/rfmuljtun5pabxcdrlou.jpg",
       desc: "Basketball is like photography. If you don't focus, all you have is the negative.",
       date: "28th-29th October",
     },
@@ -59,7 +59,7 @@ function Events() {
       id: 6,
       sportName: "Table Tennis",
       imgUrl:
-        "https://res.cloudinary.com/dzjzrubld/image/upload/v1719940618/eventImgSmall/mmqntxiq0mhoan3yv1r8.jpg",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729823/ashvamedha/events/az73kyv1uookgumnjfiw.jpg",
       desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
       date: "28th-29th October",
     },
