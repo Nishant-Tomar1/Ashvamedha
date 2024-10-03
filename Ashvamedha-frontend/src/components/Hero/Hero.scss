@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Erica+One&family=Gasoek+One&family=Nosifer&family=Poetsen+One&family=Poller+One&family=Racing+Sans+One&family=Rowdies:wght@300;400;700&family=Rubik+Wet+Paint&family=Trade+Winds&family=Yatra+One&family=Yeseva+One&display=swap');
 
 .hero {
+    width: 100%;
+    background-image: url("../../assests/bg4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+   	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(65%, transparent), to(rgba(255,255,255,0.6)));
+
     .container {
         position: relative;
         margin-top: -70px;
 
         .content-hero {
             height: 100vh;
-            background-image: url("../../assests/bg6_2.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -18,7 +22,6 @@
 
             .hero-info {
                 width: 60%;
-                // border: 2px solid red;
                 text-align: center;
                 height: 180px;
                 color: white;

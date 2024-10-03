@@ -12,25 +12,25 @@ import PointDetails from "./pages/PointDetails/PointDetails";
 import SetLiveScore from "./pages/SetLiveScore/SetLiveScore";
 import SetPointTableScore from "./pages/SetLiveScore/SetPointTableScore";
 import SingleSport from "./pages/SingleSports/SingleSport";
-import SyncLoader from "react-spinners/SyncLoader";
+// import SyncLoader from "react-spinners/SyncLoader";
 import UpdateLiveScore from "./pages/SetLiveScore/UpdateLiveScore";
 import { useSelector } from "react-redux";
 
 // import ClipLoader from "react-spinners/ClipLoader";
-const style = {
-  position: "fixed",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-};
-const properties = {
-  display: "block",
-  margin: "0 auto",
-  borderColor: "red",
-};
+// const style = {
+//   position: "fixed",
+//   top: "50%",
+//   left: "50%",
+//   transform: "translate(-50%, -50%)",
+// };
+// const properties = {
+//   display: "block",
+//   margin: "0 auto",
+//   borderColor: "red",
+// };
 function App() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
-  let [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     if (isLoading) {
       setLoading(true);
@@ -40,16 +40,16 @@ function App() {
   }, [isLoading]);
   return (
     <div className="App">
-      <div className="style" style={style}>
-        <SyncLoader
-          color="#030027"
-          loading={loading}
-          margin={5}
-          size={15}
-          speedMultiplier={1}
-          cssOverride={properties}
-        />
-      </div>
+    {/* //   <div className="style" style={style}> 
+    //       <SyncLoader
+    //       color="#030027"
+    //       loading={loading}
+    //       margin={5}
+    //       size={15}
+    //       speedMultiplier={1}
+    //       cssOverride={properties}
+    //     /> */}
+    {/* //   </div> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />

@@ -1,40 +1,18 @@
 import "./AboutUs.scss";
 
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { AiOutlineInstagram } from "react-icons/ai";
 import CounterUpPage from "./CounterUpPage";
-import { Parallax } from "react-parallax";
 import axios from "axios";
-import bg from "../../assests/demoPhotos/bg.jpg";
 import { setLoading } from "../../redux/appSlice";
+import merch from "../../assests/aboutusassets/merch.png"
 
 function AboutUs() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
   const dispatch = useDispatch();
-  // const [bg, setBg] = useState("");
   const [logos, setLogos] = useState([]);
-  // async function fetchBgImages() {
-  //   try {
-  //     dispatch(setLoading(true));
-  //     const response = await axios.post(
-  //       "https://ashvamedha.onrender.com/upload/",
-  //       {
-  //         folderName: "bgImg",
-  //       }
-  //     );
-  //     // setBg(response.data.result);
-  //     setBg(response?.data?.result[0]?.image?.url);
-  //   } catch (err) {
-  //   } finally {
-  //     dispatch(setLoading(false));
-  //   }
-  // }
-  const imgStyle = {
-    filter: "grayscale(100%)",
-  };
+ 
   async function fetchLogoImages() {
     try {
       dispatch(setLoading(true));
@@ -56,29 +34,10 @@ function AboutUs() {
     // fetchBgImages();
     fetchLogoImages();
   }, []);
-  const handleRedirect = (platform) => {
-    let url;
 
-    switch (platform) {
-      case 1:
-        url = "https://www.instagram.com/ashvamedha_iitbbs/";
-        break;
-      case 2:
-        url = "https://www.facebook.com/AshvamedhaIITBBS/";
-        break;
-      case 3:
-        url =
-          "https://www.linkedin.com/company/ashvamedha-iit-bhubaneswar/mycompany/";
-        break;
-      default:
-        return;
-    }
-
-    window.open(url, "_blank");
-  };
   return (
     !isLoading && (
-      <div className="AboutUs">
+      <div className="AboutUs" id="hello">
         
           <div className="content">
             <div className="title">
@@ -156,7 +115,8 @@ function AboutUs() {
           </div>
 
           <div className="ath">
-            <img src={logos[4]?.image?.url} alt="tshirt" />
+            {/* hello */}
+            <img src={merch} alt="tshirt" />
           </div>
       </div>
     )

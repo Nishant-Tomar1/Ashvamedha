@@ -4,12 +4,13 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { useNavigate } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function Hero() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
   const navigate = useNavigate();
   return (
-    !isLoading && (
+    !isLoading ? (
       <div className="hero">
         <div className="container">
           <div className="content-hero">
@@ -38,7 +39,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    )
+    ) : (<Loader/>)
   );
 }
 
