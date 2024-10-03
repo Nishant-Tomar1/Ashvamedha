@@ -9,10 +9,7 @@ function Gallery() {
   return (
     <div className="gallery">
       <Navbar />
-      <h1>
-        <span className="h1">ASHVA</span>
-        <span className="h2">MEDHA-2022</span>
-      </h1>
+      
       <SportGallery />
       <Footer />
     </div>

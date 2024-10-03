@@ -16,7 +16,8 @@ function Hero() {
           <div className="content-hero">
             <div className="hero-info">
               <h1 className="ashvamedha">
-                <span className="ashva">ASHVA</span>MEDHA
+                <span className="ashva">ASHVA</span>
+                <span className="medha">MEDHA</span>
               </h1>
               <p className="theme">EMPOWER ENDURE EXCEL</p>
               <p className="date">4th-5th November</p>

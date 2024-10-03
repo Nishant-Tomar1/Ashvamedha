@@ -70,7 +70,7 @@ function AboutUs() {
                 <p className="para">
                   Our fest offers a wide range of sports and activities for
                   participants of all skill levels. Whether you are a seasoned
-                  athlete or just looking for some fun, Asvamedha has something
+                  athlete or just looking for some fun, Ashvamedha has something
                   for everyone.
                 </p>
                 <p className="para">

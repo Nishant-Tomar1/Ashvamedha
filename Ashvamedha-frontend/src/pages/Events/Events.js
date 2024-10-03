@@ -9,6 +9,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Loader from "../../components/Loader/Loader";
 
 function Events() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
@@ -65,9 +66,11 @@ function Events() {
     },
   ];
   return (
-    !isLoading && (
+    <>
+    <Navbar />
+    {!isLoading ?
+  (
       <div className="events">
-        <Navbar />
         <h2 className="heading">
           <span className="h1">UPCOMING </span>
           <span className="h2">EVENTS</span>
@@ -96,8 +99,9 @@ function Events() {
           })}
         </div>
         <Footer />
-      </div>
-    )
+      </div>)
+     : <Loader/>}
+    </>
   );
 }
 

@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-   	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(65%, transparent), to(rgba(255,255,255,0.6)));
+   	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(64%, transparent), to(rgba(255,255,255,0.6)));
 
     .container {
         position: relative;
@@ -30,6 +30,9 @@
                     color: white;
                     font-size: 100px;
 
+                    .medha {
+                        color:rgb(255, 255, 255);
+                    }
                     .ashva {
                         color: #FF6D02;
                     }
