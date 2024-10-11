@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-   	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(64%, transparent), to(rgba(255,255,255,0.6)));
+   	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(69%, transparent), to(rgba(255,255,255,0.6)));
 
     .container {
         position: relative;
@@ -28,7 +28,7 @@
 
                 .ashvamedha {
                     color: white;
-                    font-size: 100px;
+                    font-size: 4.5em;
 
                     .medha {
                         color:rgb(255, 255, 255);
@@ -58,11 +58,12 @@
                     .btn-primary {
                         color: white;
                         background-color: transparent;
+                        // border : 2px rgb(0, 242, 255) solid;
                         padding: 12px 24px;
                         font-size: 16px;
                         height: 50px;
                         font-weight: 500;
-                        width: 180px;
+                        // width: 180px;
                         border-radius: 10px;
                         transition: all ease-in 0.3s;
                         cursor: pointer;
@@ -71,7 +72,7 @@
                         &:hover {
                             // background-color: #FF6D02;
                             color: #FF6D02;
-                            border: 1px solid #FF6D02;
+                            border: 2px solid #FF6D02;
 
                         }
                     }
@@ -129,7 +130,7 @@
 
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 820px) {
     .hero {
         .container {
             // margin-bottom: 5px;
@@ -140,23 +141,24 @@
             height: 90vh;
 
             .content-hero {
-                width: 100%;
+                // width: 100vw;
 
                 .hero-info {
                     width: 100%;
                     // border: 2px solid red;
                     text-align: center;
-                    height: 180px;
+                    height: 100px;
                     color: white;
 
                     .ashvamedha {
                         color: white;
-                        font-size: 38px;
+                        font-size: 11vw;
+                        text-align: center;
                     }
 
                     .theme,
                     .date {
-                        font-size: 24px;
+                        font-size: 18px;
                     }
 
                 }

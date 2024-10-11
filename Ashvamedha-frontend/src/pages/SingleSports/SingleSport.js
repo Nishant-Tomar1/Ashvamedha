@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { AiOutlineDoubleRight } from "react-icons/ai";
-import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch";
 import badminton from "../../assests/demoPhotos/badminton.jpg";

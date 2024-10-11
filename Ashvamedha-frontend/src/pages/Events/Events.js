@@ -64,6 +64,22 @@ function Events() {
       desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
       date: "28th-29th October",
     },
+    {
+      id: 7,
+      sportName: "Table Tennis",
+      imgUrl:
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729823/ashvamedha/events/az73kyv1uookgumnjfiw.jpg",
+      desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
+      date: "28th-29th October",
+    },
+    {
+      id: 8,
+      sportName: "Table Tennis",
+      imgUrl:
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729823/ashvamedha/events/az73kyv1uookgumnjfiw.jpg",
+      desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
+      date: "28th-29th October",
+    },
   ];
   return (
     <>

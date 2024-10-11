@@ -2,12 +2,12 @@
     width: 100%;
     height: 70px;
     display: grid;
-    background-color: black;
-    grid-template-columns: 100px 2fr 4fr 20px;
+    background-color: rgb(0, 0, 0);
+    // grid-template-columns: 100px 2fr 4fr 20px;
     position: sticky;
     top: 0px;
     left: 0px;
-    opacity: 0.9;
+    // opacity: 0.9;
     z-index: 100;
     // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 
@@ -15,8 +15,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 60px;
-        width: 75px;
+        height: 50px;
+        width: 60px;
         margin-left: 40px;
         // border: 2px solid red;
         margin-top: 10px;
@@ -46,7 +46,9 @@
 }
 
 .social-media {
-    grid-column: 4/5;
+    // grid-column: 4/5;
+    padding-top: 20px;
+    height : 70px !important
 }
 
 .social-media ul {
@@ -69,7 +71,7 @@
 
 
 .menu-link ul li {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: white;
     list-style: none;
@@ -103,7 +105,7 @@
 /* responsive css style  */
 @media (max-width: 1080px) {
     .main-nav {
-        height: 80px;
+        height: 70px;
         grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
     }
 
@@ -123,12 +125,16 @@
     }
 
     .mobile-menu-link {
-        background-color: #151515;
+        padding-bottom: 20px;
+        border-bottom: whitesmoke 2px solid;
+        border-radius: 15px;
+        background-color: black;
         display: grid;
         grid-column: 2/5;
+        opacity: 0.9;
         align-items: center;
         justify-content: space-evenly;
-        padding-left: 3rem;
+        // padding-left: 3rem;
         transition: all 2s linear;
         transform-origin: top;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -136,22 +142,19 @@
     }
 
     .mobile-menu-link ul {
-        height: 25rem;
+        height: 18rem;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
-        align-items: start;
-        // text-align: center;
+        align-items: center;
+        font-size: 18px;
         width: 100%;
 
-        li {
-            // border: 2px solid red;
-            // text-align: center;
-        }
 
         .special {
             display: none;
         }
+    
 
     }
 
@@ -193,7 +196,7 @@
 
 @media (max-width: 798px) {
     .main-nav {
-        height: 80px;
+        height: 60px;
         grid-template-columns: 1rem 2fr 1fr 1fr 1rem;
     }
 

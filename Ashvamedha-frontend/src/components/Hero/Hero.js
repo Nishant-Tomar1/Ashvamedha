@@ -10,7 +10,7 @@ function Hero() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
   const navigate = useNavigate();
   return (
-    !isLoading ? (
+    (!isLoading ? 
       <div className="hero">
         <div className="container">
           <div className="content-hero">
@@ -20,7 +20,7 @@ function Hero() {
                 <span className="medha">MEDHA</span>
               </h1>
               <p className="theme">EMPOWER ENDURE EXCEL</p>
-              <p className="date">4th-5th November</p>
+              <p className="date">26th-27th OCTOBER</p>
             </div>
             <div className="buttons">
               <div className="btn1">
@@ -33,14 +33,14 @@ function Hero() {
                   REGISTER NOW
                 </button>
               </div>
-              <div className="btn2">
+              {/* <div className="btn2">
                 <button className="btn-secondary">FIXTURES</button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
-      </div>
-    ) : (<Loader/>)
+      </div> : (<Loader/>))
+   
   );
 }
 

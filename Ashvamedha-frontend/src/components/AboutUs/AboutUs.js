@@ -47,7 +47,7 @@ function AboutUs() {
               </h1>
             </div>
             <div className="main-body">
-              <div className="logos">
+              {/* <div className="logos">
                 {logos?.map((item, index) => {
                   if (index !== 3 && index !== 4) {
                     return (
@@ -59,24 +59,16 @@ function AboutUs() {
                     );
                   }
                 })}
-              </div>
+              </div> */}
               <div className="description">
                 <p className="para">
-                  Welcome to Ashvamedha, IIT Bhubaneswar's annual sports fest.
-                  We are passionate about sports and dedicated to promoting a
-                  culture of fitness, competition, and camaraderie among the
-                  youth.
+                Welcome to Ashvamedha, IIT Bhubaneswar's annual sports fest! Driven by our passion for sports, we aim to promote fitness, competition, and camaraderie. More than just a sports event, Ashvamedha celebrates teamwork and sportsmanship.
                 </p>
                 <p className="para">
-                  Our fest offers a wide range of sports and activities for
-                  participants of all skill levels. Whether you are a seasoned
-                  athlete or just looking for some fun, Ashvamedha has something
-                  for everyone.
+                This year, we offer a wide range of activities for all skill levels. Whether you’re a seasoned athlete or just looking for fun, Ashvamedha has something for everyone.
                 </p>
                 <p className="para">
-                  Join us for a week of excitement, sportsmanship, and
-                  celebration. Let's come together to make Ashvamedha 2023 an
-                  unforgettable experience.
+                Join us for an exciting week of sports, competition, and celebration, and help make Ashvamedha 2024 an unforgettable experience!
                 </p>
                 {/* <div className="social-media">
                   <div

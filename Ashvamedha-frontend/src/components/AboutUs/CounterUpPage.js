@@ -17,8 +17,9 @@ const CounterUpPage = () => {
         <div className="counterUp">
           <h1>
             {countersOn[0] && (
-              <CountUp start={1} end={7} duration={1} delay={0} />
+              <CountUp start={1} end={10} duration={1} delay={0} />
             )}
+            +
           </h1>
           <p>SPORTS</p>
         </div>
