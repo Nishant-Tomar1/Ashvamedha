@@ -66,20 +66,28 @@ function Events() {
     },
     {
       id: 7,
-      sportName: "Table Tennis",
+      sportName: "BGMI",
       imgUrl:
-        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729823/ashvamedha/events/az73kyv1uookgumnjfiw.jpg",
-      desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/gwbnnstk5f6m2so6m4s4.jpg",
+      desc: "Showcase your esports skill in the BGMI tournament which is being held from this edition onwards.",
       date: "28th-29th October",
     },
     {
       id: 8,
-      sportName: "Table Tennis",
+      sportName: "Athletics",
       imgUrl:
-        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729823/ashvamedha/events/az73kyv1uookgumnjfiw.jpg",
-      desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/wdxnqj88su8gu4gus0fc.jpg",
+      desc: "Athletics is about strength, stamina and endurance. Do you think you are the best in all this aspects ?",
       date: "28th-29th October",
     },
+    // {
+    //   id: 8,
+    //   sportName: "Gym and Weightlifting",
+    //   imgUrl:
+    //     "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/wdxnqj88su8gu4gus0fc.jpg",
+    //   desc: "",
+    //   date: "28th-29th October",
+    // },
   ];
   return (
     <>

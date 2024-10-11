@@ -29,6 +29,7 @@
     }
   }}
 
+
 .images-gallery {
     width: 80%;
     margin: 2rem auto;
@@ -47,13 +48,13 @@
     
     .column {
         width: 33.333333%;
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
     }
     
     .column div {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
     }
 
     @media screen and (max-width: 576px) {
@@ -64,8 +65,8 @@
             padding-left: 0.1rem;
         }
         .column div {
-            margin-top: 0.05rem;
-            margin-bottom: 0.05rem;
+            margin-top: 0rem;
+            margin-bottom: 0rem;
         }
     }
     
