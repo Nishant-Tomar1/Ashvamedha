@@ -64,6 +64,30 @@ function Events() {
       desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
       date: "28th-29th October",
     },
+    {
+      id: 7,
+      sportName: "BGMI",
+      imgUrl:
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728718553/ashvamedha/events/nllyabnsse2bhzpcezfb.png",
+      desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
+      date: "28th-29th October",
+    },
+    {
+      id: 8,
+      sportName: "GYM and WeighLifting",
+      imgUrl:
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728718553/ashvamedha/events/nllyabnsse2bhzpcezfb.png",
+      desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
+      date: "28th-29th October",
+    },
+    {
+      id: 9,
+      sportName: "Athletics",
+      imgUrl:
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728718553/ashvamedha/events/nllyabnsse2bhzpcezfb.png",
+      desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
+      date: "28th-29th October",
+    },
   ];
   return (
     <>
