@@ -1,40 +1,18 @@
 import "./AboutUs.scss";
 
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { AiOutlineInstagram } from "react-icons/ai";
 import CounterUpPage from "./CounterUpPage";
-import { Parallax } from "react-parallax";
 import axios from "axios";
-import bg from "../../assests/demoPhotos/bg.jpg";
 import { setLoading } from "../../redux/appSlice";
+import merch from "../../assests/aboutusassets/merch.png"
 
 function AboutUs() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
   const dispatch = useDispatch();
-  // const [bg, setBg] = useState("");
   const [logos, setLogos] = useState([]);
-  // async function fetchBgImages() {
-  //   try {
-  //     dispatch(setLoading(true));
-  //     const response = await axios.post(
-  //       "https://ashvamedha.onrender.com/upload/",
-  //       {
-  //         folderName: "bgImg",
-  //       }
-  //     );
-  //     // setBg(response.data.result);
-  //     setBg(response?.data?.result[0]?.image?.url);
-  //   } catch (err) {
-  //   } finally {
-  //     dispatch(setLoading(false));
-  //   }
-  // }
-  const imgStyle = {
-    filter: "grayscale(100%)",
-  };
+ 
   async function fetchLogoImages() {
     try {
       dispatch(setLoading(true));
@@ -56,29 +34,10 @@ function AboutUs() {
     // fetchBgImages();
     fetchLogoImages();
   }, []);
-  const handleRedirect = (platform) => {
-    let url;
 
-    switch (platform) {
-      case 1:
-        url = "https://www.instagram.com/ashvamedha_iitbbs/";
-        break;
-      case 2:
-        url = "https://www.facebook.com/AshvamedhaIITBBS/";
-        break;
-      case 3:
-        url =
-          "https://www.linkedin.com/company/ashvamedha-iit-bhubaneswar/mycompany/";
-        break;
-      default:
-        return;
-    }
-
-    window.open(url, "_blank");
-  };
   return (
     !isLoading && (
-      <div className="AboutUs">
+      <div className="AboutUs" id="hello">
         
           <div className="content">
             <div className="title">
@@ -88,7 +47,7 @@ function AboutUs() {
               </h1>
             </div>
             <div className="main-body">
-              <div className="logos">
+              {/* <div className="logos">
                 {logos?.map((item, index) => {
                   if (index !== 3 && index !== 4) {
                     return (
@@ -100,24 +59,16 @@ function AboutUs() {
                     );
                   }
                 })}
-              </div>
+              </div> */}
               <div className="description">
                 <p className="para">
-                  Welcome to Ashvamedha, IIT Bhubaneswar's annual sports fest.
-                  We are passionate about sports and dedicated to promoting a
-                  culture of fitness, competition, and camaraderie among the
-                  youth.
+                Welcome to Ashvamedha, IIT Bhubaneswar's annual sports fest! Driven by our passion for sports, we aim to promote fitness, competition, and camaraderie. More than just a sports event, Ashvamedha celebrates teamwork and sportsmanship.
                 </p>
                 <p className="para">
-                  Our fest offers a wide range of sports and activities for
-                  participants of all skill levels. Whether you are a seasoned
-                  athlete or just looking for some fun, Asvamedha has something
-                  for everyone.
+                This year, we offer a wide range of activities for all skill levels. Whether you’re a seasoned athlete or just looking for fun, Ashvamedha has something for everyone.
                 </p>
                 <p className="para">
-                  Join us for a week of excitement, sportsmanship, and
-                  celebration. Let's come together to make Ashvamedha 2023 an
-                  unforgettable experience.
+                Join us for an exciting week of sports, competition, and celebration, and help make Ashvamedha 2024 an unforgettable experience!
                 </p>
                 {/* <div className="social-media">
                   <div
@@ -156,7 +107,8 @@ function AboutUs() {
           </div>
 
           <div className="ath">
-            <img src={logos[4]?.image?.url} alt="tshirt" />
+            {/* hello */}
+            <img src={merch} alt="tshirt" />
           </div>
       </div>
     )

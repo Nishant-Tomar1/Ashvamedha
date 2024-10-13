@@ -8,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import axios from "axios";
 import { setLoading } from "../../redux/appSlice";
+import Loader from "../../components/Loader/Loader.js"
 
 function Leaderboard() {
   const [collegeScore, setCollegeScore] = useState([]);
@@ -132,7 +133,7 @@ function Leaderboard() {
   return (
     <div>
       <Navbar />
-      {!isLoading && (
+      {!isLoading ? (
         <div className="leaderboard">
           <div className="heading">
             <h2 className="text">
@@ -146,7 +147,7 @@ function Leaderboard() {
             ))}
           </div>
         </div>
-      )}
+      ) : <Loader/>}
       <Footer />
     </div>
   );

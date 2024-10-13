@@ -1,6 +1,5 @@
 .footer {
-    // border: 2px solid red;
-    background-color: #000000;
+    border-top: 2px solid rgb(248, 243, 239);
     position: relative;
     height: 400px;
     width: 100%;
@@ -21,9 +20,11 @@
             justify-content: space-around;
             align-items: center;
             height: 85%;
+            // padding: 10px;
 
             .left {
                 // border: 2px solid red;
+                padding-left: 20px;
 
                 .title {
                     margin-bottom: 10px;
@@ -41,7 +42,7 @@
                 .social-media {
                     display: flex;
                     // border: 2px solid red;
-                    width: 45%;
+                    width: 38%;
                     height: 52px;
                     justify-content: space-around;
                     align-items: center;
@@ -80,6 +81,7 @@
             }
 
             .right {
+                padding: 10px;
                 // border: 2px solid white;
                 height: 170px;
                 width: 499px;
@@ -111,6 +113,7 @@
             // border: 2px solid white;
             border-top: 2px solid white;
             opacity: 0.3;
+            // padding: 10px;
 
             .bottom {
                 display: flex;
@@ -126,7 +129,7 @@
     }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 850px) {
     .footer {
 
         // border: 2px solid red;
@@ -146,29 +149,29 @@
 
                 .left {
                     // border: 2px solid red;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
+                   
                     padding-left: 15px;
                     height: 100%;
                     font-size: 18px;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
 
                     .title {
                         font-size: 24px;
                         position: absolute;
-                        top: 0;
-                        left: 0;
-                        padding-top: 20px;
+                        top : 0;
+                        padding-top: 25px;
                         padding-left: 15px;
                     }
 
                     .desc {
                         position: absolute;
                         font-size: 20px;
-                        top: 45px;
+                        top: 60px;
                         width: 80%;
                         // border: 2px solid white;
                     }
@@ -177,11 +180,11 @@
                         display: flex;
                         // border: 2px solid red;
                         width: 45%;
-                        height: 52px;
+                        height: 65px;
                         justify-content: space-around;
                         align-items: center;
                         position: absolute;
-                        top: 100px;
+                        top: 110px;
 
                         .icons {
                             border: 2px solid rgb(161, 177, 191);
@@ -199,18 +202,23 @@
                 }
 
                 .right {
-                    margin-top: 10px;
+                    overflow: hidden;
+                    font-size: smaller;
+                    margin-top: 0px;
                     position: absolute;
                     padding-left: 15px;
                     top: 40%;
                     width: 100%;
                     left: 0;
-                    padding-bottom: 12px;
+                    min-height: 250px;
+                    // padding-bottom: 40px;
                     // border: 2px solid white;
                 }
             }
 
             .part2 {
+                margin-top: 48px;
+                overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;

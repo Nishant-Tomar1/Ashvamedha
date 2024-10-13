@@ -9,6 +9,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Loader from "../../components/Loader/Loader";
 
 function Events() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
@@ -63,49 +64,44 @@ function Events() {
       desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
       date: "28th-29th October",
     },
-    {
-      id: 9,
-      sportName: "GYM",
-      imgUrl:
-        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728721504/ashvamedha/events/dhsxh0cezuu09f1z9zyo.jpg",
-      desc: "The sound of weights hitting the floor is the sound of determination. Lift your potential!",
-      date: "28th-29th October",
-    },
   ];
   return (
-    !isLoading && (
-      <div className="events">
-        <Navbar />
-        <h2 className="heading">
-          <span className="h1">UPCOMING </span>
-          <span className="h2">EVENTS</span>
-        </h2>
-        <div className="event-container">
-          {sportsInfo.map((item) => {
-            return (
-              <div className="single-sport">
-                <div className="image">
-                  <img src={item?.imgUrl} alt="sport" />
-                </div>
-                <div className="sport-info">
-                  <div className="name">{item?.sportName}</div>
-                  <div className="desc">"{item?.desc}"</div>
-                  <div className="button">
-                    <button
-                      onClick={() => navigate(`/events/${item?.id}`)}
-                      className="btn-primary"
-                    >
-                      Register now
-                    </button>
+    <>
+      <Navbar />
+      {!isLoading ?
+        (
+          <div className="events">
+            <h2 className="heading">
+              <span className="h1">UPCOMING </span>
+              <span className="h2">EVENTS</span>
+            </h2>
+            <div className="event-container">
+              {sportsInfo.map((item) => {
+                return (
+                  <div className="single-sport">
+                    <div className="image">
+                      <img src={item?.imgUrl} alt="sport" />
+                    </div>
+                    <div className="sport-info">
+                      <div className="name">{item?.sportName}</div>
+                      <div className="desc">"{item?.desc}"</div>
+                      <div className="button">
+                        <button
+                          onClick={() => navigate(`/events/${item?.id}`)}
+                          className="btn-primary"
+                        >
+                          Register now
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <Footer />
-      </div>
-    )
+                );
+              })}
+            </div>
+            <Footer />
+          </div>)
+        : <Loader />}
+    </>
   );
 }
 

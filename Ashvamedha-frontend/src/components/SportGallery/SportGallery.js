@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { AiOutlineClose } from "react-icons/ai";
 import axios from "axios";
+import Loader from "../Loader/Loader.js"
 import { setLoading } from "../../redux/appSlice";
 
 function SportGallery() {
@@ -189,8 +190,15 @@ function SportGallery() {
   ];
 
   return (
-    !isLoading && (
+    <>
+    { !isLoading ?  
+      (<>
+        <h1>
+        <span className="h1">ASHVA</span>
+        <span className="h2">MEDHA-2022</span>
+      </h1>
       <div class="container-gallery">
+        
         <div className={model ? "model open" : "model"}>
           <img src={tempImgSrc} alt="Loading..." />
           <AiOutlineClose onClick={() => setModel(false)} className="icon" />
@@ -212,7 +220,9 @@ function SportGallery() {
           );
         })}
       </div>
-    )
+      </>) :
+    <Loader/>}
+    </>
   );
 }
 

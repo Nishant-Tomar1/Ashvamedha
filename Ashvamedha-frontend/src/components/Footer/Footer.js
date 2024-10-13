@@ -2,7 +2,7 @@ import "./Footer.scss";
 
 import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
 import { BiCopyright, BiSolidPhoneCall } from "react-icons/bi";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebook, FaFacebookF, FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import { HiLocationMarker } from "react-icons/hi";
 import React from "react";
@@ -47,13 +47,13 @@ function Footer() {
                 className="icons instagram"
                 onClick={() => handleRedirect(1)}
               >
-                <AiOutlineInstagram className="icon" />
+                <FaInstagram className="icon" />
               </div>
               <div className="icons facebook" onClick={() => handleRedirect(2)}>
-                <FaFacebookF className="icon" />
+                <FaFacebookSquare className="icon" />
               </div>
               <div className="icons linkedin" onClick={() => handleRedirect(3)}>
-                <FaLinkedinIn className="icon" />
+                <FaLinkedin className="icon" />
               </div>
             </div>
           </div>

@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import axios from "axios";
 import { setLoading } from "../../redux/appSlice";
+import Loader from "../../components/Loader/Loader";
 
 function OurTeam() {
   const dispatch = useDispatch();
@@ -98,9 +99,10 @@ function OurTeam() {
     },
   ];
   return (
-    !isLoading && (
-      <div className="OurTeam">
-        <Navbar />
+    <>
+    <Navbar />
+    {!isLoading ? 
+      (<div className="OurTeam">
         <h2 className="heading">
           <span className="h1">OUR</span>
           <span className="h2"> TEAM</span>
@@ -153,8 +155,9 @@ function OurTeam() {
           </div>
         </div>
         <Footer />
-      </div>
-    )
+      </div>)
+     : <Loader/>}
+    </>
   );
 }
 

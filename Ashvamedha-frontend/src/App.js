@@ -15,8 +15,9 @@ import SingleSport from "./pages/SingleSports/SingleSport";
 import SyncLoader from "react-spinners/SyncLoader";
 import UpdateLiveScore from "./pages/SetLiveScore/UpdateLiveScore";
 import { useSelector } from "react-redux";
+import Loader from "./components/Loader/Loader";
 
-// import ClipLoader from "react-spinners/ClipLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 const style = {
   position: "fixed",
   top: "50%",
@@ -30,7 +31,7 @@ const properties = {
 };
 function App() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
-  let [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     if (isLoading) {
       setLoading(true);
@@ -40,16 +41,20 @@ function App() {
   }, [isLoading]);
   return (
     <div className="App">
-      <div className="style" style={style}>
-        <SyncLoader
-          color="#030027"
-          loading={loading}
-          margin={5}
-          size={15}
-          speedMultiplier={1}
-          cssOverride={properties}
-        />
-      </div>
+       <div className="style" style={style}> 
+           <SyncLoader
+           color="#030027"
+           loading={loading}
+           margin={5}
+           size={15}
+           speedMultiplier={1}
+           cssOverride={properties}
+         />
+       </div>
+      {/* <div>
+        <Loader/>
+      </div> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />

@@ -22,11 +22,11 @@ function Navbar() {
       cName: "nav-text",
       navigate: true,
     },
-    {
-      title: "About Us",
-      path: "AboutUs",
-      cName: "nav-text",
-    },
+    // {
+    //   title: "About Us",
+    //   path: "AboutUs",
+    //   cName: "nav-text",
+    // },
     {
       title: "Events",
       path: "/events",
@@ -55,6 +55,12 @@ function Navbar() {
       title: "Contact Us",
       path: "ContactUs",
       cName: "nav-text",
+    },
+    {
+      title: "Rulebook",
+      path: "/rulebook",
+      cName: "nav-text ",
+      navigate: true,
     },
   ];
   const navigate = useNavigate();
