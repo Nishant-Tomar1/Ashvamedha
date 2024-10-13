@@ -27,7 +27,7 @@ function Events() {
       id: 2,
       sportName: "Badminton",
       imgUrl:
-        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/aynkimvzlkdwmbexfymg.jpg",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728718553/ashvamedha/events/qeyeqi5joaef13p1kkg2.png",
       desc: "Badminton is not only about winning. It's about playing beautiful, memorable games.",
       date: "28th-29th October",
     },
@@ -43,7 +43,7 @@ function Events() {
       id: 4,
       sportName: "Football",
       imgUrl:
-        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729823/ashvamedha/events/kypkiyi1i6bk9ciqwyym.jpg",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728718553/ashvamedha/events/fwn1aohwqu16an071qcv.png",
       desc: "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all, love of what you are doing or learning to do.",
       date: "28th-29th October",
     },
@@ -59,8 +59,16 @@ function Events() {
       id: 6,
       sportName: "Table Tennis",
       imgUrl:
-        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729823/ashvamedha/events/az73kyv1uookgumnjfiw.jpg",
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728718553/ashvamedha/events/nllyabnsse2bhzpcezfb.png",
       desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
+      date: "28th-29th October",
+    },
+    {
+      id: 9,
+      sportName: "GYM",
+      imgUrl:
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728721504/ashvamedha/events/dhsxh0cezuu09f1z9zyo.jpg",
+      desc: "The sound of weights hitting the floor is the sound of determination. Lift your potential!",
       date: "28th-29th October",
     },
   ];
