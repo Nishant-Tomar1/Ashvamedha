@@ -4,12 +4,13 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaYoutubeSquare,
-} from "react-icons/fa";
+} from "react-icons/fa/index.esm.js";
 import { IoClose, IoMenu } from "react-icons/io5";
 import React, { useState } from "react";
 
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi/index.esm.js";
 import { Link } from "react-scroll";
+import { Link as ActualLink } from "react-router-dom";
 import ashvamedhaLogo from "../../assests/demoPhotos/ashvamedhaLogo.png";
 import { useNavigate } from "react-router-dom";
 
@@ -56,12 +57,12 @@ function Navbar() {
       path: "ContactUs",
       cName: "nav-text",
     },
-    {
-      title: "Rulebook",
-      path: "/rulebook",
-      cName: "nav-text ",
-      navigate: true,
-    },
+    // {
+    //   title: "Rulebook",
+    //   path: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view?usp=sharing",
+    //   cName: "nav-text ",
+    //   navigate: false,
+    // },
   ];
   const navigate = useNavigate();
   return (
@@ -97,7 +98,14 @@ function Navbar() {
               </li>
             );
           })}
+          <li key="25" className="nav-text rulebook">
+                <ActualLink target="_blank" to="https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view?usp=sharing" >
+                    <span>Rulebook</span>
+                </ActualLink>
+          </li>
         </ul>
+        
+      
       </div>
       <div className="social-media">
         {/* hamburger menu start  */}

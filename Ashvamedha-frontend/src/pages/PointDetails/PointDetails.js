@@ -2,11 +2,11 @@ import "./PointDetails.scss";
 
 import React, { useEffect, useState } from "react";
 
-import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/Navbar/Navbar";
-import PointInfo from "../../components/PointInfo/PointInfo";
+import Footer from "../../components/Footer/Footer.js";
+import Navbar from "../../components/Navbar/Navbar.js";
+import PointInfo from "../../components/PointInfo/PointInfo.js";
 import axios from "axios";
-import { setLoading } from "../../redux/appSlice";
+import { setLoading } from "../../redux/appSlice.js";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";

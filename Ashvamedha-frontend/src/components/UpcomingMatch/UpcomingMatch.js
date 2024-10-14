@@ -3,13 +3,13 @@ import "./UpcomingMatch.scss";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { VscClose } from "react-icons/vsc";
+import { VscClose } from "react-icons/vsc/index.esm.js";
 import axios from "axios";
 import badminton from "../../assests/demoPhotos/badminton.jpg";
 import basketball from "../../assests/demoPhotos/basketball.jpg";
 import chess1 from "../../assests/demoPhotos/chess.jpg";
 import football from "../../assests/demoPhotos/football.jpg";
-import { setLoading } from "../../redux/appSlice";
+import { setLoading } from "../../redux/appSlice.js";
 import tabletennis from "../../assests/demoPhotos/tt.jpg";
 import volleyball from "../../assests/demoPhotos/vb.jpg";
 

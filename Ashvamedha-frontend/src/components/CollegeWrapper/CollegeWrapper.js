@@ -1,6 +1,6 @@
 import React from "react";
 import "./CollegeWrapper.scss";
-import { AiOutlineDoubleRight } from "react-icons/ai";
+import { AiOutlineDoubleRight } from "react-icons/ai/index.esm.js";
 import { useNavigate } from "react-router-dom";
 function CollegeWrapper(props) {
   const navigate = useNavigate();
