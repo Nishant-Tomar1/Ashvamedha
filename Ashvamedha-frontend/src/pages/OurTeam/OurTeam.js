@@ -1,107 +1,138 @@
 import "./OurTeam.scss";
 
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+// import React, { useEffect, useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
 
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-import axios from "axios";
-import { setLoading } from "../../redux/appSlice";
+// import axios from "axios";
+// import { setLoading } from "../../redux/appSlice";
 import Loader from "../../components/Loader/Loader";
 
 function OurTeam() {
-  const dispatch = useDispatch();
-  const isLoading = useSelector((state) => state.appReducer.isLoading);
-  const [teamImg, setTeamImg] = useState([]);
-  async function fetchTeamImages() {
-    try {
-      dispatch(setLoading(true));
-      const response = await axios.post(
-        "https://ashvamedha.onrender.com/upload/",
-        {
-          folderName: "TeamImg",
-        }
-      );
-      setTeamImg(response?.data?.result);
-    } catch (err) {
-    } finally {
-      dispatch(setLoading(false));
-    }
-  }
-  useEffect(() => {
-    fetchTeamImages();
-  }, []);
+  // const dispatch = useDispatch();
+  // const isLoading = useSelector((state) => state.appReducer.isLoading);
+  // const [teamImg, setTeamImg] = useState([]);
+  // async function fetchTeamImages() {
+  //   try {
+  //     dispatch(setLoading(true));
+  //     const response = await axios.post(
+  //       "https://ashvamedha.onrender.com/upload/",
+  //       {
+  //         folderName: "TeamImg",
+  //       }
+  //     );
+  //     setTeamImg(response?.data?.result);
+  //   } catch (err) {
+  //   } finally {
+  //     dispatch(setLoading(false));
+  //   }
+  // }
+  // useEffect(() => {
+  //   fetchTeamImages();
+  // }, []);
   const chiefCoordinator = [
-    {
-      name: "Deepanshu Choudhary",
-      position: "Chief Coordinator",
-      image: teamImg[0]?.image?.url,
-      no: "+91 8449485116",
-    },
+    // {
+    //   name: "Abhishek Jakhar",
+    //   position: "Chief Coordinator",
+    //   image: teamImg[0]?.image?.url,
+    //   no: "+91 7976512192",
+    // },
   ];
 
   const teamMembers = [
     {
-      name: "Damtak Ligu",
-      position: "Publicity Co-ordinator",
-      image: teamImg[3]?.image?.url,
-      no: "+91 7630956265",
+      name: "Sanskar Kosare",
+      position: "Publicity ",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720503/ashvamedha/team/pi1yovzsrbn9xqew5hew.jpg",
+      no: "+91 8208278646",
     },
     {
-      name: "Sarlongki",
-      position: "Events Co-ordinator",
-      image: teamImg[1]?.image?.url,
-      no: "+91 8135071971",
+      name: "Mayank Raj",
+      position: "Events ",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728721046/ashvamedha/team/vplukiobhozebm5pio5t.jpg",
+      no: "+91 7709446384",
     },
     {
-      name: "Anurag Barman",
-      position: "Spons Co-ordinator",
-      image: teamImg[2]?.image?.url,
-      no: "+91 7099537740",
+      name: "Soumyajeet",
+      position: "Sponsorship",
+      image : "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720503/ashvamedha/team/wvxnpci56fgf6qa2uyik.jpg",
+      no: "+91 9836821118",
     },
     {
-      name: "Meenal C Nimje",
-      position: "Web&D Co-ordinator",
-      image: teamImg[4]?.image?.url,
-      no: "+91 8591182265",
+      name: "Adhiraj Dubey",
+      position: "Web&D ",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720505/ashvamedha/team/d6pqqqdexscnkvwnoxps.jpg",
+      no: "+91 9589660889",
     },
+    
   ];
   const corehead = [
     {
-      name: "Arihant Garg",
+      name: "Nishant",
       position: "Core Head",
-      image: teamImg[5]?.image?.url,
-      no: "+91 8448861199",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720504/ashvamedha/team/vlycnaazp2qcrygswxya.jpg",
+      no: "+91 8920481815",
     },
     {
-      name: "Ayush Singh",
+      name: "Shivam",
       position: "Core Head",
-      image: teamImg[6]?.image?.url,
-      no: "+91 7078421798",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728843691/ashvamedha/team/u5rmar3eivphrscjfm8f.jpg",
+      no: "+91 6378287518",
     },
     {
-      name: "Natasha Mukherjee",
+      name: "Nirali",
       position: "Core Head",
-      image: teamImg[7]?.image?.url,
-      no: "+91 9959533758",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720504/ashvamedha/team/vvxkkb0qsq2cd6t7vkvx.jpg",
+      no: "+91 6378233277",
+    },
+    // {
+    //   name: "Nitin Sharma",
+    //   position: "Core Head",
+    //   image: teamImg[8]?.image?.url,
+    //   no: "+91 8390685086",
+    // },
+    {
+      name: "Rohit Mehta",
+      position: "Core Head",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720504/ashvamedha/team/zskuba18jbufnnsvjsic.jpg",
+      no: "+91 9119344248",
     },
     {
-      name: "Ram",
+      name: "Thanvi Reddy",
       position: "Core Head",
-      image: teamImg[8]?.image?.url,
-      no: "+91 8328537734",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720504/ashvamedha/team/vjmjgjyyxwcdksbuoeyj.jpg",
+      no: "+91 9381811060",
     },
     {
-      name: "Devesh Patodkar",
+      name: "Aniket",
       position: "Core Head",
-      image: teamImg[9]?.image?.url,
-      no: "+91 8379957983",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720505/ashvamedha/team/suzhk8pi17d2a9tng3u0.jpg",
+      no: "+91 9798697313",
     },
+    // {
+    //   name: "Sai Sandeep",
+    //   position: "Core Head",
+    //   image: teamImg[7]?.image?.url,
+    //   no: "+91 9177337254",
+    // },
+    {
+      name: "Tanish",
+      position: "Core Head ",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720504/ashvamedha/team/itligupcge8v6xtmrbiw.jpg",
+      no: "+91 6350108695",
+    },
+    {
+      name: "Vipin Kumar",
+      position: "Core Head",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728843690/ashvamedha/team/ide1pqdiut3yacmsnbhk.jpg",
+      no: "+91 7082604643",
+    }
   ];
   return (
     <>
     <Navbar />
-    {!isLoading ? 
+    {/* {!isLoading ?  */}
       (<div className="OurTeam">
         <h2 className="heading">
           <span className="h1">OUR</span>
@@ -131,7 +162,7 @@ function OurTeam() {
                     <img src={member.image} alt="" />
                   </div>
                   <div className="description">
-                    <p>{member.position}</p>
+                    <p>{member.position} <br /> Co-ordinator</p>
                     <h3 className="name">{member.name}</h3>
                     <h3>{member.no}</h3>
                   </div>
@@ -146,6 +177,7 @@ function OurTeam() {
                   </div>
                   <div className="description">
                     <p>{member.position}</p>
+
                     <h3 className="name">{member.name}</h3>
                     <h3>{member.no}</h3>
                   </div>
@@ -156,7 +188,7 @@ function OurTeam() {
         </div>
         <Footer />
       </div>)
-     : <Loader/>}
+     {/* : <Loader/>} */}
     </>
   );
 }
