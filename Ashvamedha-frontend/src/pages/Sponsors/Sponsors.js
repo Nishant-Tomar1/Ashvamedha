@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileCard from "../../components/ProfileCard/ProfileCard";
+import ProfileCard from "../../components/ProfileCard/ProfileCard.js";
 function Sponsors() {
   const sponsors = [
     { id: 1, name: "a", imgUrl: "" },

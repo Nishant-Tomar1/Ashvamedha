@@ -1,11 +1,11 @@
 import "./Home.scss";
 
-import AboutUs from "../../components/AboutUs/AboutUs";
-import Footer from "../../components/Footer/Footer";
-import Hero from "../../components/Hero/Hero";
-import Navbar from "../../components/Navbar/Navbar";
+import AboutUs from "../../components/AboutUs/AboutUs.js";
+import Footer from "../../components/Footer/Footer.js";
+import Hero from "../../components/Hero/Hero.js";
+import Navbar from "../../components/Navbar/Navbar.js";
 import React from "react";
-import HomeGallery from "../Gallery/HomeGallery";
+import HomeGallery from "../Gallery/HomeGallery.js";
 
 function Home() {
   return (

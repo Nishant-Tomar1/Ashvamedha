@@ -4,11 +4,11 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaYoutubeSquare,
-} from "react-icons/fa";
+} from "react-icons/fa/index.esm.js";
 import { IoClose, IoMenu } from "react-icons/io5";
 import React, { useState } from "react";
 
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi/index.esm.js";
 import { Link } from "react-scroll";
 import ashvamedhaLogo from "../../assests/demoPhotos/ashvamedhaLogo.png";
 import { useNavigate } from "react-router-dom";

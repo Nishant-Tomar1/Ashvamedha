@@ -1,21 +1,21 @@
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import Events from "./pages/Events/Events";
-import Gallery from "./pages/Gallery/Gallery";
-import Home from "./pages/Home/Home";
-import ImageUploder from "./pages/ImageUploder";
-import Leaderboard from "./pages/Leaderboard/Leaderboard";
-import LiveScore from "./pages/LiveScore/LiveScore";
-import OurTeam from "./pages/OurTeam/OurTeam";
-import PointDetails from "./pages/PointDetails/PointDetails";
-import SetLiveScore from "./pages/SetLiveScore/SetLiveScore";
-import SetPointTableScore from "./pages/SetLiveScore/SetPointTableScore";
-import SingleSport from "./pages/SingleSports/SingleSport";
-import SyncLoader from "react-spinners/SyncLoader";
-import UpdateLiveScore from "./pages/SetLiveScore/UpdateLiveScore";
+import Events from "./pages/Events/Events.js";
+import Gallery from "./pages/Gallery/Gallery.js";
+import Home from "./pages/Home/Home.js";
+import ImageUploder from "./pages/ImageUploder.js";
+import Leaderboard from "./pages/Leaderboard/Leaderboard.js";
+import LiveScore from "./pages/LiveScore/LiveScore.js";
+import OurTeam from "./pages/OurTeam/OurTeam.js";
+import PointDetails from "./pages/PointDetails/PointDetails.js";
+import SetLiveScore from "./pages/SetLiveScore/SetLiveScore.js";
+import SetPointTableScore from "./pages/SetLiveScore/SetPointTableScore.js";
+import SingleSport from "./pages/SingleSports/SingleSport.js";
+import SyncLoader from "react-spinners/SyncLoader.js";
+import UpdateLiveScore from "./pages/SetLiveScore/UpdateLiveScore.js";
 import { useSelector } from "react-redux";
-import Loader from "./components/Loader/Loader";
+import Loader from "./components/Loader/Loader.js";
 
 import ClipLoader from "react-spinners/ClipLoader";
 const style = {
