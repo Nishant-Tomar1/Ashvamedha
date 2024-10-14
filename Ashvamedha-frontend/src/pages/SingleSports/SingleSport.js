@@ -32,74 +32,136 @@ function SingleSport() {
     {
       id: 1,
       sportName: "Chess",
-      imgUrl: chess,
+      imgUrl: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/khcpaoug4b1uegv1q22f.jpg",
       desc: "Chess, the game of intellect and strategy, challenges players to outthink their opponents, anticipate moves, and plan ahead. At the Ashvamedha Chess Championship, we celebrate this timeless battle of wits. Whether you're a seasoned player or just starting, join us for two days of intense competition and camaraderie.Information Regarding the event is given below.",
-      date: "4th-5th November",
+      date: "26th - 27th October",
       location: "SES Room No: 218,219",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSeNmRWHKw7EtnT9qHi1RQR9wtH4C9qmPTaGY9KRuHwmKY3gQQ/viewform?usp=sf_link",
-      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
+        "",
+      rulebook: "#",
       poc: "Devesh Patodkar",
+      theme: "warm",
     },
     {
       id: 2,
       sportName: "Badminton",
-      imgUrl: badminton,
+      imgUrl: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728718553/ashvamedha/events/qeyeqi5joaef13p1kkg2.png",
       desc: "Badminton is a sport that demands speed, agility, and finesse. Whether you're smashing shuttlecocks or diving for a crucial save, the Ashvamedha Badminton Championship promises intense rallies and thrilling matches. Join us on the court for a birdie-tastic showdown.Information Regarding the event is given below.",
-      date: "4th-5th November",
-      location: "Inside SAC Badminton Court 1,2",
+      date: "26th - 27th October",
+      location: "Inside SAC Badminton Court",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSfQCeZ8wOvee8Bsib_gDMM6h8qAxHkCR4GnQZQCtuPbmL6RPQ/viewform?usp=sf_link",
-      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
-      poc: "Pranav P",
+        "https://forms.gle/RZHEHSQfr8Lar6HFA",
+      rulebook: "#",
+      poc: "Harish and  Ronanki Sai Vardhan",
+      theme: "cold",
     },
     {
       id: 3,
       sportName: "Volleyball",
-      imgUrl: vb,
+      imgUrl: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729823/ashvamedha/events/bwneqkxvz129rbzbmr00.jpg",
       desc: "Volleyball is a dynamic team sport that demands coordination, agility, and teamwork. Whether you're spiking, blocking, or diving for a save, it's all about the thrill of the game. Join us for a spirited match at Ashvamedha Sports Arena.Information Regarding the event is given below.",
-      date: "4th-5th November",
+      date: "26th - 27th October",
       location: "Volleyball Court 1,2",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSdZNWWyt43KqeVfyfwrqCBKLU24Yjs6xC1VTdGSLvT5hBCeXA/viewform?usp=sf_link",
-      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
-      poc: "Justa Tirkey",
+        "https://forms.gle/3PL7abtt11sK1HxF7",
+      rulebook: "#",
+      poc: "Baman Teja",
+      theme: "warm",
     },
     {
       id: 4,
       sportName: "Football",
-      imgUrl: fb,
+      imgUrl: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728718553/ashvamedha/events/fwn1aohwqu16an071qcv.png",
       desc: "Football, the world's most beloved sport, unites people through the joy of scoring goals and making breathtaking saves. At Ashvamedha, we bring the football community together for a thrilling tournament filled with skill, passion, and unforgettable moments.Information Regarding the event is given below.",
-      date: "4th-5th November",
+      date: "26th - 27th October",
       location: "Football Ground",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSc2LLCqkKikPE8qUvW8eX3Rmp8GWkdcjXeoXIavFJUSOjCOlw/viewform?usp=sf_link",
-      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
-      poc: "Megha Shyam",
+        "https://forms.gle/1toBjx9Ss2oJtbqi9",
+      rulebook: "#",
+      poc: "Ajay Matasugur and Yasas",
+      theme: "cold",
     },
     {
       id: 5,
       sportName: "Basketball",
-      imgUrl: bb,
+      imgUrl: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/rfmuljtun5pabxcdrlou.jpg",
       desc: "Basketball is a fast-paced, high-flying game of strategy and skill. Dribble, pass, and shoot your way to victory in the Ashvamedha Basketball Championship. Join us on the court for slam dunks and three-pointers that will leave you in awe.Information Regarding the event is given below.",
-      date: "4th-5th November",
+      date: "26th - 27th October",
       location: "Basketball Court 1,2",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLScZ59xCzIccTuFT4DQmOQJPpFEc0kId6C02FGHorU22KDyDFQ/viewform?usp=sf_link",
-      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
-      poc: "Ayush Singh & Pranav P",
+        "https://forms.gle/HhyeT3XzW8qmMYAY6",
+      rulebook: "#",
+      poc: "Yash and Varsha",
+      theme: "warm",
     },
     {
       id: 6,
       sportName: "Table Tennis",
-      imgUrl: tt,
+      imgUrl: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728718553/ashvamedha/events/nllyabnsse2bhzpcezfb.png",
       desc: "Requires lightning-quick reflexes and precision. Ashvamedha's table tennis tournament is a showcase of spin serves, rallies, and impressive volleys. Come and experience the thrill of ping pong.Information Regarding the event is given below.",
       location: "Inside SAC Multi-Purpose Hall",
-      date: "4th-5th November",
+      date: "26th - 27th October",
+      registrationLink:
+        "https://forms.gle/AA6bNJrpzKDjDieUA",
+      poc: "Thanvi Reddy and Ayush",
+      rulebook: "#",
+      theme: "cold",
+    },
+    {
+      id: 7,
+      sportName: "BGMI",
+      imgUrl:
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/gwbnnstk5f6m2so6m4s4.jpg",
+      desc: "Battlegrounds Mobile India (BGMI) immerses players in a thrilling battle royale experience. Parachute onto a vibrant island, scavenge for weapons, and outmaneuver opponents in intense firefights",
+      location: "Inside SAC Multi-Purpose Hall",
+      date: "26th - 27th October",
       registrationLink:
         "https://docs.google.com/forms/d/e/1FAIpQLSfktHYxmXIKN_iowh15gurxkvr8BKKoSigVkyIp7YVchMMgvA/viewform?usp=sf_link",
       poc: "Jatin Sahu",
-      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
+      rulebook: "#",
+      theme: "warm",
+    },
+    {
+      id: 8,
+      sportName: "GYM and WeighLifting",
+      imgUrl:
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728721504/ashvamedha/events/dhsxh0cezuu09f1z9zyo.jpg",
+      desc: "The gym, a sanctuary of sweat and determination, becomes a canvas where weightlifting transforms mere metal into the artistry of strength, sculpting not only physiques but also character.",
+      location: "Inside SAC Multi-Purpose Hall",
+      date: "26th - 27th October",
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfktHYxmXIKN_iowh15gurxkvr8BKKoSigVkyIp7YVchMMgvA/viewform?usp=sf_link",
+      poc: "Jatin Sahu",
+      rulebook: "",
+      theme: "cold",
+    },
+    {
+      id: 9,
+      sportName: "Athletics",
+      imgUrl:
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/wdxnqj88su8gu4gus0fc.jpg",
+      desc: "Athletics, the exhilarating pursuit of speed, agility, and endurance, unfolds as a dynamic tapestry of human potential, where each race and jump becomes a vivid expression of determination and skill.",
+      location: "Inside SAC Multi-Purpose Hall",
+      date: "26th - 27th October",
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfktHYxmXIKN_iowh15gurxkvr8BKKoSigVkyIp7YVchMMgvA/viewform?usp=sf_link",
+      poc: "Jatin Sahu",
+      rulebook: "",
+      theme: "warm",
+    },
+    {
+      id: 10,
+      sportName: "Lawn Tennis",
+      imgUrl:
+        "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728895226/ashvamedha/events/yaocywewl3qdfk26lnha.jpg",
+      desc: "Step onto the vibrant court of lawn tennis, where each stroke of the racket echoes with determination and grace. Here, athletes transform challenges into artistry, competing in a dance of precision and skill.",
+      location: "Lawn Tennis Court",
+      date: "26th - 27th October",
+      registrationLink:
+        "https://forms.gle/w2a4Sm1PXMms3qJD6",
+      poc: "M Pranavram and Krish Garg",
+      rulebook: "#",
+      theme: "cold",
     },
   ];
   return (
@@ -108,53 +170,50 @@ function SingleSport() {
       <div className="sportspage">
         <div className="popup-content">
           <div className="match-popup">
-            <h2 onClick={() => setPopUpOpen(!popUpOpen)} className="hover-link">
-              Upcoming Matches
+            <h2
+              onClick={() => handleRegistration(sportDetail.sportName)}
+              className={sportDetail.theme}
+            >
+              Register
             </h2>
             <AiOutlineDoubleRight
-              onClick={() => setPopUpOpen(!popUpOpen)}
+              onClick={() => handleRegistration(sportDetail.sportName)}
               className="next"
             />
           </div>
-          <div
-            className="match-liveScore"
-            onClick={() => navigate(`/livescore/${sportDetail.sportName}`)}
-          >
-            <h2 className="hover-link"> Live Score</h2>
-            <AiOutlineDoubleRight
-              className="next"
-              onClick={() => navigate(`/livescore/${sportDetail.sportName}`)}
-            />
-          </div>
-          {popUpOpen && (
-            <UpcomingMatch
-              trigger={true}
-              children={"this is popup"}
-              sportid={sportid}
-            />
-          )}
+          {/* Uncomment if you want to add a Live Score option */}
+          {/* <div
+    className="match-liveScore"
+    onClick={() => navigate(`/livescore/${sportDetail.sportName}`)}
+  >
+    <h2 className="hover-link"> Live Score</h2>
+    <AiOutlineDoubleRight
+      className="next"
+      onClick={() => navigate(`/livescore/${sportDetail.sportName}`)}
+    />
+  </div> */}
         </div>
-        <div className="cards">
+
+        <div className="cards" style={{ marginTop: "20px" }}>
           <div className="sports-info">
-            <h1 className="name">{sportDetail.sportName}</h1>
+            <h1 id={sportDetail.theme}>{sportDetail.sportName}</h1>
             <p className="desc">{sportDetail.desc}</p>
             <p className="poc">
-              <span className="highlight">Person of Contact:</span>{" "}
+              <span className={sportDetail.theme}>Person of Contact:</span>{" "}
               {sportDetail.poc}
             </p>
             <p className="venue">
-              <span className="highlight">Location:</span>{" "}
+              <span className={sportDetail.theme}>Location:</span>{" "}
               {sportDetail.location}
             </p>
             <p className="date">
-              <span className="highlight">Date:</span> {sportDetail.date}
+              <span className={sportDetail.theme}>Date:</span> {sportDetail.date}
             </p>
             <a
               className="rulebook"
               href={sportDetail.rulebook}
-              download="Rulebook"
             >
-              <span className="highlight">Rulebook:</span> Click here
+              <span className={sportDetail.theme}>Rulebook:</span> Click here
             </a>
           </div>
           <div className="sports-img">

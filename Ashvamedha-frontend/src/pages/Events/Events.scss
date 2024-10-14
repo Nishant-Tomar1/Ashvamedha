@@ -66,7 +66,7 @@
             flex-direction: column;
             justify-content: space-evenly;
 
-            .name {
+            .warm {
                 font-size: 46px;
                 margin: 0 0 20px;
                 opacity: 1;
@@ -77,11 +77,22 @@
                 color: #FF6D02;
             }
 
+            .cold {
+                font-size: 46px;
+                margin: 0 0 20px;
+                opacity: 1;
+                font-weight: 500;
+                transform: translateY(30px);
+                transition: all 0.3s ease-out;
+                text-transform: uppercase;
+                color: #36d8fe;
+            }
+
             .desc {
                 font-size: 24px;
             }
 
-            .btn-primary {
+            #warm {
                 color: #FF6D02;
                 border: 1px solid #FF6D02;
                 background: transparent;
@@ -100,6 +111,29 @@
                     color: white;
                     background: #FF6D02;
                     border: 1px solid #FF6D02;
+
+                }
+            }
+
+            #cold {
+                color: #36d8fe;
+                border: 1px solid #36d8fe;
+                background: transparent;
+                padding: 12px 24px;
+                font-size: 16px;
+                height: 50px;
+                font-weight: 500;
+                width: 180px;
+                border-radius: 10px;
+                transition: all ease-in 0.3s;
+                cursor: pointer;
+                // margin-right: 200px;
+
+                &:hover {
+                    // background-color: #FF6D02;
+                    color: white;
+                    background: #36d8fe;
+                    border: 1px solid #36d8fe;
 
                 }
             }
