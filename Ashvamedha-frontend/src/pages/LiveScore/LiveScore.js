@@ -2,9 +2,9 @@ import "./LiveScore.scss";
 
 import React, { useEffect, useState } from "react";
 
-import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/Navbar/Navbar";
-import ScoreCard from "../../components/ScoreCard/ScoreCard";
+import Footer from "../../components/Footer/Footer.js";
+import Navbar from "../../components/Navbar/Navbar.js";
+import ScoreCard from "../../components/ScoreCard/ScoreCard.js";
 import axios from "axios";
 import live from "../../assests/demoPhotos/live.png";
 import { useParams } from "react-router-dom";

@@ -3,9 +3,9 @@ import "./AboutUs.scss";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import CounterUpPage from "./CounterUpPage";
+import CounterUpPage from "./CounterUpPage.js";
 import axios from "axios";
-import { setLoading } from "../../redux/appSlice";
+import { setLoading } from "../../redux/appSlice.js";
 import merch from "../../assests/aboutusassets/merch.png"
 
 function AboutUs() {

@@ -3,9 +3,9 @@ import "./SingleSport.scss";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { AiOutlineDoubleRight } from "react-icons/ai";
-import Navbar from "../../components/Navbar/Navbar";
-import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch";
+import { AiOutlineDoubleRight } from "react-icons/ai/index.esm.js";
+import Navbar from "../../components/Navbar/Navbar.js";
+import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch.js";
 import badminton from "../../assests/demoPhotos/badminton.jpg";
 import bb from "../../assests/demoPhotos/basketball.jpg";
 import chess from "../../assests/demoPhotos/chess.jpg";

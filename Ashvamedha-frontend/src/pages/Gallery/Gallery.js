@@ -1,9 +1,9 @@
 import "./Gallery.scss";
 
-import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer.js";
+import Navbar from "../../components/Navbar/Navbar.js";
 import React from "react";
-import SportGallery from "../../components/SportGallery/SportGallery";
+import SportGallery from "../../components/SportGallery/SportGallery.js";
 
 function Gallery() {
   return (

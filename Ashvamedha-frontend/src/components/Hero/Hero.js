@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { useNavigate } from "react-router-dom";
-import Loader from "../Loader/Loader";
+import Loader from "../Loader/Loader.js";
 
 function Hero() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
