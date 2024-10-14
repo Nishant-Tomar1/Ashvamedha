@@ -41,7 +41,7 @@ function App() {
   }, [isLoading]);
   return (
     <div className="App">
-       <div className="style" style={style}> 
+       {/* <div className="style" style={style}> 
            <SyncLoader
            color="#030027"
            loading={loading}
@@ -50,7 +50,7 @@ function App() {
            speedMultiplier={1}
            cssOverride={properties}
          />
-       </div>
+       </div> */}
       {/* <div>
         <Loader/>
       </div> */}

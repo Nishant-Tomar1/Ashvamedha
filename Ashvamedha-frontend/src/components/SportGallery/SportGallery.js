@@ -200,7 +200,8 @@ function SportGallery() {
       (<>
         <h1>
         <span className="h1">ASHVA</span>
-        <span className="h2">MEDHA-2022</span>
+        <span className="h2">MEDHA-</span>
+        <span className="h1">2023</span>
       </h1>
       <div class="container-gallery">
         

@@ -72,7 +72,7 @@ function HomeGallery() {
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
   )
 }
 

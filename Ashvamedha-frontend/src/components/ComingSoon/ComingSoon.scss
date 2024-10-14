@@ -1,0 +1,15 @@
+.comingsoon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 87vh;
+    text-align: center;
+    h1{
+        font-size: 2rem;
+        color: white;
+        span{
+            color: #FF6D02;
+        }
+    }
+}

@@ -36,7 +36,7 @@ function AboutUs() {
   }, []);
 
   return (
-    !isLoading && (
+   (
       <div className="AboutUs" id="hello">
         
           <div className="content">

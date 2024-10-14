@@ -10,7 +10,7 @@ function Hero() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
   const navigate = useNavigate();
   return (
-    (!isLoading ? 
+    (
       <div className="hero">
         <div className="container">
           <div className="content-hero">
@@ -39,7 +39,7 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div> : (<Loader/>))
+      </div> )
    
   );
 }
