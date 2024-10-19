@@ -37,7 +37,7 @@ function SingleSport() {
       date: "26th - 27th October",
       location: "SES Room No: 218,219",
       registrationLink:
-        "",
+        "https://docs.google.com/forms/d/e/1FAIpQLSd9i_E6j5lr2aquQ3RxkeBOb_-mL9OcEjlplMMVasNJw4iZFg/viewform",
       rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
       poc: "Srikanth (9392358848)",
       theme: "warm",

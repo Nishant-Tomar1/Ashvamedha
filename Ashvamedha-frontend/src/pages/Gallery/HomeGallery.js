@@ -21,7 +21,7 @@ function HomeGallery() {
                         <img src="https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728626960/ashvamedha/ashvamedha2023/qxgodwopz0prrfgkbovi.jpg" alt="img" />
                     </div>
                     <div>
-                        <img src="https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728626958/ashvamedha/ashvamedha2023/arhy2bwl1t47zejc0rz6.jpg" alt="img" />
+                        <img src="https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728626960/ashvamedha/ashvamedha2023/v2ghczhivwgsxts0inzg.jpg" alt="img" />
                     </div>
                     <div>
                         <img src="https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728626966/ashvamedha/ashvamedha2023/izmdegn1bsnlfjdjnifg.jpg" alt="img" />
