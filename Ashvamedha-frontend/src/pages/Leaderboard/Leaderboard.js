@@ -3,12 +3,12 @@ import "./Leaderboard.scss";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import CollegeWrapper from "../../components/CollegeWrapper/CollegeWrapper.js";
+// import CollegeWrapper from "../../components/CollegeWrapper/CollegeWrapper.js";
 import Footer from "../../components/Footer/Footer.js";
 import Navbar from "../../components/Navbar/Navbar.js";
 import axios from "axios";
 import { setLoading } from "../../redux/appSlice.js";
-import Loader from "../../components/Loader/Loader.js"
+// import Loader from "../../components/Loader/Loader.js"
 import ComingSoon from "../../components/ComingSoon/ComingSoon.js";
 
 function Leaderboard() {

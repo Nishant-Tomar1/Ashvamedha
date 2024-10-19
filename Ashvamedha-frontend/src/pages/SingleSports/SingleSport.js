@@ -6,12 +6,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AiOutlineDoubleRight } from "react-icons/ai/index.esm.js";
 import Navbar from "../../components/Navbar/Navbar.js";
 import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch.js";
-import badminton from "../../assests/demoPhotos/badminton.jpg";
-import bb from "../../assests/demoPhotos/basketball.jpg";
-import chess from "../../assests/demoPhotos/chess.jpg";
-import fb from "../../assests/demoPhotos/football.jpg";
-import tt from "../../assests/demoPhotos/tt.jpg";
-import vb from "../../assests/demoPhotos/vb.jpg";
+// import badminton from "../../assests/demoPhotos/badminton.jpg";
+// import bb from "../../assests/demoPhotos/basketball.jpg";
+// import chess from "../../assests/demoPhotos/chess.jpg";
+// import fb from "../../assests/demoPhotos/football.jpg";
+// import tt from "../../assests/demoPhotos/tt.jpg";
+// import vb from "../../assests/demoPhotos/vb.jpg";
 
 function SingleSport() {
   const params = useParams();
@@ -38,8 +38,8 @@ function SingleSport() {
       location: "SES Room No: 218,219",
       registrationLink:
         "",
-      rulebook: "#",
-      poc: "Devesh Patodkar",
+      rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+      poc: "Srikanth (9392358848)",
       theme: "warm",
     },
     {
@@ -51,8 +51,8 @@ function SingleSport() {
       location: "Inside SAC Badminton Court",
       registrationLink:
         "https://forms.gle/RZHEHSQfr8Lar6HFA",
-      rulebook: "#",
-      poc: "Harish and  Ronanki Sai Vardhan",
+      rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+      poc: "Harish (6264869374) and Sai Vardhan (8144574654)",
       theme: "cold",
     },
     {
@@ -64,8 +64,8 @@ function SingleSport() {
       location: "Volleyball Court 1,2",
       registrationLink:
         "https://forms.gle/3PL7abtt11sK1HxF7",
-      rulebook: "#",
-      poc: "Baman Teja",
+      rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+      poc: "Baman Teja (6304640345)",
       theme: "warm",
     },
     {
@@ -77,8 +77,8 @@ function SingleSport() {
       location: "Football Ground",
       registrationLink:
         "https://forms.gle/1toBjx9Ss2oJtbqi9",
-      rulebook: "#",
-      poc: "Ajay Matasugur and Yasas",
+      rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+      poc: "Ajay (9152177679) and Yasas (7847825923)",
       theme: "cold",
     },
     {
@@ -90,8 +90,8 @@ function SingleSport() {
       location: "Basketball Court 1,2",
       registrationLink:
         "https://forms.gle/HhyeT3XzW8qmMYAY6",
-      rulebook: "#",
-      poc: "Yash and Varsha",
+      rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+      poc: "Shivam (6378287518) and Varsha (8002166766)",
       theme: "warm",
     },
     {
@@ -103,8 +103,8 @@ function SingleSport() {
       date: "26th - 27th October",
       registrationLink:
         "https://forms.gle/AA6bNJrpzKDjDieUA",
-      poc: "Thanvi Reddy and Ayush",
-      rulebook: "#",
+      poc: "Thanvi Reddy (9381811060) and Ayush (6367645929)",
+      rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
       theme: "cold",
     },
     {
@@ -113,26 +113,26 @@ function SingleSport() {
       imgUrl:
         "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/gwbnnstk5f6m2so6m4s4.jpg",
       desc: "Battlegrounds Mobile India (BGMI) immerses players in a thrilling battle royale experience. Parachute onto a vibrant island, scavenge for weapons, and outmaneuver opponents in intense firefights",
-      location: "Inside SAC Multi-Purpose Hall",
+      location: "ONLINE",
       date: "26th - 27th October",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSfktHYxmXIKN_iowh15gurxkvr8BKKoSigVkyIp7YVchMMgvA/viewform?usp=sf_link",
-      poc: "Jatin Sahu",
-      rulebook: "#",
+        "https://docs.google.com/forms/d/e/1FAIpQLSeK79UZD1OPOyf_3djG2tUhWAhvMO8VOqh77xP9HO4KwJELaw/viewform",
+      poc: "Sanskar Kosare (8208278646)",
+      rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
       theme: "warm",
     },
     {
       id: 8,
-      sportName: "GYM and WeighLifting",
+      sportName: "GYM & Weightlifting",
       imgUrl:
         "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728721504/ashvamedha/events/dhsxh0cezuu09f1z9zyo.jpg",
       desc: "The gym, a sanctuary of sweat and determination, becomes a canvas where weightlifting transforms mere metal into the artistry of strength, sculpting not only physiques but also character.",
-      location: "Inside SAC Multi-Purpose Hall",
+      location: "SAC GYM",
       date: "26th - 27th October",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSfktHYxmXIKN_iowh15gurxkvr8BKKoSigVkyIp7YVchMMgvA/viewform?usp=sf_link",
-      poc: "Jatin Sahu",
-      rulebook: "",
+        "https://docs.google.com/forms/d/e/1FAIpQLSf1Ib2CKYc8CGiFOyoPLyyBV1cvjqKlH8jfPjQImGfxQCqcAA/viewform",
+      poc: "Deekshansh (7225855505) and Tanish (6350108695)",
+      rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
       theme: "cold",
     },
     {
@@ -141,12 +141,12 @@ function SingleSport() {
       imgUrl:
         "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1727729822/ashvamedha/events/wdxnqj88su8gu4gus0fc.jpg",
       desc: "Athletics, the exhilarating pursuit of speed, agility, and endurance, unfolds as a dynamic tapestry of human potential, where each race and jump becomes a vivid expression of determination and skill.",
-      location: "Inside SAC Multi-Purpose Hall",
+      location: "Beside Football Ground",
       date: "26th - 27th October",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSfktHYxmXIKN_iowh15gurxkvr8BKKoSigVkyIp7YVchMMgvA/viewform?usp=sf_link",
-      poc: "Jatin Sahu",
-      rulebook: "",
+        "https://docs.google.com/forms/d/e/1FAIpQLSeex8BxbszNjeyrJbllYiodsJWSH2TeEsPaDYVRHms1wGrTJw/viewform",
+      poc: "Sreenath Reddy (9703040597) and Lukge Jilen (7085758430)",
+      rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
       theme: "warm",
     },
     {
@@ -155,18 +155,19 @@ function SingleSport() {
       imgUrl:
         "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728895226/ashvamedha/events/yaocywewl3qdfk26lnha.jpg",
       desc: "Step onto the vibrant court of lawn tennis, where each stroke of the racket echoes with determination and grace. Here, athletes transform challenges into artistry, competing in a dance of precision and skill.",
-      location: "Lawn Tennis Court",
+      location: "SAC Tennis Courts",
       date: "26th - 27th October",
       registrationLink:
         "https://forms.gle/w2a4Sm1PXMms3qJD6",
-      poc: "M Pranavram and Krish Garg",
-      rulebook: "#",
+      poc: "M Pranavram (8072477461) and Krish Garg (7217530667)",
+      rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
       theme: "cold",
     },
   ];
   return (
+    <>
+      {/* <Navbar /> */}
     <div className="single-sport-page">
-      <Navbar />
       <div className="sportspage">
         <div className="popup-content">
           <div className="match-popup">
@@ -194,7 +195,7 @@ function SingleSport() {
   </div> */}
         </div>
 
-        <div className="cards" style={{ marginTop: "20px" }}>
+        <div className="cards" >
           <div className="sports-info">
             <h1 id={sportDetail.theme}>{sportDetail.sportName}</h1>
             <p className="desc">{sportDetail.desc}</p>
@@ -222,6 +223,7 @@ function SingleSport() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

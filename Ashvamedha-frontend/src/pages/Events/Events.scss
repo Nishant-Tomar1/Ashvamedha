@@ -8,8 +8,8 @@
         justify-content: center;
         width: 100%;
         align-items: center;
-        font-size: 46px;
-        margin-top: 50px;
+        font-size: 55px;
+        margin-top: 40px;
         // border: 2px solid red;
 
         .h1 {
@@ -32,7 +32,7 @@
         margin-top: 60px;
         margin-bottom: 100px;
         max-width: 124rem;
-        padding: 4rem 1rem;
+        padding: 2rem 1rem;
         margin: 0 auto;
         // border: 2px solid red;
         // min-height: 100%;
@@ -45,7 +45,7 @@
         justify-content: space-around;
         height: 400px;
         color: white;
-        margin: 80px 0;
+        margin: 40px 0;
 
         .image {
             img {
@@ -67,7 +67,7 @@
             justify-content: space-evenly;
 
             .warm {
-                font-size: 46px;
+                font-size: 2.1rem;
                 margin: 0 0 20px;
                 opacity: 1;
                 font-weight: 500;
@@ -78,7 +78,7 @@
             }
 
             .cold {
-                font-size: 46px;
+                font-size:2.1rem;
                 margin: 0 0 20px;
                 opacity: 1;
                 font-weight: 500;
@@ -89,7 +89,7 @@
             }
 
             .desc {
-                font-size: 24px;
+                font-size: 22px;
             }
 
             #warm {
@@ -154,7 +154,7 @@
             justify-content: center;
             width: 100%;
             align-items: center;
-            font-size: 36px;
+            font-size: 40px;
             margin-top: 50px;
             // border: 2px solid red;
 
@@ -194,10 +194,16 @@
                 }
 
                 .sport-info {
+                    margin-top: 0;
                     flex-direction: column;
                     width: 100%;
 
+                    .heading{
+                        font-size: 1.65rem;
+                    }
+
                     .desc {
+                        font-size: 1rem;
                         margin: 20px 0;
                     }
                 }

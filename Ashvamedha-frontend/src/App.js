@@ -17,18 +17,18 @@ import UpdateLiveScore from "./pages/SetLiveScore/UpdateLiveScore.js";
 import { useSelector } from "react-redux";
 import Loader from "./components/Loader/Loader.js";
 
-import ClipLoader from "react-spinners/ClipLoader";
-const style = {
-  position: "fixed",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-};
-const properties = {
-  display: "block",
-  margin: "0 auto",
-  borderColor: "red",
-};
+// import ClipLoader from "react-spinners/ClipLoader";
+// const style = {
+//   position: "fixed",
+//   top: "50%",
+//   left: "50%",
+//   transform: "translate(-50%, -50%)",
+// };
+// const properties = {
+//   display: "block",
+//   margin: "0 auto",
+//   borderColor: "red",
+// };
 function App() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
   const [loading, setLoading] = useState(false);

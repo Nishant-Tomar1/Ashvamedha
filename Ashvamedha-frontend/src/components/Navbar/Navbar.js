@@ -52,11 +52,11 @@ function Navbar() {
       cName: "nav-text",
       navigate: true,
     },
-    {
-      title: "Contact Us",
-      path: "ContactUs",
-      cName: "nav-text",
-    },
+    // {
+    //   title: "Contact Us",
+    //   path: "ContactUs",
+    //   cName: "nav-text",
+    // },
     // {
     //   title: "Rulebook",
     //   path: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view?usp=sharing",
@@ -98,6 +98,11 @@ function Navbar() {
               </li>
             );
           })}
+          <li key="25" className="nav-text rulebook">
+                <ActualLink target="_blank" to="https://drive.google.com/file/d/1uYx_bUUJfOQ2pumA8WBRG5euHmx8q9xl/view?usp=sharing" >
+                    <span>Brochure</span>
+                </ActualLink>
+          </li>
           <li key="25" className="nav-text rulebook">
                 <ActualLink target="_blank" to="https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view?usp=sharing" >
                     <span>Rulebook</span>

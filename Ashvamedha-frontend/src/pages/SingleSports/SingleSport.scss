@@ -3,8 +3,8 @@
     // height: 100%;
 
     .sportspage {
-        position: absolute;
-        top: 70px;
+        // position: absolute;
+        // top: 70px;
         // background: #151515;
         // border: 2px solid red;
         display: flex;
@@ -40,7 +40,7 @@
                 // border: 2px solid teal;
 
                 .warm {
-                    font-size: 23px;
+                    font-size: 28px;
                     // position: absolute;
                     cursor: pointer;
                     // top: 70px;
@@ -49,7 +49,7 @@
                 }
 
                 .cold {
-                    font-size: 23px;
+                    font-size: 28px;
                     // position: absolute;
                     cursor: pointer;
                     // top: 70px;
@@ -261,14 +261,16 @@
                 flex-direction: column-reverse;
                 // background-color: #151515;
                 align-items: center;
-                height: 80%;
+                // min-height: 120vh;
                 width: 100%;
                 color: white;
-                margin-top: 20px;
+                margin-top: 0px !important;
+                margin-bottom: 20px;
+                padding: 0px 20px ;
 
                 .sports-img {
-                    width: 350px;
-                    height: 350px;
+                    width: 300px;
+                    height: 300px;
                     border-radius: 20px;
                     margin-right: 0px;
                     margin: 20px 0;
@@ -290,11 +292,12 @@
                     align-items: center;
                     width: 100%;
                     margin-left: 0px;
+                    text-align: center;
 
                     .warm,
                     .cold {
                         text-align: center;
-                        font-size: 36px;
+                        font-size: 20px;
                         font-weight: 900;
                         margin-bottom: 0px;
                     }
@@ -303,7 +306,7 @@
                         margin-top: 5px;
                         margin-bottom: 10px;
                         text-align: center;
-                        font-size: 16px;
+                        font-size: 20px;
                         width: 90%;
                         // border: 2px solid red;
 

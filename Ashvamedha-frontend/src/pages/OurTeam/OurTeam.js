@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 // import axios from "axios";
 // import { setLoading } from "../../redux/appSlice";
-import Loader from "../../components/Loader/Loader";
+// import Loader from "../../components/Loader/Loader";
 
 function OurTeam() {
   // const dispatch = useDispatch();
@@ -32,12 +32,12 @@ function OurTeam() {
   //   fetchTeamImages();
   // }, []);
   const chiefCoordinator = [
-    // {
-    //   name: "Abhishek Jakhar",
-    //   position: "Chief Coordinator",
-    //   image: teamImg[0]?.image?.url,
-    //   no: "+91 7976512192",
-    // },
+    {
+      name: "Abhishek Jakhar",
+      position: "Chief Coordinator",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1729327567/ashvamedha/team/z0wu3a16v1k0wgqeyxt5.jpg",
+      no: "+91 7976512192",
+    },
   ];
 
   const teamMembers = [

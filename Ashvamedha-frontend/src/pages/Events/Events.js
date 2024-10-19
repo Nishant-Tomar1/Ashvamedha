@@ -110,11 +110,10 @@ function Events() {
   return (
     <>
       <Navbar />
-      {!isLoading ?
         (
           <div className="events">
             <h2 className="heading">
-              <span className="h1">UPCOMING </span>
+              <span className="h1">OUR</span>
               <span className="h2">EVENTS</span>
             </h2>
             <div className="event-container">
@@ -125,7 +124,7 @@ function Events() {
                       <img src={item?.imgUrl} alt="sport" />
                     </div>
                     <div className="sport-info">
-                      <div className={item?.theme} >{item?.sportName}</div>
+                      <div className={`${item?.theme} heading`} >{item?.sportName}</div>
                       <div className="desc">"{item?.desc}"</div>
                       <div className="button">
                         <button
@@ -143,7 +142,6 @@ function Events() {
             </div>
             <Footer />
           </div>)
-        : <Loader />}
     </>
   );
 }

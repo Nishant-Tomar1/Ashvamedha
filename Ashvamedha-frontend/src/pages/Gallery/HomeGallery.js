@@ -59,7 +59,7 @@ function HomeGallery() {
                         <img src="https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728626961/ashvamedha/ashvamedha2023/xmpndasxnoiyo1ethn09.jpg" alt="img" />
                     </div>
                     <div>
-                        <img src="https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728624637/ashvamedha/ashvamedha2023/mcjf4cfpvy8pxhg3hqaf.jpg" alt="img" />
+                        <img src="https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728626958/ashvamedha/ashvamedha2023/arhy2bwl1t47zejc0rz6.jpg" alt="img" />
                     </div>
                     <div>
                         <img src="https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728626961/ashvamedha/ashvamedha2023/wlezohimcshwzqzwfpfg.jpg" alt="img" />

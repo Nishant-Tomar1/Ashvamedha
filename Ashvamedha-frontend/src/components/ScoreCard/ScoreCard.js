@@ -5,6 +5,7 @@ import vs from "../../assests/demoPhotos/vs1.png";
 
 function ScoreCard(props) {
   return (
+    <>    
     <div className="score-card">
       <div className="part1">
         <div className="college1-info">
@@ -33,6 +34,7 @@ function ScoreCard(props) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
