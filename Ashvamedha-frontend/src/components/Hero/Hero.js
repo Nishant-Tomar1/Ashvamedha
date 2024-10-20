@@ -1,13 +1,16 @@
 import "./Hero.scss";
 
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+// import 
+// {
+  //  useDispatch,
+    // useSelector } from "react-redux";
 
 import { useNavigate } from "react-router-dom";
-import Loader from "../Loader/Loader.js";
+// import Loader from "../Loader/Loader.js";
 
 function Hero() {
-  const isLoading = useSelector((state) => state.appReducer.isLoading);
+  // const isLoading = useSelector((state) => state.appReducer.isLoading);
   const navigate = useNavigate();
   return (
     (

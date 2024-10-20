@@ -1,8 +1,12 @@
 import "./Footer.scss";
 
-import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai/index.esm.js";
+import { 
+  // AiOutlineInstagram,
+   AiOutlineMail } from "react-icons/ai/index.esm.js";
 import { BiCopyright, BiSolidPhoneCall } from "react-icons/bi/index.esm.js";
-import { FaFacebook, FaFacebookF, FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa/index.esm.js";
+import {
+  //  FaFacebook, FaFacebookF,
+   FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa/index.esm.js";
 
 import { HiLocationMarker } from "react-icons/hi/index.esm.js";
 import React from "react";

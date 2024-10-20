@@ -146,7 +146,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: start;
+                align-items: flex-start;
                 // text-align: center;
 
                 .warm {
@@ -223,7 +223,7 @@
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1150px) {
     .single-sport-page {
         // height: 100%;
         width: 100%;
@@ -233,7 +233,7 @@
         .sportspage {
             // border: 2px solid blue;
             display: flex;
-            justify-content: start;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
             // height: 150%;
@@ -290,7 +290,7 @@
                     // margin-top: 20px;
                     // border: 2px solid blue;
                     display: flex;
-                    justify-content: start;
+                    justify-content: flex-start;
                     align-items: center;
                     width: 100%;
                     margin-left: 0px;
@@ -364,7 +364,7 @@
             color: #141E46;
             // border: 2px solid blue;
             display: flex;
-            justify-content: start;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
             height: 150%;

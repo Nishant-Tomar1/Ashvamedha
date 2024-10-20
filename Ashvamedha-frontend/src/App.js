@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Events from "./pages/Events/Events.js";
@@ -50,7 +50,7 @@ function Pageroutes(){
 
 function App(){
   const isLoading = useSelector((state) => state.appReducer.isLoading);
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
   useEffect(() => {
     if (isLoading) {
       setLoading(true);

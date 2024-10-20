@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/Footer.js";
 import Navbar from "../../components/Navbar/Navbar.js";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 // import Loader from "../../components/Loader/Loader.js";
 
 function Events() {

@@ -1,14 +1,14 @@
 import "./Navbar.scss";
 
-import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaYoutubeSquare,
-} from "react-icons/fa/index.esm.js";
+// import {
+//   FaFacebookSquare,
+//   FaInstagramSquare,
+//   FaYoutubeSquare,
+// } from "react-icons/fa/index.esm.js";
 import { IoClose, IoMenu } from "react-icons/io5";
 import React, { useState } from "react";
 
-import { GiHamburgerMenu } from "react-icons/gi/index.esm.js";
+// import { GiHamburgerMenu } from "react-icons/gi/index.esm.js";
 import { Link } from "react-scroll";
 import { Link as ActualLink } from "react-router-dom";
 import ashvamedhaLogo from "../../assests/demoPhotos/ashvamedhaLogo.png";
@@ -78,7 +78,7 @@ function Navbar() {
             return item.navigate ? (
               <li key={index} className={item.cName}>
                 <Link
-                  to="#"
+                  to="/"
                   onClick={() => {
                     window.scrollTo(0,0);
                     navigate(`${item.path}`);
@@ -116,13 +116,13 @@ function Navbar() {
       <div className="social-media">
         {/* hamburger menu start  */}
         <div className="hamburger-menu">
-          <a href="#" onClick={() => {setShowMediaIcons(!showMediaIcons)}}>
+          <Link href="/" onClick={() => {setShowMediaIcons(!showMediaIcons)}}>
             {showMediaIcons ? (
               <IoClose className="icon" />
             ) : (
               <IoMenu className="icon" />
             )}
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
