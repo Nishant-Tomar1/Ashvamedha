@@ -52,10 +52,10 @@ function AboutUs() {
             </div>
             <div className="buttondiv">
                           <Link
-                            to=""
+                            to="https://forms.gle/iap77hortfY7i6jf8"
                             className="btn-primary"
                           >
-                            GET <span style={{color : "white"}}> NOW!!</span>
+                             GET YO<span style={{color : "white"}}>UR MERCH!!</span>
                           </Link>
             </div>
           </div>

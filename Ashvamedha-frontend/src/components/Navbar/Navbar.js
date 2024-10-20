@@ -100,12 +100,12 @@ function Navbar() {
             );
           })}
           <li key="25" className="nav-text rulebook">
-                <ActualLink target="_blank" to="https://drive.google.com/file/d/1uYx_bUUJfOQ2pumA8WBRG5euHmx8q9xl/view?usp=sharing" >
+                <ActualLink target="_blank" to="https://drive.google.com/file/d/1q8wArG5pp0X8n_0Oql9BiVH1CTC_lQAn/view?usp=sharing" >
                     <span>Brochure</span>
                 </ActualLink>
           </li>
           <li key="26" className="nav-text rulebook">
-                <ActualLink target="_blank" to="https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view?usp=sharing" >
+                <ActualLink target="_blank" to="https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing" >
                     <span>Rulebook</span>
                 </ActualLink>
           </li>

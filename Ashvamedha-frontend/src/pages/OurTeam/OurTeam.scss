@@ -86,8 +86,8 @@
         .coreheads,
         .coordinator {
           display: grid;
-          width: 80%;
-          grid-template-columns: repeat(4, 1fr);
+          width: 90%;
+          grid-template-columns: repeat(5, 1fr);
           margin-top: 50px;
           gap: 30px;
 
@@ -121,7 +121,7 @@
               align-items: center;
 
               p {
-                font-size: 27px !important;
+                font-size: 24px !important;
                 color: #FF6F0F;
                 margin-top: 10px;
                 text-transform: uppercase;
@@ -130,7 +130,7 @@
               }
 
               h3 {
-                font-size: 22px !important;
+                font-size: 20px !important;
                 color: #fff;
               }
             }

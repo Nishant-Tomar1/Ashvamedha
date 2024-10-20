@@ -65,7 +65,12 @@ function OurTeam() {
       image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720505/ashvamedha/team/d6pqqqdexscnkvwnoxps.jpg",
       no: "+91 9589660889",
     },
-    
+    {
+      name: "Tanish",
+      position:"Hospitality",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720504/ashvamedha/team/itligupcge8v6xtmrbiw.jpg",
+      no: "+91 6350108695",
+    },
   ];
   const corehead = [
     {
@@ -86,12 +91,12 @@ function OurTeam() {
       image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720504/ashvamedha/team/vvxkkb0qsq2cd6t7vkvx.jpg",
       no: "+91 6378233277",
     },
-    // {
-    //   name: "Nitin Sharma",
-    //   position: "Core Head",
-    //   image: teamImg[8]?.image?.url,
-    //   no: "+91 8390685086",
-    // },
+    {
+      name: "Ghanshyam",
+      position: "Core Head",
+      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1729419882/ashvamedha/team/zpcylfs2qx6vtsnovhur.jpg",
+      no: "+91 8319901135",
+    },
     {
       name: "Thanvi Reddy",
       position: "Core Head",
@@ -110,12 +115,7 @@ function OurTeam() {
       image:"https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1729402896/ashvamedha/team/xg85qegkihg0luh1th9v.jpg",
       no: "+91 9366471892",
     },
-    {
-      name: "Tanish",
-      position: "Core Head ",
-      image: "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1728720504/ashvamedha/team/itligupcge8v6xtmrbiw.jpg",
-      no: "+91 6350108695",
-    },
+    
     {
       name: "Vipin Kumar",
       position: "Core Head",

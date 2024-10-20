@@ -23,7 +23,7 @@ const sportsInfo = [
     location: "SES Room No: 218,219",
     registrationLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSd9i_E6j5lr2aquQ3RxkeBOb_-mL9OcEjlplMMVasNJw4iZFg/viewform",
-    rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+    rulebook: "https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing",
     poc: "Srikanth (9392358848)",
     theme: "warm",
   },
@@ -36,7 +36,7 @@ const sportsInfo = [
     location: "Inside SAC Badminton Court",
     registrationLink:
       "https://forms.gle/RZHEHSQfr8Lar6HFA",
-    rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+    rulebook: "https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing",
     poc: "Harish (6264869374) and Sai Vardhan (8144574654)",
     theme: "cold",
   },
@@ -49,7 +49,7 @@ const sportsInfo = [
     location: "Volleyball Court 1,2",
     registrationLink:
       "https://forms.gle/3PL7abtt11sK1HxF7",
-    rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+    rulebook: "https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing",
     poc: "Baman Teja (6304640345)",
     theme: "warm",
   },
@@ -62,7 +62,7 @@ const sportsInfo = [
     location: "Football Ground",
     registrationLink:
       "https://forms.gle/1toBjx9Ss2oJtbqi9",
-    rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+    rulebook: "https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing",
     poc: "Ajay (9152177679) and Yasas (7847825923)",
     theme: "cold",
   },
@@ -75,7 +75,7 @@ const sportsInfo = [
     location: "Basketball Court 1,2",
     registrationLink:
       "https://forms.gle/HhyeT3XzW8qmMYAY6",
-    rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+    rulebook: "https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing",
     poc: "Shivam (6378287518) and Varsha (8002166766)",
     theme: "warm",
   },
@@ -89,7 +89,7 @@ const sportsInfo = [
     registrationLink:
       "https://forms.gle/AA6bNJrpzKDjDieUA",
     poc: "Thanvi Reddy (9381811060) and Ayush (6367645929)",
-    rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+    rulebook: "https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing",
     theme: "cold",
   },
   {
@@ -103,7 +103,7 @@ const sportsInfo = [
     registrationLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSeK79UZD1OPOyf_3djG2tUhWAhvMO8VOqh77xP9HO4KwJELaw/viewform",
     poc: "Sanskar Kosare (8208278646)",
-    rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+    rulebook: "https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing",
     theme: "warm",
   },
   {
@@ -117,7 +117,7 @@ const sportsInfo = [
     registrationLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSf1Ib2CKYc8CGiFOyoPLyyBV1cvjqKlH8jfPjQImGfxQCqcAA/viewform",
     poc: "Deekshansh (7225855505) and Tanish (6350108695)",
-    rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+    rulebook: "https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing",
     theme: "cold",
   },
   {
@@ -131,7 +131,7 @@ const sportsInfo = [
     registrationLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSeex8BxbszNjeyrJbllYiodsJWSH2TeEsPaDYVRHms1wGrTJw/viewform",
     poc: "Sreenath Reddy (9703040597) and Lukge Jilen (7085758430)",
-    rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+    rulebook: "https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing",
     theme: "warm",
   },
   {
@@ -145,7 +145,7 @@ const sportsInfo = [
     registrationLink:
       "https://forms.gle/w2a4Sm1PXMms3qJD6",
     poc: "M Pranavram (8072477461) and Krish Garg (7217530667)",
-    rulebook: "https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view",
+    rulebook: "https://drive.google.com/file/d/1InFTI3Zu8qfCHNtCNvprIHpEpjz94Xjg/view?usp=sharing",
     theme: "cold",
   },
 ];
