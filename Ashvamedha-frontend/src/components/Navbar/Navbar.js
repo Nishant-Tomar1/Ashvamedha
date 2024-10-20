@@ -67,7 +67,7 @@ function Navbar() {
   const navigate = useNavigate();
   return (
     <nav className="main-nav">
-      <div className="logo" onClick={() => navigate("/")}>
+      <div className="logo" onClick={()=>{window.scrollTo(0,0);navigate("/")}}>
         <img src={ashvamedhaLogo} alt="ASHVAMEDHA" />
       </div>
       <div
@@ -80,6 +80,7 @@ function Navbar() {
                 <Link
                   to="#"
                   onClick={() => {
+                    window.scrollTo(0,0);
                     navigate(`${item.path}`);
                   }}
                 >
@@ -103,7 +104,7 @@ function Navbar() {
                     <span>Brochure</span>
                 </ActualLink>
           </li>
-          <li key="25" className="nav-text rulebook">
+          <li key="26" className="nav-text rulebook">
                 <ActualLink target="_blank" to="https://drive.google.com/file/d/1SXuWSfnb3d_5q0j0apuFsaaL-_xDAngD/view?usp=sharing" >
                     <span>Rulebook</span>
                 </ActualLink>
@@ -115,7 +116,7 @@ function Navbar() {
       <div className="social-media">
         {/* hamburger menu start  */}
         <div className="hamburger-menu">
-          <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+          <a href="#" onClick={() => {setShowMediaIcons(!showMediaIcons)}}>
             {showMediaIcons ? (
               <IoClose className="icon" />
             ) : (

@@ -9,10 +9,10 @@ import Navbar from "../../components/Navbar/Navbar.js";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Loader from "../../components/Loader/Loader.js";
+// import Loader from "../../components/Loader/Loader.js";
 
 function Events() {
-  const isLoading = useSelector((state) => state.appReducer.isLoading);
+  // const isLoading = useSelector((state) => state.appReducer.isLoading);
   const navigate = useNavigate();
 
   const sportsInfo = [
@@ -119,7 +119,7 @@ function Events() {
             <div className="event-container">
               {sportsInfo.map((item) => {
                 return (
-                  <div className="single-sport">
+                  <div  key={item.id} className="single-sport">
                     <div className="image">
                       <img src={item?.imgUrl} alt="sport" />
                     </div>
@@ -128,7 +128,9 @@ function Events() {
                       <div className="desc">"{item?.desc}"</div>
                       <div className="button">
                         <button
-                          onClick={() => navigate(`/events/${item?.id}`)}
+                          onClick={() =>{ 
+                            window.scrollTo(0,0);
+                            navigate(`/events/${item?.id}`)}}
                           className="btn-primary"
                           id={item?.theme}
                         >

@@ -7,6 +7,7 @@ import CounterUpPage from "./CounterUpPage.js";
 import axios from "axios";
 import { setLoading } from "../../redux/appSlice.js";
 import merch from "../../assests/aboutusassets/merch.png"
+import { Link} from "react-router-dom";
 
 function AboutUs() {
   const isLoading = useSelector((state) => state.appReducer.isLoading);
@@ -104,11 +105,21 @@ function AboutUs() {
                 <span className="title2"> MERCHANDISE</span>
               </h1>
             </div>
+            
           </div>
-
-          <div className="ath">
-            {/* hello */}
-            <img src={merch} alt="tshirt" />
+          <div className="merchbox">
+            <div className="ath">
+              {/* hello */}
+              <img src={merch} alt="tshirt" />
+            </div>
+            <div className="buttondiv">
+                          <Link
+                            to=""
+                            className="btn-primary"
+                          >
+                            GET <span style={{color : "white"}}> NOW!!</span>
+                          </Link>
+            </div>
           </div>
       </div>
     )

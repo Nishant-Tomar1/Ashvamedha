@@ -15,6 +15,10 @@
     display: none;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 :root {
     --color-primary: #ff3d02;
     --color-secondary:  #ff440a;

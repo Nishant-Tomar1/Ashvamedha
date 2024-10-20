@@ -58,6 +58,38 @@
     //   transform: scale(1.05);
     // }
   }
+  .merchbox{
+    width: full;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 90px;
+    gap: 0;
+    // margin-top: 0px;
+
+    .buttondiv{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+
+      .btn-primary{
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: #FF6D02;
+        padding: 10px 20px;
+        // background: #FF6D02;
+        border: #FF6D02 2px solid;
+        border-radius: 16px;
+        transition: all 0.3s ease-in;
+      }
+      .btn-primary:hover{
+        color : white;
+        background: #FF6D02;
+      }
+    }
+
+  }
   
   
   .parallax__layer--base {
@@ -141,7 +173,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     // border: 2px solid red;
     
     img {
@@ -168,6 +200,8 @@
   }
   
   @media only screen and (max-width: 960px) {
+    
+
     .logos {
       margin-top: 100px;
       
@@ -190,7 +224,17 @@
           }
         }
       }
-  }
+    }
+    .merchbox{
+      .buttondiv{
+        .btn-primary{
+          padding: 8px 12px;
+          border-radius: 10px;
+          font-size: 1.2rem ;
+        }
+  
+      }
+    }
     .icons {
       font-size: 36px;
       margin: 0 10px;
@@ -201,7 +245,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 100px;
+      margin-bottom: 10px;
       
       img {
         width: 100%;
@@ -267,3 +311,5 @@
     margin-bottom: 0px;
   }
 }
+
+

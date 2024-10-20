@@ -27,6 +27,7 @@ function Hero() {
                 <button
                   className="btn-primary"
                   onClick={() => {
+                    window.scrollTo(0,0);
                     navigate("/events");
                   }}
                 >
