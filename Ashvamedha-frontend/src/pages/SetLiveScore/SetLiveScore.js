@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { server } from "../../constants";
+import "./SetLiveScore.scss"
 
 import axios from "axios";
 
@@ -27,20 +29,20 @@ function SetLiveScore() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://ashvamedha.onrender.com/sport/setlivescore",
+        `${server}/sport/setlivescore`,
         {
-          college1Name,
-          college1Logo,
-          college2Logo,
-          college1Score,
-          college2Name,
-          college2Score,
-          matchName,
-          category,
-          sportName,
-          editedBy,
-          set: setInfo,
-          location,
+          college1Name : college1Name.toLowerCase(),
+          college1Logo : college1Logo.toLowerCase(),
+          college2Logo : college2Logo.toLowerCase(),
+          college1Score : college1Score.toLowerCase(),
+          college2Name: college2Name.toLowerCase(),
+          college2Score : college2Score.toLowerCase(),
+          matchName : matchName.toLowerCase(),
+          category : category.toLowerCase(),
+          sportName : sportName.toLowerCase(),
+          editedBy : editedBy.toLowerCase(),
+          set: setInfo.toLowerCase(),
+          location : location.toLowerCase(),
         }
       );
       console.log("response of setLive score", response);
@@ -50,7 +52,8 @@ function SetLiveScore() {
   }
   return (
     <div>
-      <form>
+      <form style={{color: 'white'}}>
+        <h1> SET LIVE SCORE</h1>
         <div>
           <label htmlFor="matchName">Enter sport name</label>
           <input type="text" onChange={(e) => setSportName(e.target.value)} />

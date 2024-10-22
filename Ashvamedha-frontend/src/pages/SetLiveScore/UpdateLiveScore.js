@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { server } from "../../constants";
+import "./UpdateLiveScore.scss"
 import axios from "axios";
 
 function UpdateLiveScore() {
@@ -12,16 +13,16 @@ function UpdateLiveScore() {
     e.preventDefault();
     try {
       const response = await axios.put(
-        "https://ashvamedha.onrender.com/sport/updatelivescore",
+        `${server}/sport/updatelivescore`,
         {
-          matchname: matchName,
-          sportname: sportName,
-          set: setInfo,
-          college1Score,
-          college2Score,
+          matchname: matchName.toLowerCase(),
+          sportname: sportName.toLowerCase(),
+          set: setInfo.toLowerCase(),
+          college1Score : college1Score.toLowerCase(),
+          college2Score : college2Score.toLowerCase(),
         }
       );
-      console.log("response of livescore", response?.data?.result);
+      // console.log("response of livescore", response?.data?.result);
     } catch (error) {
       console.log("response of setLive score", error);
     }
@@ -29,7 +30,8 @@ function UpdateLiveScore() {
   return (
     <div>
       <div>
-        <form>
+        <form style={{color:'white'}}>
+        <h2>Update Live Score</h2>
           <div>
             <label htmlFor="matchName">Enter sport name</label>
             <input type="text" onChange={(e) => setSportName(e.target.value)} />

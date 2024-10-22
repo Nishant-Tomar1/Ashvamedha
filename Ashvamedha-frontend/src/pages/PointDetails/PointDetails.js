@@ -9,6 +9,7 @@ import axios from "axios";
 import { setLoading } from "../../redux/appSlice.js";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import {server} from "../../constants.js"
 import { useSelector } from "react-redux";
 
 function PointDetails() {
@@ -20,7 +21,7 @@ function PointDetails() {
     try {
       dispatch(setLoading(true));
       const response = await axios.post(
-        "https://ashvamedha.onrender.com/college/",
+        `${server}/college/`,
         {
           collegeName: params.collegename,
         }

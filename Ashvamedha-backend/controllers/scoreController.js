@@ -33,18 +33,30 @@ const setLiveScore = async (req, res) => {
       return res.send(error(400, "All fields are required"));
     }
     const livescore = await liveScore.create({
-      college1Name,
-      college1Logo,
-      college1Score,
-      college2Name,
-      college2Score,
-      college2Logo,
-      matchName,
-      category,
-      sportName,
-      editedBy,
-      set,
-      location,
+      college1Name : college1Name.toLowerCase(),
+          college1Logo : college1Logo.toLowerCase(),
+          college2Logo : college2Logo.toLowerCase(),
+          college1Score : college1Score.toLowerCase(),
+          college2Name: college2Name.toLowerCase(),
+          college2Score : college2Score.toLowerCase(),
+          matchName : matchName.toLowerCase(),
+          category : category.toLowerCase(),
+          sportName : sportName.toLowerCase(),
+          editedBy : editedBy.toLowerCase(),
+          set: set.toLowerCase(),
+          location : location.toLowerCase()
+      // college1Name,
+      // college1Logo,
+      // college1Score,
+      // college2Name,
+      // college2Score,
+      // college2Logo,
+      // matchName,
+      // category,
+      // sportName,
+      // editedBy,
+      // set,
+      // location,
     });
     return res.send(success(201, `live score set ${livescore}`));
   } catch (e) {
@@ -64,13 +76,16 @@ const updateLiveScore = async (req, res) => {
         )
       );
     }
+    
     const match = await liveScore.find({
-      matchName: matchname,
-      sportName: sportname,
+      matchName: matchname.toLowerCase(),
+      sportName: sportname.toLowerCase(),
     });
-    if (!match) {
+    if (!match.length) {
       return res.send(404, "match score not found, set the score");
     }
+    // console.log(match);
+    
     match.forEach(async (match) => {
       match.college1Score = college1Score;
       match.college2Score = college2Score;
@@ -90,10 +105,10 @@ const getLiveScore = async (req, res) => {
       return res.send(error(400, "all fields are reqired"));
     }
     const liveScoreInfo = await liveScore.find({
-      sportName: sportname,
+      sportName: sportname.toLowerCase(),
     });
-    if (!liveScoreInfo) {
-      return res.send(404, "match score not found");
+    if (!liveScoreInfo.length) {
+      return res.send(404, `Live score not found for ${sportname}`);
     }
     return res.send(success(200, { liveScoreInfo }));
   } catch (e) {
@@ -111,7 +126,7 @@ const deleteLiveScore = async (req, res) => {
     if (!match) {
       return res.send(404, "match score not found, set the score first");
     }
-    await liveScore.deleteOne({ _id: matchId });
+    await liveScore.deleteOne({ _id: matchId});
     return res.send(
       success(200, `live score ended plz update the overall point table`)
     );

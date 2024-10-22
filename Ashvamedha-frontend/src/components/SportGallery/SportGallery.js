@@ -2,7 +2,7 @@ import "./SportGallery.scss";
 
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import { server } from "../../constants.js";
 import { AiOutlineClose } from "react-icons/ai/index.esm.js";
 import axios from "axios";
 import Loader from "../Loader/Loader.js"
@@ -22,7 +22,7 @@ function SportGallery() {
     try {
       dispatch(setLoading(true));
       const response = await axios.post(
-        "https://ashvamedha.onrender.com/upload/",
+        `${server}/upload/`,
         {
           folderName: "galleryImg",
         }

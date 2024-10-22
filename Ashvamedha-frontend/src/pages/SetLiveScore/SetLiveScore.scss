@@ -1,0 +1,81 @@
+// Fire Theme Variables
+$primary-color: #ff4500;  // Bright orange-red
+$secondary-color: #ff8c00;  // Deep orange
+$background-color: #1c1c1c;  // Dark background
+$input-background: #333333;  // Input background
+$text-color: #ffffff;  // White text
+$input-border-color: #ff6347;  // Tomato color for borders
+$hover-color: #ffae42;  // Lighter orange for hover effects
+
+// Mixin for inputs to maintain consistent styling
+@mixin input-style {
+  background-color: $input-background;
+  border: 2px solid $input-border-color;
+  border-radius: 4px;
+  padding: 10px;
+  color: $text-color;
+  font-size: 16px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: $hover-color;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $hover-color;
+  }
+}
+
+// Global form styling
+form {
+  background-color: $background-color;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: $secondary-color;
+  }
+
+  input {
+    @include input-style;
+    margin-bottom: 15px;
+  }
+
+  input[type="submit"] {
+    background-color: $primary-color;
+    color: $text-color;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  // Responsive styling
+  @media (min-width: 992px) { // Large screens
+    width: 50vw;
+  }
+
+  @media (min-width: 1200px) { // Extra large screens
+    width: 30vw;
+  }
+}
+
+// Body Styling for background and text consistency
+body {
+//   background: #1c1c1c;
+  color: $text-color;
+  font-family: 'Arial', sans-serif;
+}

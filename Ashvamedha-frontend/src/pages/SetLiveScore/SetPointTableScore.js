@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { server } from "../../constants";
+import "./SetPointTableScore.scss"
 
 import axios from "axios";
 
@@ -15,7 +17,7 @@ function SetPointTableScore() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://ashvamedha.onrender.com/match/",
+        `${server}/match/`,
         {
           college1Name,
           college2Name,
@@ -35,6 +37,7 @@ function SetPointTableScore() {
   return (
     <div>
       <form>
+      <h2>Set Points Table Score</h2>
         <div>
           <label htmlFor="matchName">Enter sport name</label>
           <input type="text" onChange={(e) => setSportName(e.target.value)} />

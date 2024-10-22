@@ -2,6 +2,7 @@ import "./Leaderboard.scss";
 
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { server } from "../../constants.js";
 
 // import CollegeWrapper from "../../components/CollegeWrapper/CollegeWrapper.js";
 import Footer from "../../components/Footer/Footer.js";
@@ -112,7 +113,7 @@ function Leaderboard() {
     try {
       dispatch(setLoading(true));
       const ticketInfos = collegeInfo.map((item) =>
-        axios.post("https://ashvamedha.onrender.com/college/score", {
+        axios.post(`${server}/college/score`, {
           collegeName: item.collegeName,
         })
       );

@@ -6,6 +6,7 @@ import Footer from "../../components/Footer/Footer.js";
 import Navbar from "../../components/Navbar/Navbar.js";
 import ScoreCard from "../../components/ScoreCard/ScoreCard.js";
 import axios from "axios";
+import { server } from "../../constants.js";
 import live from "../../assests/demoPhotos/live.png";
 import { useParams } from "react-router-dom";
 
@@ -16,7 +17,7 @@ function LiveScore() {
   async function fetchLiveScore() {
     try {
       const result = await axios.post(
-        "https://ashvamedha.onrender.com/sport/getlivescore",
+        `${server}/sport/getlivescore`,
         {
           sportname: sportname.toLowerCase(),
         }

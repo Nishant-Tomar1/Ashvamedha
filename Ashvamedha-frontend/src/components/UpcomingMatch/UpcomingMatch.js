@@ -2,7 +2,7 @@ import "./UpcomingMatch.scss";
 
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import { server } from "../../constants.js";
 import { VscClose } from "react-icons/vsc/index.esm.js";
 import axios from "axios";
 import badminton from "../../assests/demoPhotos/badminton.jpg";
@@ -47,7 +47,7 @@ function UpcomingMatch(props) {
       dispatch(setLoading(true));
       const result = upcomingmatchImg.find(({ id }) => id == props.sportid);
       const fixturePost = await axios.post(
-        "https://ashvamedha.onrender.com/upload/name",
+        `${server}/upload/name`,
         {
           folderName: "4th-nov-fixtures",
           name: result.fixtureName,
