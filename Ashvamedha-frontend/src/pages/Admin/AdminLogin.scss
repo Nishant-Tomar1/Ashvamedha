@@ -7,7 +7,7 @@ $text-color: #ffffff;  // White text
 $input-border-color: #ff6347;  // Tomato color for borders
 $hover-color: #ffae42;  // Lighter orange for hover effects
 
-// Mixin for consistent input styling
+// Mixin for input styling
 @mixin input-style {
   background-color: $input-background;
   border: 2px solid $input-border-color;
@@ -28,15 +28,30 @@ $hover-color: #ffae42;  // Lighter orange for hover effects
   }
 }
 
-// Global form styling
+.adminlogin{
+  display: flex;
+  min-width: 100vw;
+  min-height:90dvh;
+  justify-content: center;
+  align-items: center;
+}
+// Admin Login Form Styling
 form {
-  margin-top: 100px !important;
-  margin-bottom: 100px !important;
+  // margin-top: 200px !important;
+  // margin-bottom: 100px !important;
   background-color: $background-color;
   padding: 20px;
   border-radius: 10px;
-  margin: auto;
+  margin-left: 20px;
+  margin-right: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+
+  h2 {
+    color: $secondary-color;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
   label {
     display: block;

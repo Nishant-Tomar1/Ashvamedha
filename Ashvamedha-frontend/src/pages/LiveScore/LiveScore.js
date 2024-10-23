@@ -22,6 +22,8 @@ function LiveScore() {
           sportname: sportname.toLowerCase(),
         }
       );
+      // console.log(result.data.result.liveScoreInfo);
+      
       setLiveScore(result.data.result.liveScoreInfo);
     } catch (err) {
       console.log("error", err);
@@ -31,6 +33,7 @@ function LiveScore() {
     const interval = setInterval(fetchLiveScore, 1000);
     return () => clearInterval(interval);
   }, [params]);
+
   return (
     <div className="score-page">
       <Navbar />
@@ -40,7 +43,7 @@ function LiveScore() {
         </div>
         <div className="score-content">
           {liveScore.length !== 0 &&
-            liveScore.map((item) => <ScoreCard info={item} />)}
+            liveScore.map((item, index) => <ScoreCard key={index} info={item} />)}
         </div>
       </div>
       <Footer />

@@ -52,6 +52,7 @@ function AboutUs() {
             </div>
             <div className="buttondiv">
                           <Link
+                          target="_blank"
                             to="https://forms.gle/iap77hortfY7i6jf8"
                             className="btn-primary"
                           >

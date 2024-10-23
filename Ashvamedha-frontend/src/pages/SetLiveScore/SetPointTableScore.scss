@@ -30,6 +30,8 @@ $hover-color: #ffae42;  // Lighter orange for hover effects
 
 // Global form styling
 form {
+  margin-top: 100px !important;
+  margin-bottom: 100px !important;
   background-color: $background-color;
   padding: 20px;
   border-radius: 10px;

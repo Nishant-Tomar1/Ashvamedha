@@ -2,17 +2,20 @@ import React, { useState } from "react";
 import { server } from "../../constants";
 import "./UpdateLiveScore.scss"
 import axios from "axios";
+import { useLogin } from "../../context/loginContextProvider";
 
 function UpdateLiveScore() {
   const [matchName, setMatchName] = useState("");
   const [college1Score, setCollege1Score] = useState("");
   const [college2Score, setCollege2Score] = useState("");
   const [setInfo, setSetInfo] = useState("");
-  const [sportName, setSportName] = useState("");
+  const loginCtx = useLogin();
+  const sportName = loginCtx.isLoggedIn ? loginCtx.sport :"";
   async function handleLiveScore(e) {
     e.preventDefault();
+    
     try {
-      const response = await axios.put(
+      await axios.put(
         `${server}/sport/updatelivescore`,
         {
           matchname: matchName.toLowerCase(),
@@ -22,28 +25,32 @@ function UpdateLiveScore() {
           college2Score : college2Score.toLowerCase(),
         }
       );
+      // console.log(res);
+      
       // console.log("response of livescore", response?.data?.result);
     } catch (error) {
       console.log("response of setLive score", error);
     }
   }
   return (
-    <div>
+    <div className='adminlogin'>
+      {loginCtx.isLoggedIn ? 
       <div>
-        <form style={{color:'white'}}>
+        <form style={{color:'white'}} onSubmit={handleLiveScore}>
         <h2>Update Live Score</h2>
           <div>
-            <label htmlFor="matchName">Enter sport name</label>
-            <input type="text" onChange={(e) => setSportName(e.target.value)} />
+            <label htmlFor="matchName">SportName  </label>
+            <input type="text" value={sportName} readOnly />
           </div>
           <div>
             <label htmlFor="matchName">Enter match name</label>
-            <input type="text" onChange={(e) => setMatchName(e.target.value)} />
+            <input type="text" required onChange={(e) => setMatchName(e.target.value)} />
           </div>
           <div>
             <label htmlFor="matchName">Enter college 1 score</label>
             <input
-              type="text"
+            required
+              type="number"
               onChange={(e) => setCollege1Score(e.target.value)}
             />
           </div>
@@ -51,19 +58,23 @@ function UpdateLiveScore() {
           <div>
             <label htmlFor="matchName">Enter college 2 score</label>
             <input
-              type="text"
+            required
+              type="number"
               onChange={(e) => setCollege2Score(e.target.value)}
             />
           </div>
 
           <div>
             <label htmlFor="matchName">Enter setDetails</label>
-            <input type="text" onChange={(e) => setSetInfo(e.target.value)} />
+            <input required type="text" onChange={(e) => setSetInfo(e.target.value)} />
           </div>
 
-          <input type="submit" onClick={handleLiveScore} />
+          <input type="submit"  />
         </form>
       </div>
+      :
+      <h1>You are not Logged In</h1>
+      }
     </div>
   );
 }

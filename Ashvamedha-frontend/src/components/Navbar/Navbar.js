@@ -109,6 +109,16 @@ function Navbar() {
                     <span>Rulebook</span>
                 </ActualLink>
           </li>
+          {/* <li key="27" className="nav-text rulebook">
+                <Link 
+                to="/"
+                onClick={() => {
+                  window.scrollTo(0,0);
+                  navigate(`/admin`);
+                }} >
+                    <span>Admin</span>
+                </Link>
+          </li> */}
         </ul>
         
       
@@ -116,7 +126,7 @@ function Navbar() {
       <div className="social-media">
         {/* hamburger menu start  */}
         <div className="hamburger-menu">
-          <Link href="/" onClick={() => {setShowMediaIcons(!showMediaIcons)}}>
+          <Link to="/" onClick={() => {setShowMediaIcons(!showMediaIcons)}}>
             {showMediaIcons ? (
               <IoClose className="icon" />
             ) : (

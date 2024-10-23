@@ -23,7 +23,7 @@ function Hero() {
                 <span className="medha">MEDHA</span>
               </h1>
               <p className="theme">EMPOWER ENDURE EXCEL</p>
-              <p className="date">26th-27th OCTOBER</p>
+              <p className="date">1st-3rd NOVEMBER</p>
             </div>
             <div className="buttons">
               <div className="btn1">

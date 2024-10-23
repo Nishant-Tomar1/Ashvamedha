@@ -110,7 +110,7 @@ function Events() {
   return (
     <>
       <Navbar />
-        (
+        
           <div className="events">
             <h2 className="heading">
               <span className="h1">OUR</span>
@@ -143,7 +143,7 @@ function Events() {
               })}
             </div>
             <Footer />
-          </div>)
+          </div>
     </>
   );
 }
