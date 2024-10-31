@@ -34,6 +34,7 @@ function Hero() {
                     navigate("/events");
                   }}
                 >
+                  {/* LIVE SCORES & FIXTURES */}
                   REGISTER NOW
                 </button>
               </div>

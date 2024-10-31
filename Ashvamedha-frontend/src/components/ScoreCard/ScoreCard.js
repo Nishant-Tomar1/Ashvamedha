@@ -2,11 +2,36 @@ import "./ScoreCard.scss";
 
 import React from "react";
 import vs from "../../assests/demoPhotos/vs1.png";
+import { useLogin } from "../../context/loginContextProvider";
+import axios from "axios";
+import {useNavigate} from 'react-router-dom'
+import { server } from "../../constants";
 
 function ScoreCard(props) {
+  const loginCtx = useLogin()
+  const navigate = useNavigate();
+  const handleDelete = async()=>{
+    if (window.confirm("Delete the livescore??")){
+      try {
+        const res = await axios.delete(`${server}/sport/deletelivescore`,{
+          data :{
+            matchId : props.info._id
+          }
+        })
+      console.log(res);
+      if (res.data.statusCode === 200){
+        alert(`Live Score Ended for MatchName : "${props.info.matchName}", Update the points table`);
+        navigate("/updatepointstable")
+      }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
   return (
     <>    
     <div className="score-card">
+    {(loginCtx.sport === props.info.sportName) &&<button onClick={handleDelete}style={{color:"red", background:"#090909",padding:"5px"}}>Delete </button>}
       <div className="part1">
         <div className="college1-info">
           <div className="img">

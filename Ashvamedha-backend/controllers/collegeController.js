@@ -1,6 +1,7 @@
 const Sports = require("../models/sports");
 const { success, error } = require("../utils/responseWrapper");
 const { mapMatchResultOutput } = require("../utils/utils");
+
 const collegePointTable = async (req, res) => {
   // point table in this requested by a particular college
   try {
@@ -17,6 +18,7 @@ const collegePointTable = async (req, res) => {
     return res.send(error(500, e.message));
   }
 };
+
 const totalScore = async (req, res) => {
   try {
     const { collegeName } = req.body;
@@ -30,6 +32,7 @@ const totalScore = async (req, res) => {
     return res.send(error(500, e.message));
   }
 };
+
 module.exports = {
   collegePointTable,
   totalScore,

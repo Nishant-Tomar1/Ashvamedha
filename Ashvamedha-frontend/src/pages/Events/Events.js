@@ -24,6 +24,7 @@ function Events() {
       desc: "Chess is the art of thinking ahead, of making complex decisions under pressure",
       date: "26th and 27th October",
       theme: "warm",
+      nameid : "chess"
     },
     {
       id: 2,
@@ -33,6 +34,7 @@ function Events() {
       desc: "Badminton is not only about winning. It's about playing beautiful, memorable games.",
       date: "26th and 27th October",
       theme: "cold",
+      nameid : "badminton"
     },
     {
       id: 3,
@@ -42,6 +44,7 @@ function Events() {
       desc: "Success in volleyball comes not from individual glory but from seamless teamwork",
       date: "26th and 27th October",
       theme: "warm",
+      nameid : "volleyball"
     },
     {
       id: 4,
@@ -51,6 +54,7 @@ function Events() {
       desc: "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all, love of what you are doing or learning to do.",
       date: "26th and 27th October",
       theme: "cold",
+      nameid : "football"
     },
     {
       id: 5,
@@ -60,6 +64,7 @@ function Events() {
       desc: "Basketball is like photography. If you don't focus, all you have is the negative.",
       date: "26th and 27th October",
       theme: "warm",
+      nameid : "basketball"
     },
     {
       id: 6,
@@ -69,6 +74,7 @@ function Events() {
       desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
       date: "26th and 27th October",
       theme: "cold",
+      nameid : "table-tennis"
     },
     {
       id: 7,
@@ -78,6 +84,7 @@ function Events() {
       desc: "Every drop brings a new chance; gear up and make your mark in the battlefield .",
       date: "26th and 27th October",
       theme: "warm",
+      nameid : "bgmi"
     },
     {
       id: 8,
@@ -87,6 +94,7 @@ function Events() {
       desc: "Every rep is a step closer to becoming the strongest version of yourself",
       date: "26th and 27th October",
       theme: "cold",
+      nameid : "gym"
     },
     {
       id: 9,
@@ -96,6 +104,7 @@ function Events() {
       desc: "Run with purpose, leap with passion, and let every stride take you closer to your dreams.",
       date: "26th and 27th October",
       theme: "warm",
+      nameid : "athletics"
     },
     {
       id: 10,
@@ -105,6 +114,7 @@ function Events() {
       desc: "In tennis, every point is a battle, and every match is a journey toward excellence and self-discovery.",
       date: "26th and 27th October",
       theme: "cold",
+      nameid : "lawn-tennis"
     },
   ];
   return (
@@ -126,16 +136,41 @@ function Events() {
                     <div className="sport-info">
                       <div className={`${item?.theme} heading`} >{item?.sportName}</div>
                       <div className="desc">"{item?.desc}"</div>
-                      <div className="button">
-                        <button
+                     <div className="button" >
+                        {/*  <button
+                        style={{margin:"5px"}}
                           onClick={() =>{ 
                             window.scrollTo(0,0);
-                            navigate(`/events/${item?.id}`)}}
+                            navigate(`/fixtures/${item.nameid.toLowerCase()}`)}}
+                          className="btn-primary"
+                          id={item?.theme}
+                          
+                        >
+                          Fixtures
+                        </button>
+                        
+                        <button
+                        style={{margin:"5px"}}
+                          onClick={() =>{ 
+                            window.scrollTo(0,0);
+                            navigate(`/livescore/${item.nameid.toLowerCase()}`)}}
                           className="btn-primary"
                           id={item?.theme}
                         >
-                          Register now
-                        </button>
+                          Live Score
+                        </button> */}
+                        <button
+                        style={{margin:"5px"}}
+                          onClick={() =>{ 
+                            window.scrollTo(0,0);
+                            navigate(`/events/${item.id}`)}}
+                          className="btn-primary"
+                          id={item?.theme}
+                        >
+                          Register
+                        </button> 
+
+
                       </div>
                     </div>
                   </div>

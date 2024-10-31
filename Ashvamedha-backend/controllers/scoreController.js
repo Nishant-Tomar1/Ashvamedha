@@ -119,6 +119,7 @@ const getLiveScore = async (req, res) => {
 const deleteLiveScore = async (req, res) => {
   try {
     const { matchId } = req.body;
+    
     if (!matchId) {
       return res.send(error(400, "match id required for to delete score"));
     }
@@ -126,7 +127,9 @@ const deleteLiveScore = async (req, res) => {
     if (!match) {
       return res.send(404, "match score not found, set the score first");
     }
-    await liveScore.deleteOne({ _id: matchId});
+    // console.log(match);
+    
+    // await liveScore.deleteOne({ _id: matchId});
     return res.send(
       success(200, `live score ended plz update the overall point table`)
     );

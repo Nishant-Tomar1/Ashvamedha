@@ -1,7 +1,9 @@
 import "./UpcomingMatch.scss";
 
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch,
+  //  useSelector 
+  } from "react-redux";
 import { server } from "../../constants.js";
 import { VscClose } from "react-icons/vsc/index.esm.js";
 import axios from "axios";
@@ -15,8 +17,8 @@ import volleyball from "../../assests/demoPhotos/vb.jpg";
 
 function UpcomingMatch(props) {
   const dispatch = useDispatch();
-  const isLoading = useSelector((state) => state.appReducer.isLoading);
-  const [img, setImg] = useState("");
+  // const isLoading = useSelector((state) => state.appReducer.isLoading);
+  // const [img, setImg] = useState("");
   const [fixtureImg, setFixtureImg] = useState({});
   const [isTrigger, setIsTrigger] = useState(props.trigger);
   const upcomingmatchImg = [
@@ -45,7 +47,7 @@ function UpcomingMatch(props) {
   async function getFixtures() {
     try {
       dispatch(setLoading(true));
-      const result = upcomingmatchImg.find(({ id }) => id == props.sportid);
+      const result = upcomingmatchImg.find(({ id }) => id === props.sportid);
       const fixturePost = await axios.post(
         `${server}/upload/name`,
         {
@@ -62,7 +64,7 @@ function UpcomingMatch(props) {
   }
   useEffect(() => {
     getFixtures();
-  }, [props.sportid]);
+  });
   return isTrigger ? (
     <div className="popup">
       <div className="popup-inner">

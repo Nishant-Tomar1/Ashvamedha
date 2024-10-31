@@ -11,18 +11,20 @@
     // background-color: #151515;
 
     .heading {
-        font-size: 46px;
+        font-size: 40px;
         // border: 2px solid red;
         margin-top: 60px;
         margin-bottom: 40px;
 
         .text {
             .h1 {
+                // font-size: 5vw;
                 color: #FF6F0F;
-                margin-right: 20px;
+                // margin-right: 5px;
             }
 
             .h2 {
+                // font-size: 5vw;
                 color: white;
             }
 
@@ -39,7 +41,7 @@
         margin-bottom: 40px;
         padding: 20px;
         border-radius: 10px;
-        background: black;
+        // background: black;
         backdrop-filter: blur(9px);
         -webkit-backdrop-filter: blur(10px);
         border: 2px solid white;
@@ -52,7 +54,7 @@
     .leaderboard {
 
         .heading {
-            font-size: 24px;
+            font-size: 20px;
             margin-top: 30px;
             width: 100%;
             display: flex;
@@ -73,7 +75,7 @@
     .leaderboard {
 
         .heading {
-            font-size: 24px;
+            font-size: 20px;
             margin-top: 30px;
             width: 100%;
             display: flex;

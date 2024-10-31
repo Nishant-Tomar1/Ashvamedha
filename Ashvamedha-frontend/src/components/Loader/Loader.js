@@ -9,11 +9,11 @@ function Loader() {
     <>
     <div className='Loaderbox'>
       {/* <div className='Loaderinside'> */}
-        <div class="imagefader">
-          <div><img src={logomashaal4} className='loaderlogomashaal' /></div>
-          <div><img src={logomashaal3} className='loaderlogomashaal' /></div>
-          <div><img src={logomashaal2} className='loaderlogomashaal' /></div>
-          <div><img src={logomashaal} className='loaderlogomashaal' /></div>
+        <div className="imagefader">
+          <div><img alt='-' src={logomashaal4} className='loaderlogomashaal' /></div>
+          <div><img alt='-' src={logomashaal3} className='loaderlogomashaal' /></div>
+          <div><img alt='-' src={logomashaal2} className='loaderlogomashaal' /></div>
+          <div><img alt='-' src={logomashaal} className='loaderlogomashaal' /></div>
         </div>
       {/* </div> */}
     </div>

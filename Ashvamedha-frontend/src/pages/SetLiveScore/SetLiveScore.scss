@@ -38,14 +38,14 @@ form {
   margin: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
-  label {
+  label,select {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: $secondary-color;
   }
 
-  input {
+  input ,select{
     @include input-style;
     margin-bottom: 15px;
   }

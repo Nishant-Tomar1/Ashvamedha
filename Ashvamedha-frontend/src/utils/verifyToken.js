@@ -1,12 +1,16 @@
 import axios from "axios";
 import { server } from "../constants.js";
 
-export const verifyToken = async () => {
+export const verifyToken = async (accessToken) => {
         try {
           const response = await axios.get(`${server}/admin/verify`, {
-            withCredentials : true
+            headers :{
+              Authorization :`Bearer${accessToken}`
+            }
           }); 
           // console.log(response);
+          
+          
           if (response?.data.statusCode === 200) {
               return { isLoggedIn : true ,  sport : response.data.result.sport } 
           }

@@ -2,12 +2,12 @@ import "./SingleSport.scss";
 
 import React, { useEffect, useState } from "react";
 import {  
-  // useNavigate, 
+  useNavigate, 
   useParams } from "react-router-dom";
 
 import { AiOutlineDoubleRight } from "react-icons/ai/index.esm.js";
 // import Navbar from "../../components/Navbar/Navbar.js";
-// import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch.js";
+import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch.js";
 // import badminton from "../../assests/demoPhotos/badminton.jpg";
 // import bb from "../../assests/demoPhotos/basketball.jpg";
 // import chess from "../../assests/demoPhotos/chess.jpg";
@@ -166,10 +166,10 @@ function SingleSport() {
   });
   const params = useParams();
   const {sportid} = params;
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // const [sportImg, setSportImg] = useState([]);
-  // const [popUpOpen, setPopUpOpen] = useState(false);
+  const [popUpOpen, setPopUpOpen] = useState(false);
   function handleRegistration(sportName) {
     const response = sportsInfo.find((item) => item.sportName === sportName);
     window.open(response.registrationLink);
@@ -185,31 +185,23 @@ function SingleSport() {
       {/* <Navbar /> */}
       <div className="single-sport-page">
         <div className="sportspage">
-          <div className="popup-content">
-            <div className="match-popup">
-              <h2
-                onClick={() => handleRegistration(sportDetail.sportName)}
-                className={sportDetail.theme}
-              >
-                Register
-              </h2>
-              <AiOutlineDoubleRight
-                onClick={() => handleRegistration(sportDetail.sportName)}
-                className="next"
-              />
-            </div>
-            {/* Uncomment if you want to add a Live Score option */}
-            {/* <div
-              className="match-liveScore"
-              onClick={() => navigate(`/livescore/${sportDetail.sportName}`)}
-            >
-              <h2 className="hover-link"> Live Score</h2>
-              <AiOutlineDoubleRight
-                className="next"
-                onClick={() => navigate(`/livescore/${sportDetail.sportName}`)}
-              />
-            </div> */}
-          </div>
+
+       
+
+        <div className="popup-content">
+          <div className="match-popup">
+                <h2
+                  onClick={() => handleRegistration(sportDetail.sportName)}
+                  className={sportDetail.theme}
+                >
+                  Register
+                </h2>
+                <AiOutlineDoubleRight
+                  onClick={() => handleRegistration(sportDetail.sportName)}
+                  className="next"
+                />
+              </div>
+        </div>
 
           <div className="cards">
             <div className="sports-info">
@@ -235,7 +227,40 @@ function SingleSport() {
               <img src={sportDetail.imgUrl} alt="Loading" />
             </div>
           </div>
+
+
+         
+
         </div>
+
+        {/* <div >
+          <div >
+            <h2 onClick={() => setPopUpOpen(!popUpOpen)} className="hover-link">
+              Upcoming Matches
+            </h2>
+            <AiOutlineDoubleRight
+              onClick={() => setPopUpOpen(!popUpOpen)}
+              className="next"
+            />
+          </div>
+          <div
+            className="match-liveScore"
+            onClick={() => navigate(`/livescore/${sportDetail.sportName}`)}
+          >
+            <h2 className="hover-link"> Live Score</h2>
+            <AiOutlineDoubleRight
+              className="next"
+              onClick={() => navigate(`/livescore/${sportDetail.sportName}`)}
+            />
+          </div>
+          {popUpOpen && (
+            <UpcomingMatch
+              trigger={true}
+              children={"this is popup"}
+              sportid={sportid}
+            />
+          )}
+        </div>  */}
       </div>
     </>
   );

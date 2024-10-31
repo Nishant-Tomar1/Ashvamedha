@@ -1,14 +1,17 @@
 .pd {
     // border: 2px solid red;
-    background-color: #151515;
+    // background-color: #151515;
     scroll-behavior: auto;
     // border: 2px solid red;
 
     .wrapper {
-        height: 100vh;
+        height: 85vh;
+        font-size: x-large;
+        color: #FF6F0F;
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
 
         .text_shadows {
             text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
@@ -122,16 +125,27 @@
 
             .h1 {
                 color: #FF6F0F;
+                // font-size: 1.2rem;
                 margin-right: 10px;
             }
 
             .h2 {
+                // font-size: 1.2rem;
                 color: white;
             }
 
         }
+        
+@media screen and (max-width:550px) {
+        .heading-point{
+            font-size: 30px;
+
+        }
+    
+}
 
         .pointdetail {
+            // padding: 20px;
             margin-bottom: 20px;
             min-height: 100%;
             display: flex;
@@ -146,3 +160,4 @@
     }
 
 }
+

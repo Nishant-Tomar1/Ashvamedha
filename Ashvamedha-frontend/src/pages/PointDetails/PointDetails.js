@@ -12,6 +12,10 @@ import { useParams } from "react-router-dom";
 import {server} from "../../constants.js"
 import { useSelector } from "react-redux";
 
+const head = {
+  sportName: 'SPORT', category: 'CATEGORY', matchName: 'MATCH NAME', college1: 'OPPONENT', point: 'POINTS' 
+}
+
 function PointDetails() {
   const dispatch = useDispatch();
   const isLoading = useSelector((state) => state.appReducer.isLoading);
@@ -26,6 +30,9 @@ function PointDetails() {
           collegeName: params.collegename,
         }
       );
+      // console.log(response.data.result.modifiedResult);
+      
+
       setPointinfo(response.data.result.modifiedResult);
     } catch (e) {
       console.log("error from point deatils side", e);
@@ -44,8 +51,8 @@ function PointDetails() {
           Your team is yet to score <br />
         </h3>
       </div> */}
-      <div class="wrapper">
-        <h2 class="text_shadows">Your team is yet to score</h2>
+      <div className="wrapper">
+        <h2 >Your team is yet to score!!</h2>
       </div>
       <Footer />
     </div>
@@ -54,13 +61,14 @@ function PointDetails() {
       <Navbar />
       <div className="main">
         <h2 className="heading-point">
-          <span className="h1">POINT</span>
+          <span className="h1">POINTS</span>
           <span className="h2">TABLE</span>
         </h2>
         {!isLoading && (
           <div className="pointdetail">
+            <PointInfo gameInfo={head} />
             {pointinfo.map((item, index) => (
-              <PointInfo gameInfo={item} serialNo={index} />
+              <PointInfo gameInfo={item} key={index} serialNo={index} />
             ))}
           </div>
         )}

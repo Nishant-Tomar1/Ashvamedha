@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./AdminLogin.scss"
 import axios from 'axios'
 import { server } from '../../constants'
-import { useCookies } from 'react-cookie'
+// import { useCookies } from 'react-cookie'
 import { useLogin } from '../../context/loginContextProvider'
 import {  useNavigate } from 'react-router-dom'
 
@@ -14,7 +14,7 @@ function AdminLogin() {
 
     const navigate = useNavigate();
     const LoginCtx = useLogin();
-    const [cookies] = useCookies(["accessToken", "refreshToken"])
+    // const [cookies] = useCookies(["accessToken", "refreshToken"])
 
     const handleAdminChange = (e) => {
         // console.log(target.name);     
@@ -32,7 +32,6 @@ function AdminLogin() {
                 password : admin.password.toLowerCase()
             },{withCredentials:true})
             if (res.data.statusCode === 200){
-                // console.log(res.data);
                 
                 alert("Logged In Successfully!!");
                 navigate("/admin");
@@ -40,7 +39,7 @@ function AdminLogin() {
                 //     email :"",
                 //     password :""
                 // })
-                LoginCtx.login(res.data.result.accessToken, res.data.result.refreshToken, res.data.result.sport);
+                LoginCtx.login(res.data.result.accessToken,res.data.result.refreshToken, res.data.result.sport);
             }
             else alert(res.data.message ? res.data.message : "Invalid Credentails!!");     
         } catch (error) {

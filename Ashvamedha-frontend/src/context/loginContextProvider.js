@@ -5,36 +5,41 @@ import { createContext } from "react";
 export const loginContext = createContext({
     isLoggedIn : false,
     sport :"",
-    accessToken : null,
-    refreshToken : null,
     login : () => {},
     logout : () => {},
-    setAccessToken : () => {},
-    setRefreshToken: () => {},
 })
 
 function LoginContextProvider({children}){
     const [, setCookie] = useCookies(["accessToken : nothing", "refreshToken :  nothing"])
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [sport, setSport] = useState("");
-    const [accessToken, setAccessToken] = useState(null)
-    const [refreshToken, setRefreshToken] = useState(null)
 
 
-    const loginHandler = (accessToken, refreshToken, sport) => {
+    const loginHandler = ( accessToken, refreshToken, sport) => {
+        
         setIsLoggedIn(true);
         setSport(sport);
-        setAccessTokenHandler(accessToken);
-        setRefreshTokenHandler(refreshToken);
-        // console.log(accessToken, refreshToken, sport, isLoggedIn);
-        
+        setCookie(
+            "accessToken",
+            accessToken,
+            {
+                path:"/",
+                maxAge: 60 * 60 * 24 
+            }
+        );
+        setCookie(
+            "refreshToken",
+            refreshToken,
+            {
+                path:"/",
+                maxAge: 60 * 60 * 24 * 15 
+            }
+        );
     }
 
     const logoutHandler = () => {
         setIsLoggedIn(false);
         setSport("");
-        setAccessToken(null)
-        setRefreshToken(null)
         setCookie(
             "accessToken",
             null,
@@ -54,33 +59,11 @@ function LoginContextProvider({children}){
 
     }
 
-    const setAccessTokenHandler  = (newAccessToken) => {
-        setCookie("accessToken", newAccessToken, {
-            path: "/",
-            maxAge: 60 * 60 * 24 ,
-          });
-        //   console.log(newAccessToken);
-        setAccessToken(newAccessToken);
-    }
-
-    const setRefreshTokenHandler = (newRefreshToken) => {
-        // console.log(newRefreshToken);
-        setCookie("refreshToken", newRefreshToken, {
-            path: "/",
-            maxAge: 60 * 60 * 24 * 15 ,
-          });
-        setRefreshToken(newRefreshToken);
-    }
-
     const context = {
         isLoggedIn : isLoggedIn,
         sport : sport,
-        accessToken : accessToken,
-        refreshToken : refreshToken,
         login : loginHandler,
         logout : logoutHandler,
-        setAccessToken : setAccessTokenHandler,
-        setRefreshToken : setRefreshTokenHandler,
     }
 
     return (

@@ -58,16 +58,16 @@ const login = async (req, res) => {
     }
     const accessToken = generateAccessToken({ _id: user._id, sport : user.sport });
     const refreshToken = generateRefreshToken({ _id: user._id, sport : user.sport });
-
+    
     const options = {
       // httpOnly: true,
-      secure: true,
+      secure: false,
     }
 
     return res
-    .cookie("accessToken", accessToken, options )
-    .cookie("refreshToken", refreshToken, options)
-    .send(success(200, { accessToken ,refreshToken, sport}));
+    // .cookie("accessToken", accessToken, options )
+    // .cookie("refreshToken", refreshToken, options)
+    .send(success(200, { accessToken , refreshToken, sport}));
   } catch (e) {
     console.log("this is the error from login side", e);
     return res.send(error(500, e.message));
@@ -83,7 +83,7 @@ const verifyToken = async(req, res) => {
   }
 }
 
-const refreshAccessToken = async (req, res) => {
+const refreshAccessToken = async (req, res) => { 
   const cookies = req.cookies;
   
   if (!cookies.refreshToken ) {

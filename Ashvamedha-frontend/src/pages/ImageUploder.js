@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-
+import {server} from "../constants"
 import axios from "axios";
 
 function ImageUploder() {
   const [image, setImage] = useState("");
+  const [imageName, setImageName] = useState("");
+  const [folderName, setFolderName] = useState("");
   function handleImgChange(e) {
     const file = e.target.files[0];
     const fileReader = new FileReader();
@@ -17,17 +19,19 @@ function ImageUploder() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post("http://localhost:4000/upload/create", {
+      const result = await axios.post(`${server}/upload/create`, {
         image,
-        folderName: "eventImgSmall",
-        name: "tt",
+        folderName: folderName,
+        name: imageName,
       });
+      console.log(result);
+      
     } catch (err) {
       console.log("error", err);
     }
   };
   return (
-    <div>
+    <div className="adminlogin">
       <form onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="fileInput"> Upload you photo</label>
         <input
@@ -36,9 +40,25 @@ function ImageUploder() {
           accept="image/*"
           required
         />
-        <button>Submit</button>
+        <img src={image} alt="" style={{ width: "200px", height: "200px" }} />
+        <label htmlFor="fileInput"> folderName</label>
+        <input
+          type="text"
+          value={folderName}
+          onChange={(e) => setFolderName(e.target.value)}
+          required
+        />
+        <label htmlFor="fileInput">Image Name</label>
+        <input
+          type="text"
+          value={imageName}
+          onChange={(e) => setImageName(e.target.value)}
+          required
+        />
+        
+
+        <button type="submit">Submit</button>
       </form>
-      <img src={image} alt="" style={{ width: "200px", height: "200px" }} />
     </div>
   );
 }

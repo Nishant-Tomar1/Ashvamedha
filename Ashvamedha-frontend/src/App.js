@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import Events from "./pages/Events/Events.js";
 import Gallery from "./pages/Gallery/Gallery.js";
@@ -13,25 +13,13 @@ import SetLiveScore from "./pages/SetLiveScore/SetLiveScore.js";
 import SetPointTableScore from "./pages/SetLiveScore/SetPointTableScore.js";
 import SingleSport from "./pages/SingleSports/SingleSport.js";
 import UpdateLiveScore from "./pages/SetLiveScore/UpdateLiveScore.js";
-import { useSelector } from "react-redux";
 import AdminLogin from "./pages/Admin/AdminLogin.js";
 import { useLogin } from "./context/loginContextProvider.js";
 import { useCookies } from "react-cookie";
 import { verifyToken } from "./utils/verifyToken.js";
 import AdminHome from "./pages/Admin/AdminHome.js";
+import Fixtures from "./pages/Fixtures/Fixtures.js";
 
-// import ClipLoader from "react-spinners/ClipLoader";
-// const style = {
-//   position: "fixed",
-//   top: "50%",
-//   left: "50%",
-//   transform: "translate(-50%, -50%)",
-// };
-// const properties = {
-//   display: "block",
-//   margin: "0 auto",
-//   borderColor: "red",
-// };
 
 function Pageroutes(){
   return (
@@ -42,6 +30,7 @@ function Pageroutes(){
         <Route path="/livescore/:sportname" element={<LiveScore />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/leaderboard/:collegename" element={<PointDetails />} />
+        <Route path="/fixtures/:sportname" element={<Fixtures/>} />
         <Route path="/team" element={<OurTeam />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/upload" element={<ImageUploder />} />
@@ -56,35 +45,35 @@ function Pageroutes(){
 
 
 function App(){
-  const isLoading = useSelector((state) => state.appReducer.isLoading);
-  const [, setLoading] = useState(false);
-  const LoginCtx = useLogin();
+  const loginCtx = useLogin();
   const [cookies] = useCookies(["accessToken", "refreshToken"])
 
-  useEffect( ()=>{
-    const Verify = async () => {
-      if (cookies.accessToken){
-        // console.log("hello");
-        
-        const res = await verifyToken();
-        // console.log(res);
-        
-        if (res.isLoggedIn){
-          LoginCtx.login(cookies.accessToken, cookies.refreshToken, res?.sport);
-        }
-        
+  const Verify = async () => {
+    if (cookies.accessToken){
+      console.log("accessToken found");
+      
+      const res = await verifyToken(cookies.accessToken);
+      
+      if (res.isLoggedIn){
+        loginCtx.login(cookies.accessToken, cookies.refreshToken,res?.sport);
       }
+      
     }
+  }
+  
+  useEffect( ()=>{
+    console.log("page refreshed");
+    
     Verify();
-  })
+  },[])
 
-  useEffect(() => {
-    if (isLoading) {
-      setLoading(true);
-    } else {
-      setLoading(false);
-    }
-  }, [isLoading]);
+  // useEffect(() => {
+  //   if (isLoading) {
+  //     setLoading(true);
+  //   } else {
+  //     setLoading(false);
+  //   }
+  // }, [isLoading]);
 
 
   return (

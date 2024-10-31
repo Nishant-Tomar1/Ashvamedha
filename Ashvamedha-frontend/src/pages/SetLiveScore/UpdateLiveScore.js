@@ -1,19 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { server } from "../../constants";
 import "./UpdateLiveScore.scss"
 import axios from "axios";
 import { useLogin } from "../../context/loginContextProvider";
 
 function UpdateLiveScore() {
+  const [liveScore, setLiveScore] = useState([]);
   const [matchName, setMatchName] = useState("");
   const [college1Score, setCollege1Score] = useState("");
   const [college2Score, setCollege2Score] = useState("");
   const [setInfo, setSetInfo] = useState("");
   const loginCtx = useLogin();
   const sportName = loginCtx.isLoggedIn ? loginCtx.sport :"";
+  
+  async function fetchLiveScore() {
+    try {
+      const result = await axios.post(
+        `${server}/sport/getlivescore`,
+        {
+          sportname: sportName.toLowerCase(),
+        }
+      );
+      console.log(result);
+      
+      setLiveScore(result.data.result?.liveScoreInfo);
+    } catch (err) {
+      console.log("error", err);
+    }
+  }
+  
+  useEffect(()=>{
+      fetchLiveScore();
+  },[sportName])
+  
   async function handleLiveScore(e) {
     e.preventDefault();
-    
     try {
       await axios.put(
         `${server}/sport/updatelivescore`,
@@ -32,6 +53,7 @@ function UpdateLiveScore() {
       console.log("response of setLive score", error);
     }
   }
+
   return (
     <div className='adminlogin'>
       {loginCtx.isLoggedIn ? 
@@ -40,11 +62,20 @@ function UpdateLiveScore() {
         <h2>Update Live Score</h2>
           <div>
             <label htmlFor="matchName">SportName  </label>
-            <input type="text" value={sportName} readOnly />
+            <input type="text" value={sportName}  readOnly />
           </div>
           <div>
             <label htmlFor="matchName">Enter match name</label>
-            <input type="text" required onChange={(e) => setMatchName(e.target.value)} />
+            {/* <input type="text" required onChange={(e) => setMatchName(e.target.value)} />
+             */}
+             <select required onChange={(e) => setMatchName(e.target.value)}>
+              <option value="">Select Match</option>
+              {liveScore?.map((match) => (
+                <option key={match.matchName} value={match.matchName}>
+                  {match.matchName}
+                </option>
+              ))}
+            </select>
           </div>
           <div>
             <label htmlFor="matchName">Enter college 1 score</label>

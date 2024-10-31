@@ -1,30 +1,36 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./AdminHome.scss"
 import { useLogin } from '../../context/loginContextProvider';
 import {Link, useNavigate} from 'react-router-dom'
+import Loader from '../../components/Loader/Loader';
 
 function AdminHome() {
     const loginCtx = useLogin();
-    const Navigate = useNavigate();
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState(true);
     useEffect(()=>{
-        if (!loginCtx.isLoggedIn){
-            Navigate("/admin/login")
-        }
-    },[loginCtx.isLoggedIn])
+        setTimeout(()=>{
+            setLoading(false);
+        },1000);
+    })
 
     const handleLogout = (e) => {
         e.preventDefault();
-        const response = window.confirm("Are you sure you want to logout")
+        const response = window.confirm("Are you sure you want to logout");
         if (response) {
             loginCtx.logout();
-            Navigate("/");
+            navigate("/");
             alert("Logged out successfully");
         }
     }
+    
     return (
         <div className='adminhomepage'>
         {
-            loginCtx.isLoggedIn &&
+            !loading ?
+            <>
+                 {
+            loginCtx.isLoggedIn ?
             <div>
                 <h2>You are Logged In as {loginCtx.sport} admin </h2>
                 <p>Note : You can only do changes for {loginCtx.sport}</p>
@@ -33,8 +39,17 @@ function AdminHome() {
                 <Link to="/updatepointstable" >Set Points Table Score</Link>
                 <button onClick={handleLogout}>Logout </button>
             </div>
+            :
+            <div>
+                You are not logged In <br />
+                <button onClick={()=>{navigate("/admin/login")}}>Login</button>
+            </div>
            
         }
+            </> 
+            : <Loader/>
+        }
+       
         </div>
         
     )
