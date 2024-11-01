@@ -42,9 +42,8 @@ app.use("/match", matchRouter);
 app.use("/sport", sportsRouter);
 app.use("/cron", cronRouter);
 
-
 const backendUrl = "http://localhost:8000/cron/testcron";
-cron.schedule("*/5 * * * * ", function () {
+cron.schedule("*/15 * * * * *", function () {
   console.log("Restarting server");
 
   http
@@ -60,9 +59,6 @@ cron.schedule("*/5 * * * * ", function () {
       console.error("Error ", err.message);
     });
 });
-
-
-
 
 const port = process.env.PORT || 4003;
 app.listen(port, () => {

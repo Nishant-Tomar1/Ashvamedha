@@ -46,31 +46,29 @@ const login = async (req, res) => {
 
     if (!sportList.includes(sport)){
       return res.send(error(409,"Email format is invalid!!"));
+      return;
     }
 
     const user = await admin.findOne({ email }).select("+password");
+    // console.log(user);
+    
     if (!user) {
       return res.send(error(404, "user not registered"));
+      return;
     }
+
     const matchPassword = await bcrypt.compare(password, user.password);
+
     if (!matchPassword) {
       return res.send(error(403, "Incorrect password"));
+      return;
     }
     const accessToken =  generateAccessToken({ _id: user._id, sport : user.sport });
     const refreshToken = generateRefreshToken({ _id: user._id, sport : user.sport });
     
-    const options = {
-      // httpOnly: true,
-      secure: false,
-    }
-
-    // .cookie("accessToken", accessToken, options )
-    // .cookie("refreshToken", refreshToken, options)
     return res.send(success(200, { accessToken , refreshToken, sport}));
   } catch (e) {
     console.log("this is the error from login side", e);
-    
-    // return res.send(error(500, e.message));
   }
 }; 
 

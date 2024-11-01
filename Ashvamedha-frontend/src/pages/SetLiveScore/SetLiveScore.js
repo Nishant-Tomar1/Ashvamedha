@@ -6,6 +6,7 @@ import { collegeList } from "../../constants";
 import axios from "axios";
 import { useLogin } from "../../context/loginContextProvider";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar";
 
 //   matchName,
 // college1Score,
@@ -80,6 +81,8 @@ function SetLiveScore() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="adminlogin">
       {loginCtx.sport ? (
         <form style={{ color: "white" }} onSubmit={handleLiveScore}>
@@ -183,6 +186,7 @@ function SetLiveScore() {
         <h2>Not Logged In!!</h2>
       )}
     </div>
+    </>
   );
 }
 

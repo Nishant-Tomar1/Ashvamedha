@@ -3,6 +3,7 @@ import { server } from "../../constants";
 import "./UpdateLiveScore.scss"
 import axios from "axios";
 import { useLogin } from "../../context/loginContextProvider";
+import Navbar from "../../components/Navbar/Navbar";
 
 function UpdateLiveScore() {
   const [liveScore, setLiveScore] = useState([]);
@@ -55,6 +56,8 @@ function UpdateLiveScore() {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className='adminlogin'>
       {loginCtx.isLoggedIn ? 
       <div>
@@ -107,6 +110,7 @@ function UpdateLiveScore() {
       <h1>You are not Logged In</h1>
       }
     </div>
+    </>
   );
 }
 

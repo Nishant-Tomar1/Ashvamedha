@@ -13,7 +13,7 @@ import {server} from "../../constants.js"
 import { useSelector } from "react-redux";
 
 const head = {
-  sportName: 'SPORT', category: 'CATEGORY', matchName: 'MATCH NAME', college1: 'OPPONENT', point: 'POINTS' 
+  sportName: 'SPORT', category: 'CAT.', matchName: 'MATCH NAME', college1: 'OPP.', point: 'PTS.' 
 }
 
 function PointDetails() {
@@ -66,14 +66,14 @@ function PointDetails() {
         </h2>
         {!isLoading && (
           <div className="pointdetail">
-            <PointInfo gameInfo={head} />
+            <PointInfo gameInfo={head}/>
             {pointinfo.map((item, index) => (
               <PointInfo gameInfo={item} key={index} serialNo={index} />
             ))}
           </div>
         )}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

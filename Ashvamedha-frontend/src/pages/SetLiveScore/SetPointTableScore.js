@@ -6,6 +6,7 @@ import { collegeList, collegeList2 } from "../../constants";
 import axios from "axios";
 import { useLogin } from "../../context/loginContextProvider";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar";
 
 function SetPointTableScore() {
   const [matchName, setMatchName] = useState("");
@@ -50,7 +51,8 @@ function SetPointTableScore() {
     }
   }
   return (
-    
+    <>
+    <Navbar/>
     <div className='adminlogin'>
       {loginCtx.isLoggedIn ? 
       <form onSubmit={handleLiveScore}>
@@ -132,6 +134,7 @@ function SetPointTableScore() {
       <h1>You are not Logged in</h1>
       }
     </div>
+    </>
   );
 }
 

@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import "./AdminLogin.scss"
 import axios from 'axios'
-import { server } from '../../constants'
+import { server, sportList } from '../../constants'
 import { useLogin } from '../../context/loginContextProvider'
 import {  useNavigate } from 'react-router-dom'
+import Navbar from '../../components/Navbar/Navbar'
 
 function AdminLogin() {
     const [admin, setAdmin] = useState({
@@ -24,6 +25,8 @@ function AdminLogin() {
        
     const handleSubmit = async(e) => {
         e.preventDefault();
+        // console.log(admin);
+        
         try {
             const res = await axios.post(`${server}/admin/login`,{
                 email : admin.email.toLowerCase(),
@@ -42,12 +45,22 @@ function AdminLogin() {
     }
 
     return (
+        <>
+        <Navbar/>
         <div className='adminlogin'>
             <form onSubmit={handleSubmit}>
                 <h2>Admin Login</h2>
                 <div>
                 <label htmlFor="email" >Email</label>
-                <input type="text" name="email" value={admin.email} required onChange={handleAdminChange} />
+                {/* <input type="text" name="email" value={admin.email} required onChange={handleAdminChange} /> */}
+                <select required name='email' onChange={(e) => setAdmin(prev => ({...prev,email : e.target.value}))}>
+              <option value="">Select sport</option>
+              {sportList.map((sport) => (
+                <option key={sport.name} value={sport.email}>
+                  {sport.name}
+                </option>
+              ))}
+            </select>
                 </div>
                 <div>
                 <label htmlFor="password" >Password</label>
@@ -57,6 +70,7 @@ function AdminLogin() {
                 <input type="submit"  />
             </form>
         </div>
+        </>
     )
 }
 

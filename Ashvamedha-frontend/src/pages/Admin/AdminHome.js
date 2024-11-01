@@ -3,6 +3,7 @@ import "./AdminHome.scss"
 import { useLogin } from '../../context/loginContextProvider';
 import {Link, useNavigate} from 'react-router-dom'
 import Loader from '../../components/Loader/Loader';
+import Navbar from '../../components/Navbar/Navbar';
 
 function AdminHome() {
     const loginCtx = useLogin();
@@ -25,6 +26,8 @@ function AdminHome() {
     }
     
     return (
+        <>
+            <Navbar/>
         <div className='adminhomepage'>
         {
             !loading ?
@@ -51,6 +54,7 @@ function AdminHome() {
         }
        
         </div>
+        </>
         
     )
 }

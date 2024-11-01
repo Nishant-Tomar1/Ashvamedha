@@ -61,9 +61,9 @@
 
 @media screen and (max-width:750px) {
     .pointinfo {
-        width: 95%;
-        height: 100px;
-        margin: 10px 10px;
+        width: 98%;
+        height: 60px;
+        margin: 5px 5px;
         // text-transform: lowercase;
         display: flex;
         justify-content: space-around;
@@ -109,7 +109,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 16px;
+            font-size: 14px;
         }
 
     }
@@ -118,13 +118,13 @@
 @media screen and (max-width:350px) {
     .pointinfo {
         // margin: 10px;
-        height: 100px;
+        height: 50px !important;
         // text-transform: lowercase;
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 95%;
-        margin: 10px 10px;
+        margin: 5px 5px;
 
         .serial-no {
             width: 10%;
@@ -165,7 +165,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 10px;
+            font-size: 12px;
         }
 
     }

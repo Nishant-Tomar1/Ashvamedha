@@ -8,7 +8,7 @@ function PointInfo(props) {
   
   return (
     <div className="pointinfo">
-      <div className="serial-no">{props?.serialNo + 1 || "S.No"}</div>
+      {/* <div className="serial-no">{props?.serialNo + 1 || "S.No"}</div> */}
       <div className="category"> {props?.gameInfo?.category}</div>
       <div className="opponent">
         {/* <span className="vs"></span> */}

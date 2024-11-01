@@ -1,5 +1,5 @@
-// export const server = "http://localhost:8000"
-export const server = "https://ashvamedha-fjrh.onrender.com";
+export const server = "http://localhost:8000"
+// export const server = "https://ashvamedha-fjrh.onrender.com";
 
 export const collegeList = [
   { name: "aiims", logo : "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1730469753/ashvamedha/Colleges/ikhdak21qfdliitzoetj.png"},
@@ -95,6 +95,45 @@ export const collegeList2 = [
   { name: "jatni-clg", logo : "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1730457514/ashvamedha/Colleges/tp6puotwtxrcs1q6sekd.png"},
   { name: "NA", logo : ""},
 ];
+
+export const sportList = [
+  {
+    name :"football",
+    email : "football.admin@ashvamedha.in",
+  },
+  {
+    name :"volleyball",
+    email : "volleyball.admin@ashvamedha.in",
+  },
+  {
+    name :"basketball",
+    email : "basketball.admin@ashvamedha.in",
+  },
+  {
+    name :"chess",
+    email : "chess.admin@ashvamedha.in",
+  },
+  {
+    name :"badminton",
+    email : "badminton.admin@ashvamedha.in",
+  },
+  {
+    name :"tabletennis",
+    email : "tabletennis.admin@ashvamedha.in",
+  },
+  {
+    name :"lawntennis",
+    email : "lawntennis.admin@ashvamedha.in",
+  },
+  {
+    name :"gym",
+    email : "gym.admin@ashvamedha.in",
+  },
+  {
+    name :"bgmi",
+    email : "bgmi.admin@ashvamedha.in",
+  }
+]
 
 export const fixtures = {
   day1 : {
@@ -421,7 +460,7 @@ export const fixtures = {
         category: "men",
         team1: "centurion-a",
         team2: "aiims",
-        time: "7:00 am to 10:00 am",
+        time: "8:00 am to 11:00 am",
         location: "SAC LT Court-1",
       },
       {
@@ -430,8 +469,8 @@ export const fixtures = {
         category: "men",
         team1: "centurion-b",
         team2: "iitbbs",
-        time: "7:00 am to 10:00 am",
-        location: "SAC LT Court-2",
+        time: "3:00 pm to 6:00 pm",
+        location: "SAC LT Court-1",
       },
       {
         matchName: "match3",
@@ -440,7 +479,7 @@ export const fixtures = {
         team1: "centurion-a",
         team2: "niser",
         time: "3:00 pm to 6:00 pm",
-        location: "SAC LT Court-1",
+        location: "SAC LT Court-2",
       },
       {
         matchName: "match4",
@@ -665,12 +704,75 @@ export const fixtures = {
     ],
     volleyball :[
       {
-          matchName : "match9",
-          matchType : "final",
+          matchName : "match1",
+          matchType : "Qualifier A",
           category:"",
-          team1 :"TBD",
-          team2:"TBD",
+          team1 :"iiest",
+          team2:"niser",
+          time:"7:00am to 8:00am",
+          location :"volleyball Court - 1"
+      },
+      {
+          matchName : "match2",
+          matchType : "Qualifier B",
+          category:"",
+          team1 :"bgu",
+          team2:"trident",
+          time:"8:00am to 9:00am",
+          location :"volleyball Court - 1"
+      },
+      {
+          matchName : "match3",
+          matchType : "League Match",
+          category:"",
+          team1 :"cv-raman",
+          team2:"centurion",
           time:"3:00pm to 4:00pm",
+          location :"volleyball Court - 1"
+      },
+      {
+          matchName : "match4",
+          matchType : "League Match",
+          category:"",
+          team1 :"iitbbs",
+          team2:"gita",
+          time:"4:00pm to 5:00pm",
+          location :"volleyball Court - 1"
+      },
+      {
+          matchName : "match5",
+          matchType : "League Match",
+          category:"",
+          team1 :"tbd",
+          team2:"ssu",
+          time:"5:00pm to 6:00pm",
+          location :"volleyball Court - 1"
+      },
+      {
+          matchName : "match6",
+          matchType : "League Match",
+          category:"",
+          team1 :"tbd",
+          team2:"outr",
+          time:"6:00pm to 7:00pm",
+          location :"volleyball Court - 1"
+      },
+      {
+          matchName : "match7",
+          matchType : "semi-final",
+          category:"",
+          team1 :"tbd",
+          team2:"tbd",
+          time:"7:00pm to 8:00pm",
+          location :"volleyball Court - 1"   
+      },
+      {
+          matchName : "match8",
+          matchType : "semi-final",
+          category:"",
+          team1 :"tbd",
+          team2:"tbd",
+          time:"8:00pm to 9:00pm",
           location :"volleyball Court - 1"
       }
     ],
@@ -971,26 +1073,26 @@ export const fixtures = {
         matchName: "match5",
         matchType: "Semi Final",
         category: "men",
-        team1: "TBD",
-        team2: "TBD",
-        time: "7:00 am to 10:00 am",
+        team1: "tbd",
+        team2: "tbd",
+        time: "8:00 am to 11:00 am",
         location: "Lawn Tennis Court-1",
       },
       {
         matchName: "match6",
         matchType: "Semi Final",
         category: "men",
-        team1: "TBD",
-        team2: "TBD",
-        time: "7:00 am to 10:00 am",
+        team1: "tbd",
+        team2: "tbd",
+        time: "8:00 am to 11:00 am",
         location: "Lawn Tennis Court-2",
       },
       {
         matchName: "match7",
         matchType: "Final",
         category: "men",
-        team1: "TBD",
-        team2: "TBD",
+        team1: "tbd",
+        team2: "tbd",
         time: "4:00 pm to 7:00 pm",
         location: "Lawn Tennis Court-1",
       },
@@ -1224,3 +1326,4 @@ export const fixtures = {
     bgmi :[]
   }
 }
+
