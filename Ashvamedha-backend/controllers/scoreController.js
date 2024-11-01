@@ -129,7 +129,7 @@ const deleteLiveScore = async (req, res) => {
     }
     // console.log(match);
     
-    // await liveScore.deleteOne({ _id: matchId});
+    await liveScore.deleteOne({ _id: matchId});
     return res.send(
       success(200, `live score ended plz update the overall point table`)
     );

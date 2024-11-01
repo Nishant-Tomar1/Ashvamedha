@@ -149,6 +149,9 @@ function SetLiveScore() {
                 <option key="2" value="women">
                  Women
               </option>
+              <option key="3" value="mixed">
+                 Mixed
+              </option>
             </select>
           </div>
           <div>

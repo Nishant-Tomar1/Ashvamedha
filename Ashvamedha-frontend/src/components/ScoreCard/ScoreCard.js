@@ -1,7 +1,7 @@
 import "./ScoreCard.scss";
 
 import React from "react";
-import vs from "../../assests/demoPhotos/vs1.png";
+import vs from "../../assests/demoPhotos/vs2.png";
 import { useLogin } from "../../context/loginContextProvider";
 import axios from "axios";
 import {useNavigate} from 'react-router-dom'
@@ -52,6 +52,7 @@ function ScoreCard(props) {
         </div>
       </div>
       <div className="part2">
+      {(loginCtx.sport === props.info.sportName) && <div className="set-details setname">{props.info.matchName} (match number is visible to admin only)</div>}
         <div className="set-details setname">{props.info.set}</div>
         <div className="set-details">{props.info.category}</div>
         <div className="set-details location">

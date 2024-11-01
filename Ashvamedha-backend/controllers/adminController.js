@@ -70,6 +70,7 @@ const login = async (req, res) => {
     .send(success(200, { accessToken , refreshToken, sport}));
   } catch (e) {
     console.log("this is the error from login side", e);
+    
     return res.send(error(500, e.message));
   }
 }; 

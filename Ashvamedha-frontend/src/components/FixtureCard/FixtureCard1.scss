@@ -88,27 +88,26 @@
 @media only screen and (max-width: 450px) {
     .score-card {
         width: 90%;
-        
+
         .part1 {
-            
             // flex-direction: column;
             align-items: center;
             justify-content: space-around;
             // border: 2px solid red;
-           
             width: 100%;
             margin-top: 20px;
 
             .college1-info,
             .college2-info {
-                font-size: 18px !important;
                 // border: 2px solid red;
+                text-transform: uppercase;
+                font-size: 18px !important;
 
                 .img {
                     // border: 2px solid white;
                     border-radius: 50%;
-                    width: 60px !important;
-                    height: 60px !important;
+                    width: 60px;
+                    height: 60px;
 
                     img {
                         width: 100%;

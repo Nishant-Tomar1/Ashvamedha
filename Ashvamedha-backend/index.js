@@ -8,8 +8,12 @@ const matchRouter = require("./routers/matchRouter");
 const userRouter = require("./routers/userRouter");
 const uploadRouter = require("./routers/uploadRouter");
 const sportsRouter = require("./routers/sportsRouter");
+const cronRouter = require("./routers/cronRouter");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const cron = require("node-cron");
+const http = require("http")
+const https = require("https")
 
 dotenv.config("./.env");
 // middlewares
@@ -36,6 +40,30 @@ app.use("/admin", adminRouter);
 app.use("/college", collegeRouter);
 app.use("/match", matchRouter);
 app.use("/sport", sportsRouter);
+app.use("/cron", cronRouter);
+
+
+const backendUrl = "http://localhost:8000/cron/testcron";
+cron.schedule("*/5 * * * * ", function () {
+  console.log("Restarting server");
+
+  http
+    .get(backendUrl, (res) => {
+      if (res.statusCode === 200) {
+        console.log("Restarted");;
+        
+      } else {
+        console.error(`failed to restart with status code: ${res.statusCode}`);
+      }
+    })
+    .on("error", (err) => {
+      console.error("Error ", err.message);
+    });
+});
+
+
+
+
 const port = process.env.PORT || 4003;
 app.listen(port, () => {
   console.log(`server has started at the port ${port}`);

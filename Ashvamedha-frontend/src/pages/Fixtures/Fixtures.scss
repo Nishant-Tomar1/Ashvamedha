@@ -1,0 +1,19 @@
+.fixtures {
+  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; // Ensures the content is centered vertically within the viewport
+  
+    h1 {
+      margin-bottom: 20px; // Space below the heading
+      margin-top: 60px;
+      font-size: 1.5rem;
+    }
+  
+    .fixture-card {
+      margin: 10px 0; // Space between each FixtureCard
+    }
+  }
+  

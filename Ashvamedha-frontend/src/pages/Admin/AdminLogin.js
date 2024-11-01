@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import "./AdminLogin.scss"
 import axios from 'axios'
 import { server } from '../../constants'
-// import { useCookies } from 'react-cookie'
 import { useLogin } from '../../context/loginContextProvider'
 import {  useNavigate } from 'react-router-dom'
 
@@ -14,7 +13,6 @@ function AdminLogin() {
 
     const navigate = useNavigate();
     const LoginCtx = useLogin();
-    // const [cookies] = useCookies(["accessToken", "refreshToken"])
 
     const handleAdminChange = (e) => {
         // console.log(target.name);     
@@ -35,10 +33,6 @@ function AdminLogin() {
                 
                 alert("Logged In Successfully!!");
                 navigate("/admin");
-                // setAdmin({
-                //     email :"",
-                //     password :""
-                // })
                 LoginCtx.login(res.data.result.accessToken,res.data.result.refreshToken, res.data.result.sport);
             }
             else alert(res.data.message ? res.data.message : "Invalid Credentails!!");     
@@ -57,7 +51,7 @@ function AdminLogin() {
                 </div>
                 <div>
                 <label htmlFor="password" >Password</label>
-                <input type="text" name="password" value={admin.password} required onChange={handleAdminChange} />
+                <input type="text" autoComplete='off' name="password" value={admin.password} required onChange={handleAdminChange} />
                 </div>
                 
                 <input type="submit"  />
