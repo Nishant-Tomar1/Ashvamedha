@@ -34,8 +34,8 @@ function Hero() {
                     navigate("/events");
                   }}
                 >
-                  {/* LIVE SCORES & FIXTURES */}
-                  REGISTER NOW
+                  LIVE SCORES & FIXTURES
+                  {/* REGISTER NOW */}
                 </button>
               </div>
               {/* <div className="btn2">

@@ -74,7 +74,7 @@ function Events() {
       desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
       date: "26th and 27th October",
       theme: "cold",
-      nameid : "table-tennis"
+      nameid : "tabletennis"
     },
     {
       id: 7,
@@ -114,7 +114,7 @@ function Events() {
       desc: "In tennis, every point is a battle, and every match is a journey toward excellence and self-discovery.",
       date: "26th and 27th October",
       theme: "cold",
-      nameid : "lawn-tennis"
+      nameid : "lawntennis"
     },
   ];
   return (
@@ -137,7 +137,7 @@ function Events() {
                       <div className={`${item?.theme} heading`} >{item?.sportName}</div>
                       <div className="desc">"{item?.desc}"</div>
                      <div className="button" >
-                        {/*  <button
+                         <button
                         style={{margin:"5px"}}
                           onClick={() =>{ 
                             window.scrollTo(0,0);
@@ -158,8 +158,8 @@ function Events() {
                           id={item?.theme}
                         >
                           Live Score
-                        </button> */}
-                        <button
+                        </button>
+                        {/* <button
                         style={{margin:"5px"}}
                           onClick={() =>{ 
                             window.scrollTo(0,0);
@@ -168,7 +168,7 @@ function Events() {
                           id={item?.theme}
                         >
                           Register
-                        </button> 
+                        </button>  */}
 
 
                       </div>

@@ -31,7 +31,12 @@ function ScoreCard(props) {
   return (
     <>    
     <div className="score-card">
-    {(loginCtx.sport === props.info.sportName) &&<button onClick={handleDelete}style={{color:"red", background:"#090909",padding:"5px"}}>Delete </button>}
+    {(loginCtx.sport === props.info.sportName) &&
+    <>
+    <button onClick={handleDelete}style={{color:"red", background:"#090909",padding:"5px",cursor:"pointer"}}>Delete </button>
+    <button onClick={()=>{navigate("/updatelivescore")}}style={{color:"yellow", background:"#090909",padding:"5px",cursor:"pointer"}}>Update </button>
+    </>
+    }
       <div className="part1">
         <div className="college1-info">
           <div className="img">

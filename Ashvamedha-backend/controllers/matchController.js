@@ -48,7 +48,7 @@ const updateMatchResult = async (req, res) => {
     return res.send(success(201, `match result uploaded: ${matchResult}`));
   } catch (e) {
     console.log("this is the error from matchController side", e);
-    return res.send(error(500, e.message));
+    // return res.send(error(500, e.message));
   }
 };
 module.exports = {

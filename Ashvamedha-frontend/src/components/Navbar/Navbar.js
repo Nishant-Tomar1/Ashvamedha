@@ -109,7 +109,7 @@ function Navbar() {
                     <span>Rulebook</span>
                 </ActualLink>
           </li>
-          {/* <li key="27" className="nav-text rulebook">
+          <li key="27" className="nav-text rulebook">
                 <Link 
                 to="/"
                 onClick={() => {
@@ -118,7 +118,7 @@ function Navbar() {
                 }} >
                     <span>Admin</span>
                 </Link>
-          </li> */}
+          </li>
         </ul>
         
       

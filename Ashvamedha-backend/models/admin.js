@@ -12,7 +12,7 @@ const adminSchema = mongoose.Schema({
   sport : {
     type : String,
     required : true,
-    enum : ["football","badminton","chess","table-tennis","gym","bgmi","volleyball","lawn-tennis","basketball","athletics"]
+    enum : ["football","badminton","chess","tabletennis","gym","bgmi","volleyball","lawntennis","basketball","athletics"]
   },
   password: {
     type: String,

@@ -5,6 +5,7 @@ import "./FixtureCard1.scss"
 
 function FixtureCard1(props) {
     const getCollegeLogo = (collegeName) => {
+        if (collegeName.toLowerCase() === "tbd" ) return "https://res.cloudinary.com/backend-project-chai-aur-code/image/upload/v1730474620/ashvamedha/Colleges/zpvqrtb9wxtohfzwl09u.png";
         const college = collegeList.find((item) => item.name === collegeName);
         return college ? college.logo : null; // Returns null if college is not found
       };

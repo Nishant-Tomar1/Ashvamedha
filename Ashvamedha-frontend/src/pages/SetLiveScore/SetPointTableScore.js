@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { server } from "../../constants";
 import "./SetPointTableScore.scss";
-import { collegeList } from "../../constants";
+import { collegeList, collegeList2 } from "../../constants";
 
 import axios from "axios";
 import { useLogin } from "../../context/loginContextProvider";
@@ -69,7 +69,7 @@ function SetPointTableScore() {
             </label>
             <select required onChange={(e) => setCollege1Name(e.target.value)}>
               <option value="">Select a college</option>
-              {collegeList.map((college) => (
+              {collegeList2.map((college) => (
                 <option key={college.name} value={college.name}>
                   {college.name}
                 </option>
@@ -80,7 +80,7 @@ function SetPointTableScore() {
             <label htmlFor="matchName">College 2</label>
             <select required onChange={(e) => setCollege2Name(e.target.value)}>
               <option value="">Select a college</option>
-              {collegeList.map((college) => (
+              {collegeList2.map((college) => (
                 <option key={college.name} value={college.name}>
                   {college.name}
                 </option>
@@ -112,6 +112,9 @@ function SetPointTableScore() {
                 </option>
                 <option key="2" value="women">
                  Women
+              </option>
+              <option key="3" value="mixed">
+                 Mixed
               </option>
             </select>
           </div>

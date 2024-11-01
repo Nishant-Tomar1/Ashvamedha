@@ -79,8 +79,6 @@ function SetLiveScore() {
     return college ? college.logo : null; // Returns null if college is not found
   };
 
-  
-
   return (
     <div className="adminlogin">
       {loginCtx.sport ? (

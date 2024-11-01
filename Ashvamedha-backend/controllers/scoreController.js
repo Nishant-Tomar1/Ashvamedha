@@ -45,23 +45,11 @@ const setLiveScore = async (req, res) => {
           editedBy : editedBy.toLowerCase(),
           set: set.toLowerCase(),
           location : location.toLowerCase()
-      // college1Name,
-      // college1Logo,
-      // college1Score,
-      // college2Name,
-      // college2Score,
-      // college2Logo,
-      // matchName,
-      // category,
-      // sportName,
-      // editedBy,
-      // set,
-      // location,
     });
     return res.send(success(201, `live score set ${livescore}`));
   } catch (e) {
     console.log("this is the error from liveScore side", e);
-    return res.send(error(500, e.message));
+    // return res.send(error(500, e.message));
   }
 };
 const updateLiveScore = async (req, res) => {
@@ -95,7 +83,7 @@ const updateLiveScore = async (req, res) => {
     return res.send(success(200, `score updated ${match}`));
   } catch (e) {
     console.log("this is the error from updateLiveScore side", e);
-    return res.send(error(500, e.message));
+    // return res.send(error(500, e.message));
   }
 };
 const getLiveScore = async (req, res) => {
@@ -113,7 +101,7 @@ const getLiveScore = async (req, res) => {
     return res.send(success(200, { liveScoreInfo }));
   } catch (e) {
     console.log("this is the error from updateLiveScore side", e);
-    return res.send(error(500, e.message));
+    // return res.send(error(500, e.message));
   }
 };
 const deleteLiveScore = async (req, res) => {
@@ -135,7 +123,7 @@ const deleteLiveScore = async (req, res) => {
     );
   } catch (e) {
     console.log("this is the error from updateLiveScore side", e);
-    return res.send(error(500, e.message));
+    // return res.send(error(500, e.message));
   }
 };
 module.exports = {
