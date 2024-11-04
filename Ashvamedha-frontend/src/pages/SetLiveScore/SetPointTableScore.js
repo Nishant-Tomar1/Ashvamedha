@@ -9,20 +9,19 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 
 function SetPointTableScore() {
+  const [loading, setLoading] = useState(false);
   const [matchName, setMatchName] = useState("");
   const [college1Name, setCollege1Name] = useState("");
   const [college2Name, setCollege2Name] = useState("");
   const [collegeWon, setCollegeWon] = useState("");
   const [point, setPoint] = useState("");
   const [category, setCategory] = useState("");
-  const [editedBy, setEditedBy] = useState("");
-
-  
   
   const navigate = useNavigate();
   const loginCtx = useLogin();
   const sportName = loginCtx.isLoggedIn ? loginCtx.sport : "";
   async function handleLiveScore(e) {
+    setLoading(true)
     e.preventDefault();
     try {
       const response = await axios.post(
@@ -39,13 +38,18 @@ function SetPointTableScore() {
         }
       );
       if (response.data.statusCode === 201){
+        setLoading(false);
         alert("Points table updated successfully");
-        navigate(`/livescore/${collegeWon}`)
+        navigate(`/leaderboard/${collegeWon}`)
       }
-      else { alert(response.data.message)}
+      else {
+        setLoading(false)
+         alert(response.data.message);
+      }
       
       // console.log("response of setLive score", response);
     } catch (error) {
+      setLoading(false);
       console.log("response of setLive score", error);
       alert("Something went wrong. Try again")
     }
@@ -128,7 +132,7 @@ function SetPointTableScore() {
           <label htmlFor="matchName">editedBy</label>
           <input required type="text" onChange={(e) => setEditedBy(e.target.value)} />
         </div> */}
-        <input type="submit"  />
+        {!loading ? <input type="submit" /> : <h2>Loading...</h2>}
       </form>
       :
       <h1>You are not Logged in</h1>

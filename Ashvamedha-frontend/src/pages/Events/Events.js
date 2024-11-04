@@ -137,7 +137,17 @@ function Events() {
                       <div className={`${item?.theme} heading`} >{item?.sportName}</div>
                       <div className="desc">"{item?.desc}"</div>
                      <div className="button" >
-                         <button
+                     <button
+                        style={{margin:"5px"}}
+                          onClick={() =>{ 
+                            window.scrollTo(0,0);
+                            navigate(`/livescore/${item.nameid.toLowerCase()}`)}}
+                          className="btn-primary"
+                          id={item?.theme}
+                        >
+                          Live Score
+                        </button>
+                        <button
                         style={{margin:"5px"}}
                           onClick={() =>{ 
                             window.scrollTo(0,0);
@@ -149,16 +159,7 @@ function Events() {
                           Fixtures
                         </button>
                         
-                        <button
-                        style={{margin:"5px"}}
-                          onClick={() =>{ 
-                            window.scrollTo(0,0);
-                            navigate(`/livescore/${item.nameid.toLowerCase()}`)}}
-                          className="btn-primary"
-                          id={item?.theme}
-                        >
-                          Live Score
-                        </button>
+                        
                         {/* <button
                         style={{margin:"5px"}}
                           onClick={() =>{ 

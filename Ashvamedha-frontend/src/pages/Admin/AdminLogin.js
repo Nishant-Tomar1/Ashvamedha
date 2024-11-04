@@ -7,6 +7,7 @@ import {  useNavigate } from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar'
 
 function AdminLogin() {
+    const [loading ,setLoading] = useState(false);
     const [admin, setAdmin] = useState({
         email : "",
         password :""
@@ -26,6 +27,7 @@ function AdminLogin() {
     const handleSubmit = async(e) => {
         e.preventDefault();
         // console.log(admin);
+        setLoading(true);
         
         try {
             const res = await axios.post(`${server}/admin/login`,{
@@ -33,13 +35,17 @@ function AdminLogin() {
                 password : admin.password.toLowerCase()
             },{withCredentials:true})
             if (res.data.statusCode === 200){
-                
+                setLoading(false)
                 alert("Logged In Successfully!!");
                 navigate("/admin");
                 LoginCtx.login(res.data.result.accessToken,res.data.result.refreshToken, res.data.result.sport);
             }
-            else alert(res.data.message ? res.data.message : "Invalid Credentails!!");     
+            else {
+                setLoading(false);       
+                alert(res.data.message ? res.data.message : "Invalid Credentails!!");
+            } 
         } catch (error) {
+            setLoading(false);
             console.log(error);       
         }     
     }
@@ -67,7 +73,7 @@ function AdminLogin() {
                 <input type="text" autoComplete='off' name="password" value={admin.password} required onChange={handleAdminChange} />
                 </div>
                 
-                <input type="submit"  />
+                {!loading ? <input type="submit" /> : <h2>Loading...</h2>}
             </form>
         </div>
         </>

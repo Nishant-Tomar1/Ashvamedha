@@ -8,25 +8,18 @@ import { useLogin } from "../../context/loginContextProvider";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 
-//   matchName,
-// college1Score,
-//   college2Name,
-//   college2Score,
-//   category,
-//   sportName,
-//   editedBy,
-//   set,
 function SetLiveScore() {
+  const [loading, setLoading] = useState(false);
   const [matchName, setMatchName] = useState("");
   const [college1Name, setCollege1Name] = useState("");
-  const [college1Logo, setCollege1Logo] = useState("");
+  // const [college1Logo, setCollege1Logo] = useState("");
   const [college2Name, setCollege2Name] = useState("");
-  const [college2Logo, setcollege2Logo] = useState("");
+  // const [college2Logo, setcollege2Logo] = useState("");
   const [college1Score, setCollege1Score] = useState("");
   const [college2Score, setCollege2Score] = useState("");
   const [setInfo, setSetInfo] = useState("");
   const [category, setCategory] = useState("");
-  const [editedBy, setEditedBy] = useState("");
+  // const [editedBy, setEditedBy] = useState("");
   const [location, setLocation] = useState("");
   const loginCtx = useLogin();
   const sportName = loginCtx.isLoggedIn ? loginCtx.sport : "";
@@ -34,8 +27,6 @@ function SetLiveScore() {
   const navigate = useNavigate()
   
   useEffect(()=>{
-    
-    // console.log(loginCtx);
   },[loginCtx])
 
   async function handleLiveScore(e) {
@@ -43,6 +34,7 @@ function SetLiveScore() {
     if (college1Name === college2Name){
       return alert("Both colleges should be different!!")
     }
+    setLoading(true);
     try {
       const response = await axios.post(
         `${server}/sport/setlivescore`,
@@ -63,14 +55,17 @@ function SetLiveScore() {
       );
       console.log("response of setLive score", response);
       if (response.data.statusCode === 201){
+        setLoading(false);
         alert("Created Successfully. Please Confirm it in the livescore section.")
         navigate(`/livescore/${sportName}`)
       }
       else{
         alert("Try again and enter details carefully!")
+        
       }
+      setLoading(false);
     } catch (error) {
-      
+      setLoading(false);
       console.log("error of setLive score", error);
     }
   }
@@ -172,15 +167,7 @@ function SetLiveScore() {
               onChange={(e) => setLocation(e.target.value)}
             />
           </div>
-          {/* <div>
-            <label htmlFor="matchName">editedBy</label>
-            <input
-              required
-              type="text"
-              onChange={(e) => setEditedBy(e.target.value)}
-            />
-          </div> */}
-          <input type="submit" />
+          {!loading ? <input type="submit" /> : <h2>Loading...</h2>}
         </form>
       ) : (
         <h2>Not Logged In!!</h2>

@@ -6,6 +6,7 @@ import { useLogin } from "../../context/loginContextProvider";
 import Navbar from "../../components/Navbar/Navbar";
 
 function UpdateLiveScore() {
+  const [loading, setLoading] = useState(false);
   const [liveScore, setLiveScore] = useState([]);
   const [matchName, setMatchName] = useState("");
   const [college1Score, setCollege1Score] = useState("");
@@ -15,6 +16,7 @@ function UpdateLiveScore() {
   const sportName = loginCtx.isLoggedIn ? loginCtx.sport :"";
   
   async function fetchLiveScore() {
+    setLoading(true)
     try {
       const result = await axios.post(
         `${server}/sport/getlivescore`,
@@ -25,7 +27,9 @@ function UpdateLiveScore() {
       console.log(result);
       
       setLiveScore(result.data.result?.liveScoreInfo);
+      setLoading(false);
     } catch (err) {
+      setLoading(false)
       console.log("error", err);
     }
   }
@@ -36,6 +40,7 @@ function UpdateLiveScore() {
   
   async function handleLiveScore(e) {
     e.preventDefault();
+    setLoading(true);
     try {
       await axios.put(
         `${server}/sport/updatelivescore`,
@@ -48,9 +53,10 @@ function UpdateLiveScore() {
         }
       );
       // console.log(res);
-      
+      setLoading(false)
       // console.log("response of livescore", response?.data?.result);
     } catch (error) {
+      setLoading(false)
       console.log("response of setLive score", error);
     }
   }
@@ -103,7 +109,7 @@ function UpdateLiveScore() {
             <input required type="text" onChange={(e) => setSetInfo(e.target.value)} />
           </div>
 
-          <input type="submit"  />
+          {!loading ? <input type="submit" /> : <h2>Loading...</h2>}
         </form>
       </div>
       :

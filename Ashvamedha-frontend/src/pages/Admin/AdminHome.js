@@ -37,6 +37,7 @@ function AdminHome() {
             <div>
                 <h2>You are Logged In as {loginCtx.sport} admin </h2>
                 <p>Note : You can only do changes for {loginCtx.sport}</p>
+                <Link to={`/livescore/${loginCtx.sport}`}>See Livescore ({loginCtx.sport})</Link>
                 <Link to="/setlivescore" >Create New Live Score</Link>
                 <Link to="/updatelivescore">Update  Live Score</Link>
                 <Link to="/updatepointstable" >Set Points Table Score</Link>
